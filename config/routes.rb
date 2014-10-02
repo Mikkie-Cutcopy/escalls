@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+  root to: 'calls#index'
+
   namespace :admin do
     resources :calls
     resources :users
