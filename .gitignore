@@ -10,3 +10,4 @@
 /tmp
 
 .idea/
+config/environment_variables.yml
