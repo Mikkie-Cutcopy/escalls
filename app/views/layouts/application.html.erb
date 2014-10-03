@@ -7,10 +7,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="page-header">
-  <h1> Escalls </h1>
-</div>
 
+<%= admin? ? (render 'layouts/admin_layout') : (render 'layouts/user_layout') %>
 
 <%= yield %>
 

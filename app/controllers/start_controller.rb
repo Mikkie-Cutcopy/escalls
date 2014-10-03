@@ -4,6 +4,11 @@ class StartController < ApplicationController
 
   def access
     @user = current_user
-    redirect_to user_calls_path(@user)
+      if @user.status == 'admin'
+        redirect_to admin_calls_path
+      else
+        redirect_to user_calls_path(@user)
+      end
+
   end
 end

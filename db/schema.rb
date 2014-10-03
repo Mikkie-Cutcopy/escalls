@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141001140750) do
+ActiveRecord::Schema.define(version: 20141003121208) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,24 +19,27 @@ ActiveRecord::Schema.define(version: 20141001140750) do
   create_table "calls", force: true do |t|
     t.date     "date"
     t.string   "user_id"
-    t.integer  "score"
+    t.integer  "total_score"
     t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "subject"
+    t.integer  "file_id"
+    t.text     "comment"
   end
 
   create_table "comments", force: true do |t|
     t.integer  "user_id"
-    t.string   "body"
+    t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "criterions", force: true do |t|
     t.string   "name"
-    t.string   "desc_fine"
-    t.string   "desc_bad"
-    t.integer  "score"
+    t.text     "good_thing"
+    t.text     "bad_thing"
+    t.integer  "relative_weight"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
