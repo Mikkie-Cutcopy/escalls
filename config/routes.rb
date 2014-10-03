@@ -2,14 +2,14 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  root to: 'calls#index'
+  root to: 'start#access'
 
   namespace :admin do
     resources :calls
     resources :users
   end
 
-  resources :users, only: [:show] do
+  resources :users do
     resources :calls, only: [:index, :show]
   end
 
