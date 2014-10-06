@@ -1,0 +1,21 @@
+= form_for @call, url: admin_calls_path do |f|
+  = f.label :Тема
+  = f.text_field :subject
+  br
+  = f.label :Дата_звонка
+  = f.datetime_select :date
+  br
+  = f.file_field :file_id
+  = f.select :user_id, options_for_select([["Маша Миронова", 1]]), {}, {class: 'form-control input-sm'}
+  br
+  - @call.estimates.each do |estimate|
+    = f.fields_for :estimates, index: estimate.id do |e|
+      - criterion = @criterions.where('id' => estimate.criterion_id).first
+      = e.label criterion.name
+      |
+      = e.text_field :score
+      = e.hidden_field :criterion_id, :value => criterion.id
+      br
+
+  br
+  = f.submit

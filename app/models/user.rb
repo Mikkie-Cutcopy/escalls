@@ -5,4 +5,13 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :confirmable, :timeoutable
 
   has_many :calls
+
+
+  def admin?
+    self.role == 'admin'
+  end
+
+  def worker?
+    self.role == 'worker'
+  end
 end

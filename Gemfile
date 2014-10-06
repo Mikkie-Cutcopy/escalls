@@ -13,7 +13,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 gem 'devise'
-gem 'cancan'
+gem 'cancancan'
 gem 'pg'
 
 gem 'bootstrap-sass', '~> 3.2.0'
