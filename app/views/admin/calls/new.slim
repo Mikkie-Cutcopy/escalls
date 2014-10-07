@@ -8,14 +8,13 @@
   = f.file_field :file_id
   = f.select :user_id, options_for_select([["Маша Миронова", 1]]), {}, {class: 'form-control input-sm'}
   br
-  - @call.estimates.each do |estimate|
-    = f.fields_for :estimates, index: estimate.id do |e|
-      - criterion = @criterions.where('id' => estimate.criterion_id).first
-      = e.label criterion.name
-      |
-      = e.text_field :score
-      = e.hidden_field :criterion_id, :value => criterion.id
-      br
+  = f.fields_for :estimates do |e|
+    - criterion = @criterions.where('id' => e.object.criterion_id).first
+    = e.label criterion.name
+    |
+    = e.text_field :score
+    = e.hidden_field :criterion_id, :value => criterion.id
+    br
 
   br
   = f.submit

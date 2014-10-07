@@ -20,8 +20,9 @@ class Admin::CallsController < ApplicationController
   end
 
   def create
-
-    Call.create(call_params)
+    call = Call.new(call_params)
+    call.get_total_score!(call_params)
+    call.save
     render 'admin/calls/index'
 
   end
@@ -33,7 +34,7 @@ class Admin::CallsController < ApplicationController
   private
 
   def call_params
-    params.require(:call).permit(:date, :user_id, :total_score, :status, :subject, :file_id, :comment, estimates: [:score])
+    params.require(:call).permit(:date, :user_id, :total_score, :status, :subject, :file_id, :comment, estimates_attributes: [:score, :criterion_id])
   end
 
 

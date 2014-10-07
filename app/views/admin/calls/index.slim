@@ -5,7 +5,19 @@ p class='bg-danger' You doesn't have a calls yet
 br
 = link_to 'new call', new_admin_call_path
 
-
+div style="width: 800px"
+  table class="table table-bordered"
+    tr class="success"
+      th Date
+      th Name
+      th Subject
+      th Total Score
+    - @calls.each do |call|
+      tr class='info'
+        td #{call.date}
+        td #{call.user.full_name}
+        td #{call.subject}
+        td #{call.total_score}
 
 
 
