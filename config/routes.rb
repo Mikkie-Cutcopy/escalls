@@ -6,11 +6,16 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :calls
-    resources :users
+    resources :users do
+      member do
+        get :accept
+      end
+    end
   end
 
   resources :users do
     resources :calls, only: [:index, :show]
   end
+
 
 end

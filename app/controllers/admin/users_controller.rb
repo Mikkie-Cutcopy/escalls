@@ -1,10 +1,15 @@
 class Admin::UsersController < ApplicationController
 
   def index
-    @users = User.all
+    @workers = User.where('role' => 'worker')
+    @new_users = User.where('role' => '')
   end
 
   def show
+
+  end
+
+  def accept
 
   end
 
