@@ -6,6 +6,9 @@ class Call < ActiveRecord::Base
   has_many :criterions, through: :estimates
   accepts_nested_attributes_for :estimates
 
+  class << self
+    attr_accessor :allow_create
+  end
 
   def get_total_score!(params)
     total_score = 0
@@ -16,4 +19,5 @@ class Call < ActiveRecord::Base
     end
     self.total_score = total_score
   end
+
 end

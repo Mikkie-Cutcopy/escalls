@@ -1,5 +1,7 @@
 h3 Criterions
-= button_to 'New', new_admin_criterion_path
+= button_to 'New', new_admin_criterion_path, method: :get
+p class='bg-danger'
+  = @message
 - unless @criterions.empty?
   div style="width: 1200px"
     table class="table table-bordered"
@@ -14,5 +16,10 @@ h3 Criterions
           th #{c.name}
           td #{c.good_thing}
           td #{c.bad_thing}
-          td #{c.relative_weight}
+          td
+            = c.relative_weight
+            = form_tag change_rw_value_admin_criterion_path(c) do
+              = text_field_tag :new_relative_weight
+              = submit_tag 'Ok'
+
           td #{button_to 'edit', edit_admin_criterion_path(c)}

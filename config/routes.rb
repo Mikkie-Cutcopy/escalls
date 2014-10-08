@@ -7,11 +7,11 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :calls
     resources :users do
-      member do
-        get :accept
-      end
+      get :accept, as: :member
     end
-    resources :criterions
+    resources :criterions do
+      post :change_rw_value, on: :member
+    end
   end
 
   resources :users do

@@ -8,6 +8,7 @@ class Admin::CallsController < ApplicationController
   end
 
   def new
+    redirect_to admin_criterions_path unless Call.allow_create
     @call = Call.new
     @workers = User.where('role' => 'worker')
 
@@ -20,6 +21,7 @@ class Admin::CallsController < ApplicationController
   end
 
   def create
+    redirect_to admin_criterions_path unless Call.allow_create
     call = Call.new(call_params)
     call.get_total_score!(call_params)
     call.save
