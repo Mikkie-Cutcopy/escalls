@@ -11,6 +11,7 @@ Rails.application.routes.draw do
         get :accept
       end
     end
+    resources :criterions
   end
 
   resources :users do

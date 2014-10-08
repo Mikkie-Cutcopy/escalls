@@ -1,0 +1,18 @@
+h3 Criterions
+= button_to 'New', new_admin_criterion_path
+- unless @criterions.empty?
+  div style="width: 1200px"
+    table class="table table-bordered"
+      tr class="success"
+        th Name
+        th Good thing
+        th Bad thing
+        th Relative weight
+        th Actions
+      - @criterions.each do |c|
+        tr class='info'
+          th #{c.name}
+          td #{c.good_thing}
+          td #{c.bad_thing}
+          td #{c.relative_weight}
+          td #{button_to 'edit', edit_admin_criterion_path(c)}
