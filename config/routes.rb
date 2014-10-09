@@ -5,12 +5,14 @@ Rails.application.routes.draw do
   root to: 'start#access'
 
   namespace :admin do
-    resources :calls
+    resources :calls do
+      post :recount, on: :member
+    end
     resources :users do
       get :accept, on: :member
     end
     resources :criterions do
-      post :change_rw_value, on: :member
+      post :change_relative_weight_value, on: :member
     end
   end
 

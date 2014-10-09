@@ -33,7 +33,7 @@ class Admin::CriterionsController < ApplicationController
     redirect_to admin_criterions_path
   end
 
-  def change_rw_value #button
+  def change_relative_weight_value #button
     criterion = Criterion.find_by_id(params[:id])
     criterion.relative_weight = params[:new_relative_weight].to_i
     criterion.save

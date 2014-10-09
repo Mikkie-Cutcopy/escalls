@@ -18,7 +18,7 @@ p class='bg-danger'
           td #{c.bad_thing}
           td
             = c.relative_weight
-            = form_tag change_rw_value_admin_criterion_path(c) do
+            = form_tag change_relative_weight_value_admin_criterion_path(c) do
               = text_field_tag :new_relative_weight
               = submit_tag 'Ok'
 

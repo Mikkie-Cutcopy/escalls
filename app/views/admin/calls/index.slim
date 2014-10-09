@@ -13,15 +13,19 @@ div style="width: 800px"
   table class="table table-bordered"
     tr class="success"
       th Date
-      th Name
+      th Worker
       th Subject
       th Total Score
+      th Actions
     - @calls.each do |call|
       tr class='info'
         td #{call.date}
         td #{call.user.full_name}
         td #{call.subject}
         td #{call.total_score}
+        td
+          = button_to 'Edit', edit_admin_call_path(call), method: :get
+          = button_to 'Recount', recount_admin_call_path(call), method: :post
 
 
 
