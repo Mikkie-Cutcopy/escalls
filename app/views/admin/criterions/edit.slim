@@ -1,4 +1,4 @@
-= form_for :criterion, url: admin_criterions_path do |form|
+= form_for :criterion, url: admin_criterion_path, method: :patch do |form|
   = form.label :Name
   br
   = form.text_field :name
@@ -12,4 +12,4 @@
   = form.text_area  :bad_thing
   = form.hidden_field :relative_weight
   br
-  = form.submit 'Create'
+  = form.submit 'Edit'

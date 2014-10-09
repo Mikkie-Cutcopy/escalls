@@ -22,4 +22,6 @@ p class='bg-danger'
               = text_field_tag :new_relative_weight
               = submit_tag 'Ok'
 
-          td #{button_to 'edit', edit_admin_criterion_path(c)}
+          td
+            = button_to 'edit', edit_admin_criterion_path(c), method: :get
+            = button_to 'delete', admin_criterion_path(c), method: :delete

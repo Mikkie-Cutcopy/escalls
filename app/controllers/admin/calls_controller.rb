@@ -4,11 +4,11 @@ class Admin::CallsController < ApplicationController
   load_and_authorize_resource
 
   def index
-
+    @calls = Call.all
   end
 
   def new
-    redirect_to admin_criterions_path unless Call.allow_create
+    return redirect_to admin_criterions_path unless Call.allow_create
     @call = Call.new
     @workers = User.where('role' => 'worker')
 
@@ -21,12 +21,11 @@ class Admin::CallsController < ApplicationController
   end
 
   def create
-    redirect_to admin_criterions_path unless Call.allow_create
+    return redirect_to admin_criterions_path unless Call.allow_create
     call = Call.new(call_params)
     call.get_total_score!(call_params)
     call.save
-    render 'admin/calls/index'
-
+    redirect_to admin_calls_path
   end
 
   def show
