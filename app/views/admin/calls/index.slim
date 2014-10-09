@@ -26,6 +26,7 @@ div style="width: 800px"
         td
           = button_to 'Edit', edit_admin_call_path(call), method: :get
           = button_to 'Recount', recount_admin_call_path(call), method: :post
+          = button_to 'Delete', admin_call_path(call), method: :delete
 
 
 

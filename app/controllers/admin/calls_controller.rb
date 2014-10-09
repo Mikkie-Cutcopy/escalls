@@ -52,9 +52,16 @@ class Admin::CallsController < ApplicationController
 
   end
 
+  def destroy
+    @call.destroy
+    redirect_to admin_calls_path
+  end
+
 
   def recount
-
+    #@call.get_total_score!(call_params)
+    #@call.update_attributes(call_params)
+    #redirect_to admin_calls_path
   end
 
   private
