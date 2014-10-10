@@ -37,6 +37,7 @@ class Admin::CriterionsController < ApplicationController
     criterion = Criterion.find_by_id(params[:id])
     criterion.relative_weight = params[:new_relative_weight].to_i
     criterion.save
+    flash[:message_ok] = 'Everything is OK' unless amount_check_and_report
     redirect_to admin_criterions_path
   end
 
