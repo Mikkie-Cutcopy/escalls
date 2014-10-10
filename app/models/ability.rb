@@ -5,7 +5,7 @@ class Ability
 
        user ||= User.new
        if user.admin?
-         can :manage, [Call, Criterion]
+         can :manage, [Call, Criterion, Report]
          can :manage, Comment, :user_id => user.id
        elsif user.worker?
          can :read,   Criterion

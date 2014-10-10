@@ -11,15 +11,16 @@ br
     table class="table table-bordered"
       tr class="success"
         th Date
-        th Worker
         th Subject
+        th Worker
         th Total Score
         th Actions
       - @calls.each do |call|
         tr class='info'
           td #{call.date}
+          td
+            = link_to call.subject, admin_call_reports_path(call)
           td #{call.user.full_name}
-          td #{call.subject}
           td #{call.total_score}
           td
             = button_to 'Edit', edit_admin_call_path(call), method: :get

@@ -37,7 +37,7 @@ class Admin::CallsController < ApplicationController
     Criterion.amount_check
     return redirect_to admin_criterions_path unless Call.allow_create
     unless @call.check_for_dependencies[:status]
-      flash[:message] = "something went wrong with estimates"
+      flash[:message] = 'something went wrong with estimates'
       return redirect_to admin_calls_path
     end
     @criterions = Criterion.all

@@ -5,6 +5,7 @@ class Call < ActiveRecord::Base
   has_many :estimates, dependent: :destroy
   has_many :criterions, through: :estimates
   accepts_nested_attributes_for :estimates
+  has_many :reports
 
   class << self
     attr_accessor :allow_create

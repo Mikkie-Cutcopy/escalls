@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :calls do
+      resources :reports, on: :collection, only: [:index, :show, :destroy]
       post :recount, on: :member
     end
     resources :users do
