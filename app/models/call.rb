@@ -20,4 +20,18 @@ class Call < ActiveRecord::Base
     self.total_score = total_score
   end
 
+  def check_for_dependencies
+    status = true
+    objects = []
+    unless self.estimates.empty?
+      self.estimates.each do |e|
+         unless e.criterion
+           status = false
+           objects << e
+         end
+      end
+    end
+    {status: status, objects: objects}
+  end
+
 end

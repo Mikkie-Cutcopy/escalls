@@ -1,2 +1,22 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+ .header__alert_message {
+   width: 1200px;
+   padding: 5px;
+   height: 35px;
+   background-color: #ff0033;
+   font-size: 16px;
+   text-align: center;
+   margin:0 auto 20px auto;
+   color: #ffffff;
+   /* box-shadow */
+   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 8px;
+   -moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 8px;
+   box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 8px;
+ }
+
+ .scale_title_alert_message {
+   position: relative;
+   top: 2px;
+ }

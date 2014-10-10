@@ -10,6 +10,12 @@
 
 <%= admin? ? (render 'layouts/admin_layout') : (render 'layouts/user_layout') %>
 
+<% if flash[:message] %>
+    <div class="header__alert_message">
+      <span class="scale_title_alert_message"><%= flash[:message] %></span>
+    </div>
+<% end %>
+
 <%= yield %>
 
 </body>

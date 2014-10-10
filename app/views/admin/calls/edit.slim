@@ -9,7 +9,7 @@
   = f.select :user_id, options_for_select([["Маша Миронова", 2]]), {}, {class: 'form-control input-sm'}
   br
   = f.fields_for :estimates do |e|
-    - criterion = @criterions.where('id' => e.object.criterion_id).first
+    - criterion = e.object.criterion # ищем связанный с эстимэйтом критерий
     = e.label criterion.name
     |
     = e.text_field :score

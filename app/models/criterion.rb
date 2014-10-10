@@ -1,6 +1,6 @@
 class Criterion < ActiveRecord::Base
 
-  has_many :estimates
+  has_many :estimates, dependent: :destroy
   has_many :calls, through: :estimates
 
   def self.amount_check
