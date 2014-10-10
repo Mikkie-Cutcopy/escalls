@@ -5,9 +5,14 @@ class Admin::CallsController < ApplicationController
 
   def index
     @calls = Call.all
+    if @calls.empty?
+      flash[:message] = 'You doesn\'t have a calls yet'
+    end
   end
 
   def new
+    flash[:message] = nil
+    Criterion.amount_check
     return redirect_to admin_criterions_path unless Call.allow_create
     @call = Call.new
     @workers = User.where('role' => 'worker')

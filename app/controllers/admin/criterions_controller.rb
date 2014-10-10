@@ -4,7 +4,7 @@ class Admin::CriterionsController < ApplicationController
   load_and_authorize_resource
 
   def index
-    @message = amount_check_and_report
+    flash[:message] = amount_check_and_report
     @criterions.order!(:id)
   end
 
