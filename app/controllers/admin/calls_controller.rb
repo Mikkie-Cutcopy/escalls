@@ -25,6 +25,7 @@ class Admin::CallsController < ApplicationController
   def create
     call = Call.new(call_params)
     call.get_total_score!
+    call.version = Version.last.value
     call.save
     redirect_to admin_calls_path
   end

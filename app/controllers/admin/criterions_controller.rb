@@ -1,6 +1,7 @@
 class Admin::CriterionsController < ApplicationController
 
   before_action :authenticate_user!
+  after_action  :change_version, only: [:create, :update, :change_relative_weight_value]
   load_and_authorize_resource
 
   def index
@@ -54,6 +55,11 @@ class Admin::CriterionsController < ApplicationController
       else
         nil
     end
+  end
+
+  def change_version
+    version = rand(100000..999999)
+    Version.new(value: version).save
   end
 
   def criterion_params

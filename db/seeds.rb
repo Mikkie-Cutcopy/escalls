@@ -127,3 +127,8 @@
       user.save!(:validate => false)
     end
   end
+
+  if Version.all.empty?
+    version = rand(100000..999999)
+    Version.new(value: version).save
+  end
