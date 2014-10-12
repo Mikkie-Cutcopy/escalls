@@ -19,6 +19,7 @@ class Call < ActiveRecord::Base
       total_score += score = coefficient * weight
     end
     self.total_score = total_score
+    self.version = Version.last.value
   end
 
   def check_for_dependencies
@@ -35,4 +36,7 @@ class Call < ActiveRecord::Base
     {status: status, objects: objects}
   end
 
+  def fresh?
+    self.version == Version.last.value
+  end
 end
