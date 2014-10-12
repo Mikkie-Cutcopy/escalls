@@ -17,7 +17,7 @@ br
         th Actions
       - @calls.each do |call|
         tr class='info'
-          th #{call.date}
+          th #{call.created_at}
           td
             = link_to call.subject, admin_call_reports_path(call)
           td #{call.user.full_name}
