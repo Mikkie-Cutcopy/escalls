@@ -1,15 +1,17 @@
 class Admin::CriterionsController < ApplicationController
 
   before_action :authenticate_user!
+  after_action  :change_version, only: [:create, :update, :change_relative_weight_value]
   load_and_authorize_resource
 
   def index
-    flash[:message] = amount_check_and_report
+    flash.now[:message_alert] = amount_check_and_report
     @criterions.order!(:id)
   end
 
 
   def new
+    @criterion = Criterion.new
     @criterion.relative_weight = 0
   end
 
@@ -53,6 +55,11 @@ class Admin::CriterionsController < ApplicationController
       else
         nil
     end
+  end
+
+  def change_version
+    version = rand(100000..999999)
+    Version.new(value: version).save
   end
 
   def criterion_params

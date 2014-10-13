@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141010125257) do
+ActiveRecord::Schema.define(version: 20141012173608) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,11 +26,18 @@ ActiveRecord::Schema.define(version: 20141010125257) do
     t.string   "subject"
     t.integer  "file_id"
     t.text     "comment"
+    t.integer  "version"
   end
 
   create_table "comments", force: true do |t|
     t.integer  "user_id"
     t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "criterion_versions", force: true do |t|
+    t.integer  "value"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

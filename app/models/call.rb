@@ -11,14 +11,15 @@ class Call < ActiveRecord::Base
     attr_accessor :allow_create
   end
 
-  def get_total_score!(params)
+  def get_total_score!
     total_score = 0
-    params[:estimates_attributes].each do |key, hash|
-      coefficient = hash['score'].to_i
-      weight = Criterion.find_by_id(hash['criterion_id'].to_i).relative_weight.to_i
+    self.estimates.each do |e|
+      coefficient = e.score.to_i
+      weight = Criterion.find_by_id(e.criterion_id.to_i).relative_weight.to_i
       total_score += score = coefficient * weight
     end
     self.total_score = total_score
+    self.version = Version.last.value
   end
 
   def check_for_dependencies
@@ -35,4 +36,7 @@ class Call < ActiveRecord::Base
     {status: status, objects: objects}
   end
 
+  def fresh?
+    self.version == Version.last.value
+  end
 end

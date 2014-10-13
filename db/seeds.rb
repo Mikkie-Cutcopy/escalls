@@ -1,4 +1,4 @@
-
+#encoding: utf-8
   criterions = [
       {id: 0,
        name: "Приветствие",
@@ -79,8 +79,56 @@
        relative_weight: 5}
   ]
 
+  users = [ {id: 0,
+        full_name: "Катерина Виноходова",
+        email:     "valeeva@mail.com",
+        role:      "admin",
+        password:  "password",
+        password_confirmation:  "password"
+       }]
+
+  if Rails.env.development?
+    users << {id: 1,
+        full_name: "Александра Солонина",
+        email:     "solonina@mail.com",
+        role:      "worker",
+        password:  "password",
+        password_confirmation:  "password"
+  }
+
+    users << {id: 2,
+        full_name: "Михаил Верещагин",
+        email:     "mikkie@mail.com",
+        role:      "worker",
+        password:  "password",
+        password_confirmation:  "password"
+    }
+
+    users << {id: 3,
+        full_name: "Соня Мармеладова",
+        email:     "marmeladova@mail.com",
+        role:      "guest",
+        password:  "password",
+        password_confirmation:  "password"
+    }
+  end
+
+
   if Criterion.all.empty?
     criterions.each do |c|
        Criterion.create(c)
     end
+  end
+
+  if User.all.empty?
+    users.each do |u|
+      user = User.new(u)
+      user.skip_confirmation!
+      user.save!(:validate => false)
+    end
+  end
+
+  if Version.all.empty?
+    version = rand(100000..999999)
+    Version.new(value: version).save
   end
