@@ -89,7 +89,7 @@ class Admin::CallsController < ApplicationController
   end
 
   def call_params
-    params.require(:call).permit(:date, :user_id, :total_score, :status, :subject, :file_id, :comment, estimates_attributes: [:id, :score, :criterion_id])
+    params.require(:call).permit(:date, :user_id, :total_score, :status, :subject, :file_id, :comment, :record, estimates_attributes: [:id, :score, :criterion_id])
   end
 
 end

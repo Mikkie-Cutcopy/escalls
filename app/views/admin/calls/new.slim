@@ -1,11 +1,11 @@
-= form_for @call, url: admin_calls_path do |f|
+= form_for @call, url: admin_calls_path, html: {multipart: true} do |f|
   = f.label :Тема
   = f.text_field :subject
   br
   = f.label :Дата_звонка
   = f.datetime_select :date
   br
-  = f.file_field :file_id
+  = f.file_field :record
   = f.select :user_id, options_for_select([["Маша Миронова", 2]]), {}, {class: 'form-control input-sm'}
   br
   = f.fields_for :estimates do |e|

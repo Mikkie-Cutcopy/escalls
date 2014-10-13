@@ -1,5 +1,6 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ @import "jquery.fileupload-ui";
 
 
  .container {
@@ -35,6 +36,17 @@
    box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 8px;
  }
 
+ .play-pause {
+   width: 37px !important;
+ }
+
+ .audiojs {
+   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #81e414), color-stop(0.5, #305e28), color-stop(0.51, #323f25), color-stop(1, #070c03)) !important;
+ }
+
+ .progress {
+   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #3c7810), color-stop(0.5, #ADDB5C), color-stop(0.51, #ccc), color-stop(1, #AAD16F)) !important;
+ }
  .scale_title_alert_message {
    position: relative;
    top: 2px;
