@@ -26,6 +26,8 @@ class Admin::CallsController < ApplicationController
     call = Call.new(call_params)
     call.get_total_score!
     call.save
+    call.create_report!
+    #binding.pry
     redirect_to admin_calls_path
   end
 
@@ -44,8 +46,10 @@ class Admin::CallsController < ApplicationController
   end
 
   def update
-    @call.get_total_score!
     @call.update_attributes(call_params)
+    @call.get_total_score!
+    @call.save
+    @call.create_report!
     redirect_to admin_calls_path
   end
 
@@ -73,6 +77,7 @@ class Admin::CallsController < ApplicationController
     end
     @call.get_total_score!
     @call.save
+    @call.create_report!
     redirect_to admin_calls_path
   end
 

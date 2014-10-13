@@ -5,7 +5,7 @@ class Call < ActiveRecord::Base
   has_many :estimates, dependent: :destroy
   has_many :criterions, through: :estimates
   accepts_nested_attributes_for :estimates
-  has_many :reports
+  has_many :reports, dependent: :destroy
 
   class << self
     attr_accessor :allow_create
@@ -34,6 +34,12 @@ class Call < ActiveRecord::Base
       end
     end
     {status: status, objects: objects}
+  end
+
+  def create_report!
+    json_body = self.as_json(only: [:total_score], include: {estimates: {only: [:score], include: {criterion: { only: [:name, :good_thing, :bad_thing, :relative_weight]}}}})
+    report = self.reports.build(data: json_body.to_s)
+    report.save
   end
 
   def fresh?

@@ -22,7 +22,7 @@ br
           | <tr class='warning'>
         th #{call.created_at}
         td
-          = link_to call.subject, admin_call_reports_path(call)
+          = link_to call.subject, admin_call_report_path(call, call.reports.last!)
         td #{call.user.full_name}
         td #{call.total_score}
         td

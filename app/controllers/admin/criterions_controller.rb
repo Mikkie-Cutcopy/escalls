@@ -1,7 +1,7 @@
 class Admin::CriterionsController < ApplicationController
 
   before_action :authenticate_user!
-  after_action  :change_version, only: [:create, :update, :change_relative_weight_value]
+  after_action  :change_version, only: [:create, :destroy, :change_relative_weight_value]
   load_and_authorize_resource
 
   def index
