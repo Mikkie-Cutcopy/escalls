@@ -9,22 +9,12 @@
 </head>
 <body>
 
-<%= admin? ? (render 'layouts/admin_layout') : (render 'layouts/user_layout') %>
+<%= render 'layouts/header' %>
+<%= render 'layouts/flash_messages' %>
 
-<% if flash[:message_alert] %>
-    <div class="header__alert_message">
-      <span class="scale_title_alert_message"><%= flash[:message_alert] %></span>
-    </div>
-<% end %>
-<% if flash[:message_ok] %>
-    <div class="header__ok_alert_message">
-      <span class="scale_title_alert_message"><%= flash[:message_ok] %></span>
-    </div>
-<% end %>
 <div class="container">
   <%= yield %>
 </div>
-
 
 </body>
 </html>

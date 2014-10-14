@@ -1,25 +1,27 @@
-- unless @new_users.empty?
-  h3
-    | New Users
-  div style="width: 800px"
-    table class="table table-bordered"
-      tr class="success"
-        th Name
-        th Actions
-      - @new_users.each do |n|
-        tr class='info'
-          td #{n.full_name}
-          td  #{button_to 'accept', accept_admin_user_path(n)}
+- render 'layouts/workers_tab'
+div class='tab-pane active' id='users'
+  - unless @new_users.empty?
+    h3
+      | New Users
+    div style="width: 800px"
+      table class="table table-bordered"
+        tr class="success"
+          th Name
+          th Actions
+        - @new_users.each do |n|
+          tr class='info'
+            td #{n.full_name}
+            td  #{button_to 'accept', accept_admin_user_path(n)}
 
-h3 Workers
-- unless @workers.empty?
-  div style='width: 800px'
-    table class="table table-bordered"
-      tr class="success"
-        th Name
-        th Actions
-      - @workers.each do |w|
-        tr class='info'
-          td #{w.full_name}
-          td #{link_to 'delete', admin_user_path(w), method: :delete}
+  h3 Workers
+  - unless @workers.empty?
+    div style='width: 800px'
+      table class="table table-bordered"
+        tr class="success"
+          th Name
+          th Actions
+        - @workers.each do |w|
+          tr class='info'
+            td #{w.full_name}
+            td #{link_to 'delete', admin_user_path(w), method: :delete}
 

@@ -5,6 +5,8 @@ class Admin::CallsController < ApplicationController
 
   load_and_authorize_resource
 
+  layout 'admin'
+
   def index
     @calls = Call.all.order('created_at')
     if @calls.empty?

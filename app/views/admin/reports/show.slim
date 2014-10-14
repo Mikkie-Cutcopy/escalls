@@ -1,8 +1,9 @@
-|   <script>
-        audiojs.events.ready(function() {
-            audiojs.createAll();
-        });
-    </script>
+- render 'layouts/calls_tab'
+br
+script
+  | audiojs.events.ready(function() {
+        audiojs.createAll();
+    });
 div
   audio src=@report.call.record.url preload='auto'
   br

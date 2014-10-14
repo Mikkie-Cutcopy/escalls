@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Escalls</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+</head>
+<body>
+
+<%= render 'layouts/header' %>
+
+
+<div class="admin_main">
+  <ul class="nav nav-tabs" role="tablist">
+    <%= yield :tabs %>
+  </ul>
+
+  <div class="tab-content">
+    <%= yield %>
+  </div>
+</div>
+
+
+</body>
+</html>

@@ -1,35 +1,32 @@
-
-= link_to 'sign out', destroy_user_session_path, method: :delete
-br
-= link_to 'new call', new_admin_call_path
-br
-= link_to 'workers', admin_users_path
-br
-= link_to 'criterions', admin_criterions_path
-- unless @calls.empty?
-  div style="width: 800px"
-    table class="table table-bordered"
-      tr class="success"
-        th Date
-        th Subject
-        th Worker
-        th Total Score
-        th Actions
-      - @calls.each do |call|
-        - if call.fresh?
-          | <tr class='info'>
-        - else
-          | <tr class='warning'>
-        th #{call.created_at}
-        td
-          = link_to call.subject, admin_call_report_path(call, call.reports.last!)
-        td #{call.user.full_name}
-        td #{call.total_score}
-        td
-          = button_to 'Edit', edit_admin_call_path(call), method: :get
-          = button_to 'Recount', recount_admin_call_path(call), method: :post
-          = button_to 'Delete', admin_call_path(call), method: :delete
-        | </tr>
+- render 'layouts/calls_tab'
+div class='tab-pane active' id='home'
+  h3 Calls
+  = button_to 'new call', new_admin_call_path, method: :get
+  br
+  - unless @calls.empty?
+    div style="width: 800px"
+      table class="table table-bordered"
+        tr class="success"
+          th Date
+          th Subject
+          th Worker
+          th Total Score
+          th Actions
+        - @calls.each do |call|
+          - if call.fresh?
+            | <tr class='info'>
+          - else
+            | <tr class='warning'>
+          th #{call.created_at}
+          td
+            = link_to call.subject, admin_call_report_path(call, call.reports.last!)
+          td #{call.user.full_name}
+          td #{call.total_score}
+          td
+            = button_to 'Edit', edit_admin_call_path(call), method: :get
+            = button_to 'Recount', recount_admin_call_path(call), method: :post
+            = button_to 'Delete', admin_call_path(call), method: :delete
+          | </tr>
 
 
 

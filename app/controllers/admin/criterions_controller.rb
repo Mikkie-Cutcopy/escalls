@@ -4,6 +4,8 @@ class Admin::CriterionsController < ApplicationController
   after_action  :change_version, only: [:create, :destroy, :change_relative_weight_value]
   load_and_authorize_resource
 
+  layout 'admin'
+
   def index
     flash.now[:message_alert] = amount_check_and_report
     @criterions.order!(:id)

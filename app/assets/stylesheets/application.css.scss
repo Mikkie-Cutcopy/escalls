@@ -3,11 +3,27 @@
  @import "jquery.fileupload-ui";
 
 
+
+ .admin_main {
+   width: 1100px;
+   overflow: hidden;
+   margin: auto;
+
+ }
  .container {
    margin: auto
  }
+
+ .tab-content {
+   background-color: #f7fff3;
+   overflow: hidden;
+ }
+ .page-header-title {
+   margin-left: 40px;
+ }
+
  .header__alert_message {
-   width: 1200px;
+   width: 1100px;
    padding: 5px;
    height: 35px;
    background-color: #ff0033;
@@ -22,7 +38,7 @@
  }
 
  .header__ok_alert_message {
-   width: 1200px;
+   width: 1100px;
    padding: 5px;
    height: 35px;
    background-color: #0fa337;
@@ -41,7 +57,7 @@
  }
 
  .audiojs {
-   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #81e414), color-stop(0.5, #305e28), color-stop(0.51, #323f25), color-stop(1, #070c03)) !important;
+   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #8ee46f), color-stop(0.5, #305e28), color-stop(0.51, #323f25), color-stop(1, #2f4b0d)) !important;
  }
 
  .progress {
@@ -51,3 +67,4 @@
    position: relative;
    top: 2px;
  }
+
