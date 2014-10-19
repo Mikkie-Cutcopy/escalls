@@ -3,7 +3,7 @@ class Call < ActiveRecord::Base
   has_attached_file :record
   validates_attachment_content_type :record, :content_type => ['audio/mpeg', 'audio/mp3'], :message => 'file must be of filetype .mp3', :file_name => { :matches => [/mp3\Z/] }
 
-  validates_attachment_size :record, :less_than => 10.megabytes
+  validates_attachment_size :record, :less_than => 30.megabytes
 
   belongs_to :user
 
