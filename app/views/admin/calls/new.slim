@@ -8,7 +8,7 @@ br
   = f.datetime_select :date
   br
   = f.file_field :record
-  = f.select :user_id, options_for_select([["Маша Миронова", 2]]), {}, {class: 'form-control input-sm'}
+  = f.select :user_id, options_from_collection_for_select(@workers, :id, :full_name), {}, {class: 'form-control input-sm'}
   br
   = f.fields_for :estimates do |e|
     - criterion = @criterions.where('id' => e.object.criterion_id).first

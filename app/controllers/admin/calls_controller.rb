@@ -16,7 +16,7 @@ class Admin::CallsController < ApplicationController
 
   def new
     @call = Call.new
-    @workers = User.where('role' => 'worker')
+    @workers = User.where('role' => 'worker', 'status' => 'active')
     @criterions = Criterion.all
     @criterions.each do |criterion|
       e = @call.estimates.build

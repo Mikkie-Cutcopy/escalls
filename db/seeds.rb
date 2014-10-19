@@ -92,6 +92,7 @@
         full_name: "Александра Солонина",
         email:     "solonina@mail.com",
         role:      "worker",
+        status:    "active",
         password:  "password",
         password_confirmation:  "password"
   }
@@ -100,6 +101,7 @@
         full_name: "Михаил Верещагин",
         email:     "mikkie@mail.com",
         role:      "worker",
+        status:    "active",
         password:  "password",
         password_confirmation:  "password"
     }
