@@ -14,8 +14,20 @@ class Admin::UsersController < ApplicationController
 
   end
 
-  def accept
+  def destroy
+    respond_to do |format|
+      format.js   {}
+      format.json {render json: @user}
 
+    end
+    #@user.destroy
+    #redirect_to admin_users_path
+  end
+
+  def accept
+    @user.update_attributes('status'=> 'active', 'role' => 'worker')
+    @user.save
+    redirect_to admin_users_path
   end
 
 end

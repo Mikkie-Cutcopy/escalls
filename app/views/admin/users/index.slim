@@ -11,7 +11,9 @@ div class='tab-pane active' id='users'
         - @new_users.each do |n|
           tr class='info'
             td #{n.full_name}
-            td  #{button_to 'accept', accept_admin_user_path(n)}
+            td
+              | #{button_to 'accept', accept_admin_user_path(n)}
+                #{button_to 'remove', admin_user_path(n), method: :delete}
 
   h3 Workers
   - unless @workers.empty?
@@ -23,5 +25,5 @@ div class='tab-pane active' id='users'
         - @workers.each do |w|
           tr class='info'
             td #{w.full_name}
-            td #{link_to 'delete', admin_user_path(w), method: :delete}
+            td #{link_to 'popup_delete', onclick: "PopUpShow()"}
 

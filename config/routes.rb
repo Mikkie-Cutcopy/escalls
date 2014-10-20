@@ -10,7 +10,7 @@ Rails.application.routes.draw do
       post :recount, on: :member
     end
     resources :users do
-      get :accept, on: :member
+      post :accept, on: :member
     end
     resources :criterions do
       post :change_relative_weight_value, on: :member
