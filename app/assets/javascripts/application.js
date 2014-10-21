@@ -52,10 +52,6 @@ $(document).ready(function() {
     });
 });
 
-$(document).ready(function(){
-    PopUpHide();
-});
-
 function PopUpShow(){
     $("#popup").show();
 }
@@ -63,3 +59,24 @@ function PopUpHide(){
     $("#popup").hide();
 }
 
+$(document).on('click', 'a.popup-show', function(){
+    PopUpShow();
+    var userID = $(this).attr('data-id')
+    $('.removeUser').on('click', function(){removeUser(userID)})
+});
+
+
+function removeUser(userID){
+    $.ajax({
+        type: 'DELETE',
+        url: '/admin/users/' + userID,
+        success: function(data){
+            if(data === 'ok') {
+                $('a').attr('data-id', userID).closest('tr').remove();
+            }
+        },
+        error: function(data){
+            console.log(data)
+        }
+    })
+}

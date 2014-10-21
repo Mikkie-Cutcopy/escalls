@@ -25,5 +25,7 @@ div class='tab-pane active' id='users'
         - @workers.each do |w|
           tr class='info'
             td #{w.full_name}
-            td #{link_to 'popup_delete', onclick: "PopUpShow()"}
+            td
+              a href="javascript:void(0);" class="popup-show" data-id="#{w.id}"
+                |popup_delete
 
