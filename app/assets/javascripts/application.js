@@ -62,17 +62,22 @@ function PopUpHide(){
 $(document).on('click', 'a.popup-show', function(){
     PopUpShow();
     var userID = $(this).attr('data-id')
-    $('.removeUser').on('click', function(){removeUser(userID)})
+    var a = this
+    $('.removeUser').on('click', function(){removeUser(userID, a)})
 });
 
 
-function removeUser(userID){
+function removeUser(userID, a){
+    var parent_tr = $(a).parents('tr')[0];
     $.ajax({
-        type: 'DELETE',
+        type: 'POST',
+        data: { _method: 'DELETE'},
         url: '/admin/users/' + userID,
         success: function(data){
-            if(data === 'ok') {
-                $('a').attr('data-id', userID).closest('tr').remove();
+            console.log(parent_tr)
+            if(data['success'] === true) {
+                $(parent_tr).fadeOut(150);
+                PopUpHide();
             }
         },
         error: function(data){

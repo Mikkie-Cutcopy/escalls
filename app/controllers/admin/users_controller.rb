@@ -11,19 +11,12 @@ class Admin::UsersController < ApplicationController
   end
 
   def show
-
   end
 
   def destroy
     @user = User.where('id' => params[:id]).first
-    @user.destroy
-    #binding.pry
-    respond_to do |format|
-      format.js   {}
-      format.json {render json: 'ok'}
-    end
-    #@user.destroy
-    #redirect_to admin_users_path
+    value = @user.destroy ? true : false
+    render json: {success: value}
   end
 
   def accept
