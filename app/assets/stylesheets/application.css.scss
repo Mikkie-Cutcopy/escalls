@@ -59,7 +59,7 @@ div {
  }
 
  .audiojs {
-   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #8ee46f), color-stop(0.5, #305e28), color-stop(0.51, #323f25), color-stop(1, #2f4b0d)) !important;
+   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #568c46), color-stop(0.5, #62a352), color-stop(0.51, #8ee46f), color-stop(1, #6db250)) !important;
  }
 
  .progress {
@@ -100,3 +100,8 @@ div {
    box-shadow: 0px 0px 10px #000;
  }
 
+ .btn-success.active, .open > .btn-success.dropdown-toggle {
+   color: white;
+   background-color: #B7D518;
+   border-color: #80B60D;
+ }

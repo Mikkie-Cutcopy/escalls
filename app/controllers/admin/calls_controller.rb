@@ -17,7 +17,7 @@ class Admin::CallsController < ApplicationController
   def new
     @call = Call.new
     @workers = User.where('role' => 'worker', 'status' => 'active')
-    @criterions = Criterion.all
+    @criterions = Criterion.all.order('id')
     @criterions.each do |criterion|
       e = @call.estimates.build
       e.criterion_id = criterion.id
@@ -38,7 +38,8 @@ class Admin::CallsController < ApplicationController
       flash[:message_alert] = 'something went wrong with estimates'
       return redirect_to admin_calls_path
     end
-    @criterions = Criterion.all
+    @workers = User.where('role' => 'worker', 'status' => 'active')
+    @criterions = Criterion.all.order('id')
     @criterions.each do |criterion|
       unless @call.estimates.where('criterion_id' => criterion.id).first
         e = @call.estimates.build

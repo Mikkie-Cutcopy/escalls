@@ -50,6 +50,8 @@ $(document).ready(function() {
         audioSection.html(audio);
         return false;
     });
+
+    $('[checked]').each(function() {$(this).parent('label').addClass('active')})
 });
 
 function PopUpShow(){
