@@ -17,7 +17,7 @@ div class='tab-pane active' id='home'
             | <tr class='info'>
           - else
             | <tr class='warning'>
-          th #{call.created_at}
+          th #{call.created_at.to_s(:escalls_datetime)}
           td
             = link_to call.subject, admin_call_report_path(call, call.reports.last!)
           td #{call.user.full_name}

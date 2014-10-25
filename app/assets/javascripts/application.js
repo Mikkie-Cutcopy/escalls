@@ -37,6 +37,7 @@
 //= require_tree .
 
 
+
 $(document).ready(function() {
     var audioSection = $('section#audio');
     $('a.html5').click(function() {
@@ -52,7 +53,13 @@ $(document).ready(function() {
     });
 
     $('[checked]').each(function() {$(this).parent('label').addClass('active')})
+
 });
+
+$(document).on('click', 'div.escalls-datetimepicker', function(){
+    $('#datetimepicker').datetimepicker('show');
+});
+
 
 function PopUpShow(){
     $("#popup").show();

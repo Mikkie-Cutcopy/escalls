@@ -1,24 +1,39 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
  @import "jquery.fileupload-ui";
+ @import "bootstrap-datetimepicker";
 
-div {
-  overflow: hidden;
-}
+
 
  .admin_main {
    width: 1100px;
    overflow: hidden;
    margin: auto;
-
  }
- .container {
+
+ .escalls-container {
    margin: auto
+ }
+
+ .datetimepicker {
+   left: 750px !important;
+   top: 450px !important;
+ }
+
+ .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+   background-color: #f7fff3;
+   cursor: pointer;
+   color: royalblue;
  }
 
  .tab-content {
    background-color: #f7fff3;
    overflow: hidden;
+   padding-bottom: 50px;
+   border-bottom: 1px solid #dddddd;
+   border-left: 1px solid #dddddd;
+   border-right: 1px solid #dddddd;
+   border-bottom-color: transparent;
  }
  .page-header-title {
    margin-left: 40px;
