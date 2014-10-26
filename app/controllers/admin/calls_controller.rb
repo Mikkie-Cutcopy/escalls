@@ -46,6 +46,7 @@ class Admin::CallsController < ApplicationController
         e.criterion_id = criterion.id
       end
     end
+    #binding.pry
   end
 
   def update

@@ -1,4 +1,10 @@
 - render 'layouts/calls_tab'
+
+script
+  | audiojs.events.ready(function() {
+          audiojs.createAll();
+      });
+
 br
 div.escalls-container.panel.panel-primary style="width: 500px"
   div.panel-heading
@@ -8,8 +14,7 @@ div.escalls-container.panel.panel-primary style="width: 500px"
     = form_for [:admin, @call], html: {multipart: true} do |f|
       = f.label :Тема
       br
-      = f.text_field :subject, style: "float: right; width: 400px", class: 'form-control'
-      br
+      = f.text_field :subject, class: 'form-control'
       br
       = f.label :Дата_звонка
       div.input-group.escalls-datetimepicker
@@ -22,25 +27,31 @@ div.escalls-container.panel.panel-primary style="width: 500px"
             span.glyphicon.glyphicon-calendar
 
       br
-
+      = f.label :Работник
       = f.select :user_id, options_from_collection_for_select(@workers, :id, :full_name), {}, {class: 'form-control'}
       br
-      = f.file_field :record
+      - if @call.record_file_name
+        audio src=@call.record.url preload='auto'
+      - else
+        = f.file_field :record, class: 'btn btn-primary form-control'
       br
-      = f.fields_for :estimates do |e|
-        - criterion = @call.id ? e.object.criterion : @criterions.where('id' => e.object.criterion_id).first # @call.id есть, если редактируем, и нет, если @call новый
-        = e.label criterion.name
-        |
+      ul.list-group
+        li.list-group-item
+          = f.fields_for :estimates do |e|
+            - criterion = @call.id ? e.object.criterion : @criterions.where('id' => e.object.criterion_id).first # @call.id есть, если редактируем, и нет, если @call новый
+            = e.label criterion.name
+            |
 
-        div.btn-group data-toggle="buttons" style='float: right'
-          label.btn.btn-success
-            = e.radio_button :score, 1, type: 'radio'
-          label.btn.btn-success
-            = e.radio_button :score, 0, type: 'radio'
-          label.btn.btn-success
-            = e.radio_button :score, -2, type: 'radio'
-        = e.hidden_field :criterion_id, :value => criterion.id
-        br
+            div.btn-group data-toggle="buttons" style='float: right'
+              label.btn.btn-success
+                = e.radio_button :score, 1, type: 'radio'
+              label.btn.btn-success
+                = e.radio_button :score, 0, type: 'radio'
+              label.btn.btn-success
+                = e.radio_button :score, -2, type: 'radio'
+            = e.hidden_field :criterion_id, :value => criterion.id
+            br
 
       br
-      = f.submit
+      = f.submit 'Обновить', class: 'btn btn-primary pull-right'
+      = button_to 'Отмена', admin_calls_path, class: 'btn btn-primary pull-right'
