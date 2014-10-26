@@ -2,7 +2,7 @@
  @import "bootstrap";
  @import "jquery.fileupload-ui";
  @import "bootstrap-datetimepicker";
-
+ @import "jquery-ui";
 
 
  .admin_main {
@@ -13,6 +13,12 @@
 
  .escalls-container {
    margin: auto
+ }
+
+ textarea.form-control {
+   height: 130px;
+   width: 468px;
+
  }
 
  .datetimepicker {

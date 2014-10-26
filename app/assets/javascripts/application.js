@@ -31,6 +31,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui
 //= require turbolinks
 //= require jquery-fileupload
 //= require bootstrap
@@ -70,11 +71,16 @@ function PopUpHide(){
 
 $(document).on('click', 'a.popup-show', function(){
     PopUpShow();
-    var userID = $(this).attr('data-id')
-    var a = this
+    var userID = $(this).attr('data-id');
+    var a = this;
     $('.removeUser').on('click', function(){removeUser(userID, a)})
 });
 
+$(function(){
+     $('a#comment-btn').bind('click', function() {
+         $('div.comment').toggle('blind', 600)
+         })
+});
 
 function removeUser(userID, a){
     var parent_tr = $(a).parents('tr')[0];

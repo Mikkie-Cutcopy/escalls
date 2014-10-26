@@ -37,21 +37,32 @@ div.escalls-container.panel.panel-primary style="width: 500px"
       br
       ul.list-group
         li.list-group-item
-          = f.fields_for :estimates do |e|
-            - criterion = @call.id ? e.object.criterion : @criterions.where('id' => e.object.criterion_id).first # @call.id есть, если редактируем, и нет, если @call новый
-            = e.label criterion.name
-            |
+          table.table
+            = f.fields_for :estimates do |e|
+              tr
+                td
+                  - criterion = @call.id ? e.object.criterion : @criterions.where('id' => e.object.criterion_id).first # @call.id есть, если редактируем, и нет, если @call новый
+                  = e.label criterion.name
+                  |
 
-            div.btn-group data-toggle="buttons" style='float: right'
-              label.btn.btn-success
-                = e.radio_button :score, 1, type: 'radio'
-              label.btn.btn-success
-                = e.radio_button :score, 0, type: 'radio'
-              label.btn.btn-success
-                = e.radio_button :score, -2, type: 'radio'
-            = e.hidden_field :criterion_id, :value => criterion.id
-            br
+                  div.btn-group data-toggle="buttons" style='float: right'
+                    label.btn.btn-success
+                      | +
+                      = e.radio_button :score, 1, type: 'radio'
+                    label.btn.btn-success
+                      | &plusmn
+                      = e.radio_button :score, 0, type: 'radio'
+                    label.btn.btn-success
+                      | -
+                      = e.radio_button :score, -2, type: 'radio'
+                  = e.hidden_field :criterion_id, :value => criterion.id
+                  br
+      div.comment style='display: none'
+        = f.label :Комментарий, id: 'comment'
+        = f.text_area :comment, class: 'form-control', id: 'comment'
+        br
+      a.btn.btn-primary.pull-left href='javascript:void(0);' id='comment-btn'
+        | Добавить комментарий
 
-      br
-      = f.submit 'Обновить', class: 'btn btn-primary pull-right'
-      = button_to 'Отмена', admin_calls_path, class: 'btn btn-primary pull-right'
+      = f.submit 'Обновить', class: 'btn btn-primary pull-right', style: 'width: 90px'
+      = button_to 'Отмена', admin_calls_path, class: 'btn btn-primary pull-right', style: 'width: 90px; margin-right: 10px'

@@ -14,6 +14,7 @@ gem 'spring',        group: :development
 gem 'pry'
 gem 'thin'
 gem 'jquery-fileupload-rails'
+gem 'jquery-ui-rails'
 gem 'paperclip'
 
 gem 'devise'
