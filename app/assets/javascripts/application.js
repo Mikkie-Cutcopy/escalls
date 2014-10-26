@@ -38,7 +38,6 @@
 //= require_tree .
 
 
-
 $(document).ready(function() {
     var audioSection = $('section#audio');
     $('a.html5').click(function() {
@@ -76,11 +75,13 @@ $(document).on('click', 'a.popup-show', function(){
     $('.removeUser').on('click', function(){removeUser(userID, a)})
 });
 
-$(function(){
+$(function showComment(){
      $('a#comment-btn').bind('click', function() {
-         $('div.comment').toggle('blind', 600)
+         $('div.comment').toggle('blind', 400)
+         $('a#comment-btn').toggleClass('active')
          })
 });
+
 
 function removeUser(userID, a){
     var parent_tr = $(a).parents('tr')[0];

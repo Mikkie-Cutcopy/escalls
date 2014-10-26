@@ -20,6 +20,7 @@ class Admin::CallsController < ApplicationController
     @criterions = Criterion.all.order('id')
     @criterions.each do |criterion|
       e = @call.estimates.build
+      e.score = 1
       e.criterion_id = criterion.id
     end
   end

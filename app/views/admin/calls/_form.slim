@@ -5,6 +5,11 @@ script
           audiojs.createAll();
       });
 
+- unless @call.comment.blank?
+  script
+    |$(document).ready(function() {
+       $('a#comment-btn').click();
+     });
 br
 div.escalls-container.panel.panel-primary style="width: 500px"
   div.panel-heading
@@ -59,9 +64,9 @@ div.escalls-container.panel.panel-primary style="width: 500px"
                   br
       div.comment style='display: none'
         = f.label :Комментарий, id: 'comment'
-        = f.text_area :comment, class: 'form-control', id: 'comment'
+        = f.text_area :comment, class: 'form-control', id: 'comment' ,cols: '63'
         br
-      a.btn.btn-primary.pull-left href='javascript:void(0);' id='comment-btn'
+      a.btn.btn-primary.pull-left type='radio' href='javascript:void(0);' id='comment-btn'
         | Добавить комментарий
 
       = f.submit 'Обновить', class: 'btn btn-primary pull-right', style: 'width: 90px'
