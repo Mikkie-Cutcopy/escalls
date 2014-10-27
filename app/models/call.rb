@@ -16,6 +16,16 @@ class Call < ActiveRecord::Base
     attr_accessor :allow_create
   end
 
+  attr_accessor :non_assign_score
+
+  before_save do
+    self.get_total_score!
+  end
+
+  after_save do
+    self.create_report!
+  end
+
   def get_total_score!
     total_score = 0
     self.estimates.each do |e|
