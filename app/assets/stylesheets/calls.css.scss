@@ -8,17 +8,22 @@
   margin-right: auto;
   width: 900px;
   height: 50px;
-  background-color: #c1fb87;
-  border: 1px solid #87ce7b;
+  background-color: #dafbb2;
+  border: 1px solid #b9cba0;
   margin-top: -1px;
   padding-right: 10px;
   padding-left: 10px;
   padding-top: 5px;
 
-  -webkit-box-shadow: rgba(38, 88, 38, 0.23) 0px 1px 3px;
+  -webkit-box-shadow: rgba(41, 96, 41, 0.23) 0px 1px 3px;
   -moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 4px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px;
 
+}
+
+.call-active {
+  background-color: #bbd79b !important;
+  border: 1px solid #afc797 !important;
 }
 
 .call-score {
@@ -42,7 +47,7 @@
 }
 
 .call-dropdown {
-  width: 100px;
+  width: 50px;
   display: inline-block;
 
   float: right;

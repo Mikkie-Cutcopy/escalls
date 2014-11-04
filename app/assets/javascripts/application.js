@@ -107,9 +107,7 @@ $(function(){
     $('.call-panel').bind('mouseenter mouseleave', function(event) {
         $("> div.dropdown", this).toggleClass("invisible");
         $("> div.dropdown", this).removeClass("open");
-        $(this).css({backgroundСolor: "#85c575"});
-
-
+        $(this).toggleClass("call-active");
 
     })
 });

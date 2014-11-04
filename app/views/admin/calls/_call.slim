@@ -4,8 +4,7 @@ div.call-panel
       = call.total_score
   div.dropdown.call-dropdown.invisible
     button.btn.btn-primary.dropdown-toggle type="button" id="dropdownMenu1" data-toggle="dropdown"
-      | Действия
-      span.caret
+      span.glyphicon.glyphicon-pencil
     ul.dropdown-menu role="menu" aria-labelledby="dropdownMenu1"
       li role="presentation"
         = link_to 'Редактировать', edit_admin_call_path(call), method: :get, role: "menuitem", tabindex: "-1"
@@ -21,7 +20,7 @@ div.call-panel
       = call.user.full_name
 
   div.call-content
-    = link_to call.subject, admin_call_report_path(call, call.reports.last!)
+    = call.subject
 
 
 
