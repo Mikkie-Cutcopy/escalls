@@ -3,6 +3,7 @@
  @import "jquery.fileupload-ui";
  @import "bootstrap-datetimepicker";
  @import "jquery-ui";
+ @import "calls";
 
 
  .admin_main {
@@ -21,6 +22,11 @@
 
  }
 
+ .tab-pane-content {
+   margin: auto;
+   width: 900px
+ }
+
  .datetimepicker {
    left: 750px !important;
    top: 450px !important;
@@ -35,12 +41,12 @@
  .tab-content {
    background-color: #f7fff3;
    overflow: hidden;
-   padding-bottom: 50px;
+   padding-bottom: 100px;
    border-bottom: 1px solid #dddddd;
    border-left: 1px solid #dddddd;
    border-right: 1px solid #dddddd;
-   border-bottom-color: transparent;
-   margin-bottom: 200px;
+
+   margin-bottom: 300px;
  }
  .page-header-title {
    margin-left: 40px;

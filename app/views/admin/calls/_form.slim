@@ -68,6 +68,5 @@ div.escalls-container.panel.panel-primary style="width: 500px"
         br
       a.btn.btn-primary.pull-left type='radio' href='javascript:void(0);' id='comment-btn'
         | Добавить комментарий
-
       = f.submit 'Обновить', class: 'btn btn-primary pull-right', style: 'width: 90px'
-      = button_to 'Отмена', admin_calls_path, class: 'btn btn-primary pull-right', style: 'width: 90px; margin-right: 10px'
+      = link_to 'Отмена', admin_calls_path, method: :get, class: 'btn btn-primary pull-right', style: 'width: 90px; margin-right: 10px'
