@@ -1,33 +1,14 @@
 - render 'layouts/calls_tab'
 div class='tab-pane active' id='home'
-  h3 Calls
-  = button_to 'new call', new_admin_call_path, method: :get
-  br
-  - unless @calls.empty?
-    div style="width: 1100px"
-      table class="table table-bordered"
-        tr class="success"
-          th Date
-          th Subject
-          th Worker
-          th Total Score
-          th Actions
-        - @calls.each do |call|
-          - if call.fresh?
-            | <tr class='info'>
-          - else
-            | <tr class='warning'>
-          th #{call.created_at.to_s(:escalls_datetime)}
-          td
-            = link_to call.subject, admin_call_report_path(call, call.reports.last!)
-          td #{call.user.full_name}
-          td #{call.total_score}
-          td
-            = button_to 'Edit', edit_admin_call_path(call), method: :get
-            = button_to 'Recount', recount_admin_call_path(call), method: :post
-            = button_to 'Delete', admin_call_path(call), method: :delete
-          | </tr>
-
+  div.page-header
+    h2.page-header-title Calls
+  div.tab-pane-content
+    = button_to 'New call', new_admin_call_path, method: :get, class: 'btn btn-primary pull-right'
+    br
+    br
+    br
+    - unless @calls.empty?
+      = render partial: 'call', collection: @calls
 
 
 

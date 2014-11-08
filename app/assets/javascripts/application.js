@@ -101,3 +101,13 @@ function removeUser(userID, a){
         }
     })
 }
+
+
+$(function(){
+    $('.call-panel').bind('mouseenter mouseleave', function(event) {
+        $("> div.dropdown", this).toggleClass("invisible");
+        $("> div.dropdown", this).removeClass("open");
+        $(this).toggleClass("call-active");
+
+    })
+});

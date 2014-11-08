@@ -27,9 +27,7 @@ class Admin::CallsController < ApplicationController
 
   def create
     call = Call.new(call_params)
-    call.get_total_score!
     call.save
-    call.create_report!
     #binding.pry
     redirect_to admin_calls_path
   end
@@ -42,19 +40,19 @@ class Admin::CallsController < ApplicationController
     @workers = User.where('role' => 'worker', 'status' => 'active')
     @criterions = Criterion.all.order('id')
     @criterions.each do |criterion|
+      #ищем естимэйты без оценок
       unless @call.estimates.where('criterion_id' => criterion.id).first
         e = @call.estimates.build
         e.criterion_id = criterion.id
+        @call.non_assign_score = true
       end
     end
-    #binding.pry
+    flash.now[:message_alert] = "Есть неоцененные критерии" if @call.non_assign_score
   end
 
   def update
     @call.update_attributes(call_params)
-    @call.get_total_score!
     @call.save
-    @call.create_report!
     redirect_to admin_calls_path
   end
 
@@ -80,9 +78,7 @@ class Admin::CallsController < ApplicationController
         break
       end
     end
-    @call.get_total_score!
     @call.save
-    @call.create_report!
     redirect_to admin_calls_path
   end
 
@@ -91,6 +87,10 @@ class Admin::CallsController < ApplicationController
   def allow_create_call
     Criterion.amount_check
     return redirect_to admin_criterions_path unless Call.allow_create
+  end
+
+  def non_assign_score
+
   end
 
   def call_params

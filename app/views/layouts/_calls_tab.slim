@@ -1,7 +1,7 @@
 - content_for :tabs do
   li class='active'
-    = link_to 'Calls', admin_calls_path
+    = link_to 'Calls', admin_calls_path, method: :get
   li
-    = link_to 'Criterions', admin_criterions_path
+    = link_to 'Criterions', admin_criterions_path, method: :get
   li
-    = link_to 'Workers', admin_users_path
+    = link_to 'Workers', admin_users_path, method: :get

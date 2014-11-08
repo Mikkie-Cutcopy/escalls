@@ -1,0 +1,26 @@
+div.call-panel
+  div.call-score
+    button.btn.btn-primary.disable
+      = call.total_score
+  div.dropdown.call-dropdown.invisible
+    button.btn.btn-primary.dropdown-toggle type="button" id="dropdownMenu1" data-toggle="dropdown"
+      span.glyphicon.glyphicon-pencil
+    ul.dropdown-menu role="menu" aria-labelledby="dropdownMenu1"
+      li role="presentation"
+        = link_to 'Редактировать', edit_admin_call_path(call), method: :get, role: "menuitem", tabindex: "-1"
+      li role="presentation"
+        = link_to 'Пересчитать', recount_admin_call_path(call), method: :post, role: "menuitem", tabindex: "-1"
+      li role="presentation"
+        = link_to 'Удалить',admin_call_path(call), method: :delete, role: "menuitem", tabindex: "-1"
+  div.call-head
+    div.call-date
+      b
+        = call.date.to_s(:escalls_datetime)
+    div.call-worker
+      = call.user.full_name
+
+  div.call-content
+    = call.subject
+
+
+
