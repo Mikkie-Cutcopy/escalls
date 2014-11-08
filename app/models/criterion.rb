@@ -5,12 +5,7 @@ class Criterion < ActiveRecord::Base
 
   def self.amount_check
     amount = self.all.inject(0) {|sum, c| sum + c.relative_weight}
-    Call.allow_create = case
-      when amount != 100
-        false
-      else
-        true
-    end
+    Call.allow_create = amount == 100
     amount
   end
 
