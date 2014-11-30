@@ -5,7 +5,7 @@ class Criterion < ActiveRecord::Base
 
   def self.amount_check
     amount = self.all.inject(0) {|sum, c| sum + c.relative_weight}
-    Call.allow_create = amount == 100
+    Call.allow_create = amount.eql?(100)
     amount
   end
 

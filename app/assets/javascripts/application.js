@@ -35,6 +35,7 @@
 //= require turbolinks
 //= require jquery-fileupload
 //= require bootstrap
+
 //= require_tree .
 
 

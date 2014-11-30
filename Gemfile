@@ -16,6 +16,7 @@ gem 'thin'
 gem 'jquery-fileupload-rails'
 gem 'jquery-ui-rails'
 gem 'paperclip'
+#gem 'soundmanager2-rails'
 
 gem 'devise'
 gem 'cancancan'
@@ -25,6 +26,7 @@ gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 
 gem 'slim'
+gem 'meta_request'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

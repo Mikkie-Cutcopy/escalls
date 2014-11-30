@@ -4,6 +4,8 @@ class Call < ActiveRecord::Base
   validates_attachment_content_type :record, :content_type => ['audio/mpeg', 'audio/mp3'], :message => 'file must be of filetype .mp3', :file_name => { :matches => [/mp3\Z/] }
 
   validates_attachment_size :record, :less_than => 30.megabytes
+  #validates :subject, presence: true
+  #validates :date, format: {with: /\d{2}-\d{2}-\d{4}\s\d{2}:\d{2}/}
 
   belongs_to :user
 
@@ -17,6 +19,7 @@ class Call < ActiveRecord::Base
   end
 
   attr_accessor :non_assign_score
+  attr_accessor :correct_dependencies
 
   before_save do
     self.get_total_score!
@@ -38,17 +41,17 @@ class Call < ActiveRecord::Base
   end
 
   def check_for_dependencies
-    status = true
+    self.correct_dependencies = true
     objects = []
     unless self.estimates.empty?
       self.estimates.each do |e|
          unless e.criterion
-           status = false
+           self.correct_dependencies = false
            objects << e
          end
       end
     end
-    {status: status, objects: objects}
+    {status: self.correct_dependencies, objects: objects}
   end
 
   def create_report!
@@ -58,6 +61,10 @@ class Call < ActiveRecord::Base
   end
 
   def fresh?
-    self.version == Version.last.value
+    self.version.eql?(Version.last.value)
+  end
+
+  def new?
+    self.id.blank?
   end
 end

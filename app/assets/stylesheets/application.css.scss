@@ -8,6 +8,7 @@
 
 
 
+
  .admin_main {
    width: 1100px;
    overflow: hidden;
@@ -26,7 +27,7 @@
 
  .tab-pane-content {
    margin: auto;
-   width: 900px
+   width: 1000px
  }
 
  .datetimepicker {
@@ -126,4 +127,9 @@
    color: white;
    background-color: #B7D518;
    border-color: #80B60D;
+ }
+
+ .field_with_errors {
+   @extend .form-group;
+   @extend .has-error;
  }

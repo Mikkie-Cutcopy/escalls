@@ -13,8 +13,7 @@ class Admin::CriterionsController < ApplicationController
 
 
   def new
-    @criterion = Criterion.new
-    @criterion.relative_weight = 0
+    @criterion = Criterion.new(relative_weight: 0)
   end
 
   def create
