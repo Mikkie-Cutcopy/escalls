@@ -1,30 +1,33 @@
 - render 'layouts/criterions_tab'
 div class='tab-pane active' id='criterions'
-  h3 Criterions
-  = render 'layouts/flash_messages'
-  = button_to 'New', new_admin_criterion_path, method: :get
-  p class='bg-danger'
-    = @message
-  - unless @criterions.empty?
-    div style="width:  1100px"
-      table class="table table-bordered"
-        tr class="success"
-          th Name
-          th Good thing
-          th Bad thing
-          th Relative weight
-          th Actions
-        - @criterions.each do |c|
-          tr class='info'
-            th #{c.name}
-            td #{c.good_thing}
-            td #{c.bad_thing}
-            td
-              = c.relative_weight
-              = form_tag change_relative_weight_value_admin_criterion_path(c) do
-                = text_field_tag :new_relative_weight
-                = submit_tag 'Ok'
+  div.page-header
+    h2.page-header-title Критерии оценки
+  div.tab-pane-content
+    = render 'layouts/flash_messages'
+    = button_to 'Добавить критерий', new_admin_criterion_path, method: :get, class: 'button btn btn-primary'
+    p class='bg-danger'
+      = @message
+    - unless @criterions.empty?
+      div style="width:  1000px"
+        table class="table table-bordered"
+          tr class="success"
+            th Name
+            th Good thing
+            th Bad thing
+            th Relative weight
+            th Actions
+          - @criterions.each do |c|
+            tr class='info'
+              th #{c.name}
+              td #{c.good_thing}
+              td #{c.bad_thing}
+              td
+                = c.relative_weight
+                = form_tag change_relative_weight_value_admin_criterion_path(c) do
+                  = text_field_tag :new_relative_weight
+                  = submit_tag 'Ok', class: 'button btn btn-primary'
 
-            td
-              = button_to 'edit', edit_admin_criterion_path(c), method: :get
-              = button_to 'delete', admin_criterion_path(c), method: :delete
+              td
+                = button_to 'edit', edit_admin_criterion_path(c), method: :get, class: 'button btn btn-primary'
+
+                = button_to 'delete', admin_criterion_path(c), method: :delete, data: { confirm: 'Вы уверены?' }, class: 'button btn btn-primary'

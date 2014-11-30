@@ -2,7 +2,7 @@
 
 class Admin::CallsController < ApplicationController
 
-  before_action :authenticate_user!
+  before_action :authenticate_admin!
   before_action :allow_create_call, only: [:new, :create, :edit, :update, :recount]
 
   load_and_authorize_resource
@@ -10,7 +10,7 @@ class Admin::CallsController < ApplicationController
   layout 'admin'
 
   def index
-   @calls = Call.all.order('created_at')
+   @calls = Call.all.order(created_at: :desc)
    if @calls.empty?
      flash.now[:message_alert] = 'You doesn\'t have a calls yet'
    end
@@ -56,7 +56,6 @@ class Admin::CallsController < ApplicationController
   end
 
   def show
-
   end
 
   def destroy
@@ -85,6 +84,7 @@ class Admin::CallsController < ApplicationController
 
   def allow_create_call
     Criterion.amount_check
+
     return redirect_to admin_criterions_path unless Call.allow_create
   end
 

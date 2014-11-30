@@ -1,0 +1,64 @@
+div.page-header
+  h2.page-header-title Call
+
+- render 'layouts/calls_tab'
+
+script
+  | audiojs.events.ready(function() {
+          audiojs.createAll();
+      });
+
+- unless @call.comment.blank?
+  script
+    |$(document).ready(function() {
+       $('a#comment-btn').click();
+     });
+br
+div.escalls-container.panel.panel-primary style="width: 500px"
+  div.panel-heading
+    h3.panel-title
+  div.panel-body
+    = form_for [:admin, @call], html: {multipart: true} do |f|
+      div.panel.panel-default
+        div.panel-body
+          b Тема:&nbsp
+          = f.object.subject
+          br
+          b Работник:&nbsp
+          = f.object.user.full_name
+          br
+          b Дата_звонка:&nbsp
+          = f.object.date.to_s(:escalls_datetime)
+          br
+      audio src=@call.record.url preload='auto'
+      |
+        <div class="sm2-bar-ui"> </div>
+      br
+      ul.list-group
+        li.list-group-item
+          table.table
+            = f.fields_for :estimates do |e|
+              tr
+                td
+                  - criterion = e.object.criterion
+                  = e.label criterion.name
+                  |
+                  div.btn-group  style='float: right'
+                    - if e.object.score.eql?(1)
+                      label.btn.btn-success.btn-square.disable
+                        | +
+                    - elsif e.object.score.eql?(0)
+                      label.btn.btn-warning.btn-square.disable
+                        | &plusmn
+                    - elsif e.object.score.eql?(-2)
+                      label.btn.btn-danger.btn-square.disable
+                        | -
+                  br
+
+
+          div.alert.alert-info
+            b Суммарный балл
+            label.btn.btn-success.disable    style='float: right'
+              = @call.total_score
+
+      = link_to 'Ok', root_path, method: :get, class: 'btn btn-primary pull-right', style: 'width: 90px; margin-right: 10px'

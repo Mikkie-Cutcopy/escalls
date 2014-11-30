@@ -12,8 +12,14 @@
 <%= render 'layouts/header' %>
 <%= render 'layouts/flash_messages' %>
 
-<div class="container">
-  <%= yield %>
+<div class="admin_main">
+  <ul class="nav nav-tabs" role="tablist">
+    <%= yield :tabs %>
+  </ul>
+
+  <div class="tab-content">
+    <%= yield %>
+  </div>
 </div>
 
 </body>

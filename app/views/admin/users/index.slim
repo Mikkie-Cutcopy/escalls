@@ -1,31 +1,33 @@
 - render 'layouts/workers_tab'
 div class='tab-pane active' id='users'
-  - unless @new_users.empty?
-    h3
-      | New Users
-    div style="width: 1100px"
-      table class="table table-bordered"
-        tr class="success"
-          th Name
-          th Actions
-        - @new_users.each do |n|
-          tr class='info'
-            td #{n.full_name}
-            td
-              | #{button_to 'accept', accept_admin_user_path(n)}
-                #{button_to 'remove', admin_user_path(n), method: :delete}
+  div.page-header
+    h2.page-header-title Сотрудники
+  div.tab-pane-content
+    - unless @new_users.empty?
+      h3
+        | New Users
+      div style="width: 1100px"
+        table class="table table-bordered"
+          tr class="success"
+            th Name
+            th Actions
+          - @new_users.each do |n|
+            tr class='info'
+              td #{n.full_name}
+              td
+                | #{button_to 'accept', accept_admin_user_path(n)}
+                  #{button_to 'remove', admin_user_path(n), method: :delete}
 
-  h3 Workers
-  - unless @workers.empty?
-    div style='width: 1100px'
-      table class="table table-bordered"
-        tr class="success"
-          th Name
-          th Actions
-        - @workers.each do |w|
-          tr class='info' worker-id="#{w.id}"
-            td #{w.full_name}
-            td
-              a href="javascript:void(0);" class="popup-show" data-id="#{w.id}"
-                |delete
+    - unless @workers.empty?
+      div style='width: 1000px'
+        table class="table table-bordered"
+          tr class="success"
+            th Name
+            th Actions
+          - @workers.each do |w|
+            tr class='info' worker-id="#{w.id}"
+              td #{w.full_name}
+              td
+                a href="javascript:void(0);" class="popup-show" data-id="#{w.id}"
+                  |delete
 

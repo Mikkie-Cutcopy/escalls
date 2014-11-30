@@ -8,10 +8,10 @@ class User < ActiveRecord::Base
 
 
   def admin?
-    self.role == 'admin'
+    self.role.eql?('admin')
   end
 
   def worker?
-    self.role == 'worker'
+    self.role.eql?('worker')
   end
 end

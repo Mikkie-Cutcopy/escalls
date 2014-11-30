@@ -1,6 +1,7 @@
+#encoding: utf-8
 class Admin::CriterionsController < ApplicationController
 
-  before_action :authenticate_user!
+  before_action :authenticate_admin!
   after_action  :change_version, only: [:create, :destroy, :change_relative_weight_value]
   load_and_authorize_resource
 

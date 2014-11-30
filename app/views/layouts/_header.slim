@@ -1,12 +1,11 @@
 div.page-header
   div.page-header-title
-    - if admin?
-        h1
-          | Escalls
-          small  admin
-    - else
-        h1
-          | Escalls
+    h1
+      | Escalls
+      - if admin?
+        small  admin
+      - else
+        small  worker
     div.page-header-links
       - if user_signed_in?
         = link_to 'аккаунт', user_path(current_user), method: :get
