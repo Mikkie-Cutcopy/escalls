@@ -1,5 +1,5 @@
-div class="page-header"
-  div class="page-header-title"
+div.page-header
+  div.page-header-title
     - if admin?
         h1
           | Escalls
@@ -7,3 +7,9 @@ div class="page-header"
     - else
         h1
           | Escalls
+    div.page-header-links
+      - if user_signed_in?
+        = link_to 'аккаунт', user_path(current_user), method: :get
+        | &nbsp|&nbsp
+        = link_to 'выйти', destroy_user_session_path, method: :delete
+
