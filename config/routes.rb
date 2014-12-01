@@ -21,4 +21,6 @@ Rails.application.routes.draw do
     resources :calls, only: [:index, :show]
   end
 
+  resources :criterions, only: [:index, :show]
+
 end

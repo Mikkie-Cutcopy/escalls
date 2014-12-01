@@ -11,7 +11,7 @@ div.call-panel
       li role="presentation"
         = link_to 'Пересчитать', recount_admin_call_path(call), method: :post, role: "menuitem", tabindex: "-1"
       li role="presentation"
-        = link_to 'Удалить',admin_call_path(call), method: :delete, role: "menuitem", tabindex: "-1"
+        = link_to 'Удалить',admin_call_path(call), method: :delete, data: { confirm: 'Вы уверены?' }, role: "menuitem", tabindex: "-1"
   div.call-head
     div.call-date
       b
@@ -21,6 +21,7 @@ div.call-panel
 
   div.call-content
     = link_to call.subject, admin_call_report_path(call, call.reports.last!), method: :get
+
 
 
 

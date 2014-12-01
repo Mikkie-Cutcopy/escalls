@@ -1,11 +1,9 @@
-= link_to 'about me', user_path(@user)
-|  |
-= link_to 'sign out', destroy_user_session_path, method: :delete
-br
-p class='bg-danger' You doesn't have a calls yet
-
-
-
-
-
+- render 'layouts/calls_tab'
+div class='tab-pane active' id='home'
+  div.page-header
+    h2.page-header-title Calls
+  div.tab-pane-content
+    br
+    - unless @calls.empty?
+      = render partial: 'call', collection: @calls
 

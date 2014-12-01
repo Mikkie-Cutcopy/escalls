@@ -46,7 +46,7 @@ div.escalls-container.panel.panel-primary style="width: 500px"
             = f.fields_for :estimates do |e|
               tr
                 td
-                  - criterion = @call.id ? e.object.criterion : @criterions.where('id' => e.object.criterion_id).first # @call.id есть, если редактируем, и нет, если @call новый
+                  - criterion = @call.new? ? e.object.criterion : @criterions.where('id' => e.object.criterion_id).first # @call.id есть, если редактируем, и нет, если @call новый
                   = e.label criterion.name
                   |
 
@@ -68,5 +68,6 @@ div.escalls-container.panel.panel-primary style="width: 500px"
         br
       a.btn.btn-primary.pull-left type='radio' href='javascript:void(0);' id='comment-btn'
         | Добавить комментарий
-      = f.submit 'Обновить', class: 'btn btn-primary pull-right', style: 'width: 90px'
+
+      = f.submit (@call.new? ? 'Создать' : 'Обновить'), class: 'btn btn-primary pull-right', style: 'width: 90px'
       = link_to 'Отмена', admin_calls_path, method: :get, class: 'btn btn-primary pull-right', style: 'width: 90px; margin-right: 10px'

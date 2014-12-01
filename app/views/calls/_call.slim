@@ -1,0 +1,16 @@
+div.call-panel
+  div.call-score
+    button.btn.btn-primary.disable
+      = call.total_score
+  div.call-head
+    div.call-date
+      b
+        = call.date.to_s(:escalls_datetime)
+    div.call-worker
+      = call.user.full_name
+
+  div.call-content
+    = link_to call.subject, user_call_path(current_user, call), method: :get
+
+
+

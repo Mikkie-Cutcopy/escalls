@@ -1,6 +1,7 @@
+#encoding: utf-8
 class Admin::CriterionsController < ApplicationController
 
-  before_action :authenticate_user!
+  before_action :authenticate_admin!
   after_action  :change_version, only: [:create, :destroy, :change_relative_weight_value]
   load_and_authorize_resource
 
@@ -13,8 +14,7 @@ class Admin::CriterionsController < ApplicationController
 
 
   def new
-    @criterion = Criterion.new
-    @criterion.relative_weight = 0
+    @criterion = Criterion.new(relative_weight: 0)
   end
 
   def create

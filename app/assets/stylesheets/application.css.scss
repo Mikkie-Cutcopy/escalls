@@ -8,6 +8,7 @@
 
 
 
+
  .admin_main {
    width: 1100px;
    overflow: hidden;
@@ -24,9 +25,17 @@
 
  }
 
+ h1 {
+   display: inline-block;
+ }
+
+ h2 {
+   margin-top: 0px;
+ }
+
  .tab-pane-content {
    margin: auto;
-   width: 900px
+   width: 1000px
  }
 
  .datetimepicker {
@@ -52,11 +61,18 @@
  }
  .page-header-title {
    margin-left: 40px;
+   margin-right: 40px;
  }
 
+ .page-header-links {
+   display: inline-block;
+   float: right;
+   margin-top: 20px;
+   margin-bottom: 10px;
+ }
  .header__alert_message {
    width: 1100px;
-   padding: 5px;
+   padding: 7px;
    height: 35px;
    background-color: #ff0033;
    font-size: 16px;
@@ -92,7 +108,21 @@
    width: 468px;
  }
 
+.account-container {
+  width: 380px;
+  min-height: 300px;
+  padding: 20px;
+  margin-left: 162px;
+  /* box-shadow */
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 8px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 8px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 8px;
+}
 
+.account-btn {
+  width: 340px;
+  margin-bottom: 10px;
+}
 
  .b-container{
    width:500px;
@@ -126,4 +156,9 @@
    color: white;
    background-color: #B7D518;
    border-color: #80B60D;
+ }
+
+ .field_with_errors {
+   @extend .form-group;
+   @extend .has-error;
  }

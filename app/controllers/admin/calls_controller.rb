@@ -1,6 +1,8 @@
+#encoding: utf-8
+
 class Admin::CallsController < ApplicationController
 
-  before_action :authenticate_user!
+  before_action :authenticate_admin!
   before_action :allow_create_call, only: [:new, :create, :edit, :update, :recount]
 
   load_and_authorize_resource
@@ -8,27 +10,25 @@ class Admin::CallsController < ApplicationController
   layout 'admin'
 
   def index
-    @calls = Call.all.order('created_at')
-    if @calls.empty?
-      flash.now[:message_alert] = 'You doesn\'t have a calls yet'
-    end
+   @calls = Call.all.order(created_at: :desc)
+   if @calls.empty?
+     flash.now[:message_alert] = 'You doesn\'t have a calls yet'
+   end
   end
 
   def new
-    @call = Call.new
     @workers = User.where('role' => 'worker', 'status' => 'active')
     @criterions = Criterion.all.order('id')
     @criterions.each do |criterion|
-      e = @call.estimates.build
-      e.score = 1
-      e.criterion_id = criterion.id
+      @call.estimates.build(score: 1, criterion_id: criterion.id)
     end
   end
 
   def create
     call = Call.new(call_params)
-    call.save
-    #binding.pry
+    unless call.save
+      return redirect_to new_admin_call_path(call)
+    end
     redirect_to admin_calls_path
   end
 
@@ -42,8 +42,7 @@ class Admin::CallsController < ApplicationController
     @criterions.each do |criterion|
       #ищем естимэйты без оценок
       unless @call.estimates.where('criterion_id' => criterion.id).first
-        e = @call.estimates.build
-        e.criterion_id = criterion.id
+        @call.estimates.build(criterion_id: criterion.id)
         @call.non_assign_score = true
       end
     end
@@ -57,7 +56,6 @@ class Admin::CallsController < ApplicationController
   end
 
   def show
-
   end
 
   def destroy
@@ -86,6 +84,7 @@ class Admin::CallsController < ApplicationController
 
   def allow_create_call
     Criterion.amount_check
+
     return redirect_to admin_criterions_path unless Call.allow_create
   end
 

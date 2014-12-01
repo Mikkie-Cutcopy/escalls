@@ -1,0 +1,21 @@
+- render 'layouts/criterions_tab'
+div class='tab-pane active' id='criterions'
+  div.page-header
+    h2.page-header-title Критерии оценки
+  div.tab-pane-content
+    - unless @criterions.empty?
+      div style="width:  1000px"
+        table class="table table-bordered"
+          tr class="success"
+            th Критерий
+            th Хорошо
+            th Плохо
+            th Баллы
+          - @criterions.each do |c|
+            tr class='info'
+              th #{c.name}
+              td #{c.good_thing}
+              td #{c.bad_thing}
+              td
+                button.btn.btn-primary.disable
+                  = c.relative_weight
