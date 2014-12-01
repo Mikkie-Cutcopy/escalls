@@ -1,0 +1,7 @@
+div.call-panel worker-id="#{new_worker.id}"
+  = new_worker.full_name
+  | &nbsp
+  = link_to 'принять', accept_admin_user_path(new_worker), method: :post
+  a.pull-right href="javascript:void(0);" class="popup-show" data-id="#{new_worker.id}"
+    span.glyphicon.glyphicon-remove
+
