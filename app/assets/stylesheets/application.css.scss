@@ -21,8 +21,11 @@
 
  textarea.form-control {
    height: 130px;
-   width: 468px;
+   width: 420px;
+ }
 
+ .call-comment {
+   width: 468px !important;
  }
 
  h1 {
@@ -161,4 +164,8 @@
  .field_with_errors {
    @extend .form-group;
    @extend .has-error;
+ }
+
+ .estimate-with_comment {
+   background-color: #f6f475;;
  }
