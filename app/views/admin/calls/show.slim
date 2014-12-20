@@ -1,5 +1,5 @@
 div.page-header
-  h2.page-header-title Call
+  h2.page-header-title Звонок
 
 - render 'layouts/calls_tab'
 
@@ -24,10 +24,10 @@ div.escalls-container.panel.panel-primary style="width: 500px"
           b Тема:&nbsp
           = f.object.subject
           br
-          b Работник:&nbsp
+          b Сотрудник:&nbsp
           = f.object.user.full_name
           br
-          b Дата_звонка:&nbsp
+          b Дата звонка:&nbsp
           = f.object.date.to_s(:escalls_datetime)
           br
       script
@@ -76,8 +76,18 @@ div.escalls-container.panel.panel-primary style="width: 500px"
                       label.btn.btn-danger.btn-square.disable
                         | -
                   br
+                  - unless e.object.comment.blank?
+                    br
 
+                    div.escalls-container.panel.panel-default style="width: 420px"
+                      = e.object.comment
+          div style='border: 2px'
+          b Общий комментарий:
+          br
 
+          div.escalls-container.panel.panel-default style="width: 420px; margin-top: 5px;"
+            = f.object.comment
+          br
           div.alert.alert-info
             b Итоговая оценка
             label.btn.btn-success.disable    style='float: right'
