@@ -21,8 +21,11 @@
 
  textarea.form-control {
    height: 130px;
-   width: 468px;
+   width: 420px;
+ }
 
+ .call-comment {
+   width: 468px !important;
  }
 
  h1 {
@@ -119,6 +122,17 @@
   box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 8px;
 }
 
+ .form-container {
+   width: 460px;
+   min-height: 500px;
+   padding: 20px;
+   margin: auto;
+   /* box-shadow */
+   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 8px;
+   -moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 8px;
+   box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 8px;
+ }
+
 .account-btn {
   width: 340px;
   margin-bottom: 10px;
@@ -161,4 +175,8 @@
  .field_with_errors {
    @extend .form-group;
    @extend .has-error;
+ }
+
+ .estimate-with_comment {
+   background-color: #f6f475;;
  }

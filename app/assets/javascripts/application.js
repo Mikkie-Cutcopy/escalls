@@ -78,9 +78,17 @@ $(document).on('click', 'a.popup-show', function(){
 
 $(function showComment(){
      $('a#comment-btn').bind('click', function() {
-         $('div.comment').toggle('blind', 400)
+         $('div.comment').toggle('blind', 400);
          $('a#comment-btn').toggleClass('active')
          })
+});
+
+$(function showEstimateComment(){
+    $('a#estimate-btn').bind('click', function() {
+        var selectTd = $(this).parents('td')[0];
+        $('> div.textarea', selectTd).toggle('blind', 300);
+        $('a#estimate-btn').toggleClass('active')
+    })
 });
 
 
@@ -103,6 +111,11 @@ function removeUser(userID, a){
     })
 }
 
+$(function(){
+    $('td.estimate').bind('mouseenter mouseleave', function(event) {
+        $("> a#estimate-btn", this).toggleClass("invisible");
+    })
+});
 
 $(function(){
     $('.call-panel').bind('mouseenter mouseleave', function(event) {

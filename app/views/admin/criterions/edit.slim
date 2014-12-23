@@ -1,16 +1,20 @@
 - render 'layouts/criterions_tab'
-= form_for :criterion, url: admin_criterion_path, method: :patch do |form|
-  = form.label :Name
-  br
-  = form.text_field :name
-  br
-  = form.label :Good_thing
-  br
-  = form.text_area  :good_thing
-  br
-  = form.label :Bad_thing
-  br
-  = form.text_area  :bad_thing
-  = form.hidden_field :relative_weight
-  br
-  = form.submit 'Edit'
+div.page-header
+  h2.page-header-title Редактировать критерий
+div.form-container
+  = form_for :criterion, url: admin_criterion_path, method: :patch do |form|
+    = form.label :Название
+    br
+    = form.text_field :name, class: 'form-control'
+    br
+    = form.label :Хорошо
+    br
+    = form.text_area  :good_thing, class: 'form-control'
+    br
+    = form.label :Плохо
+    br
+    = form.text_area  :bad_thing, class: 'form-control'
+    = form.hidden_field :relative_weight
+    br
+    = form.submit 'Редактировать', class: 'btn btn-primary pull-right'
+    = link_to 'Отмена', admin_criterions_path, method: :get, class: 'btn btn-primary pull-right', style: 'width: 90px; margin-right: 10px'

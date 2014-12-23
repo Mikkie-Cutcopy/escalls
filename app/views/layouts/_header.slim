@@ -8,7 +8,7 @@ div.page-header
         small  worker
     div.page-header-links
       - if user_signed_in?
-        = link_to 'аккаунт', user_path(current_user), method: :get
+        = link_to 'Аккаунт', user_path(current_user), method: :get
         | &nbsp|&nbsp
-        = link_to 'выйти', destroy_user_session_path, method: :delete
+        = link_to 'Выйти', destroy_user_session_path, method: :delete
 
