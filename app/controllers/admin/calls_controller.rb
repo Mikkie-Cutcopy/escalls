@@ -84,7 +84,6 @@ class Admin::CallsController < ApplicationController
 
   def allow_create_call
     Criterion.amount_check
-
     return redirect_to admin_criterions_path unless Call.allow_create
   end
 

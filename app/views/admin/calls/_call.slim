@@ -20,7 +20,7 @@ div.call-panel
       = call.user.full_name
 
   div.call-content
-    = link_to call.subject, admin_call_report_path(call, call.reports.last!), method: :get
+    = link_to call.subject, admin_call_path(call), method: :get
 
 
 
