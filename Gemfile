@@ -17,6 +17,8 @@ gem 'jquery-fileupload-rails'
 gem 'jquery-ui-rails'
 gem 'paperclip'
 gem 'will_paginate'
+gem 'capistrano'
+gem 'unicorn'
 #gem 'soundmanager2-rails'
 
 gem 'devise'

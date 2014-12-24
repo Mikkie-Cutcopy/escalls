@@ -12,3 +12,5 @@
 .idea/
 config/environment_variables.yml
 /public/system/calls/
+
+config/database.yml
