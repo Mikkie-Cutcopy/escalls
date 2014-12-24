@@ -1,6 +1,3 @@
-# config valid only for Capistrano 3.1
-lock '3.2.1'
-
 # По умолчанию для дистрибуции проектов используется Bundler.
 # Эта строка включает автоматическое обновление и установку
 # недостающих gems, указанных в вашем Gemfile.
@@ -16,14 +13,14 @@ lock '3.2.1'
 require 'bundler/capistrano'
 
 ## Чтобы не хранить database.yml в системе контроля версий, поместите
-## database.yml в shared-каталог проекта на сервере и раскомментируйте
+## dayabase.yml в shared-каталог проекта на сервере и раскомментируйте
 ## следующие строки.
 
-# after "deploy:update_code", :copy_database_config
-# task :copy_database_config, roles => :app do
-#   db_config = "#{shared_path}/database.yml"
-#   run "cp #{db_config} #{release_path}/config/database.yml"
-# end
+ after "deploy:update_code", :copy_database_config
+ task :copy_database_config, roles => :app do
+   db_config = "#{shared_path}/database.yml"
+   run "cp #{db_config} #{release_path}/config/database.yml"
+ end
 
 # В rails 3 по умолчанию включена функция assets pipelining,
 # которая позволяет значительно уменьшить размер статических
@@ -32,7 +29,7 @@ require 'bundler/capistrano'
 # сжатых файлов статики при деплое.
 # Если вы не используете assets pipelining в своем проекте,
 # или у вас старая версия rails, закомментируйте эту строку.
-load 'deploy/assets'
+#load 'deploy/assets'
 
 # Для удобства работы мы рекомендуем вам настроить авторизацию
 # SSH по ключу. При работе capistrano будет использоваться
@@ -40,7 +37,7 @@ load 'deploy/assets'
 # авторизацию на другие хосты.
 # Если вы не используете авторизацию SSH по ключам И ssh-agent,
 # закомментируйте эту опцию.
-#ssh_options[:forward_agent] = true
+ssh_options[:forward_agent] = true
 
 # Имя вашего проекта в панели управления.
 # Не меняйте это значение без необходимости, оно используется дальше.
@@ -108,27 +105,4 @@ namespace :deploy do
   task :restart, :roles => :app do
     run "[ -f #{unicorn_pid} ] && kill -USR2 `cat #{unicorn_pid}` || #{unicorn_start_cmd}"
   end
-end
-
-namespace :deploy do
-
-  desc 'Restart application'
-  task :restart do
-    on roles(:app), in: :sequence, wait: 5 do
-      # Your restart mechanism here, for example:
-      # execute :touch, release_path.join('tmp/restart.txt')
-    end
-  end
-
-  after :publishing, :restart
-
-  after :restart, :clear_cache do
-    on roles(:web), in: :groups, limit: 3, wait: 10 do
-      # Here we can do anything such as:
-      # within release_path do
-      #   execute :rake, 'cache:clear'
-      # end
-    end
-  end
-
 end
