@@ -18,6 +18,7 @@ gem 'jquery-ui-rails'
 gem 'paperclip'
 gem 'will_paginate'
 gem 'capistrano',  github: 'capistrano/capistrano', ref: '96a16'
+gem 'sprockets-rails', '>= 2.1.4'
 
 gem 'unicorn'
 #gem 'soundmanager2-rails'
