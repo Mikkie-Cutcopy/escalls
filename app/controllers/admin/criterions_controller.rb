@@ -41,7 +41,7 @@ class Admin::CriterionsController < ApplicationController
     criterion = Criterion.find_by_id(params[:id])
     criterion.relative_weight = params[:new_relative_weight].to_i
     criterion.save
-    flash[:message_ok] = 'Everything is OK' unless amount_check_and_report
+    #flash[:message_ok] = 'Everything is OK' unless amount_check_and_report
     redirect_to admin_criterions_path
   end
 
@@ -51,9 +51,10 @@ class Admin::CriterionsController < ApplicationController
     amount = Criterion.amount_check
     case
       when amount < 100
-        'To create calls feature is not available. The sum of relative weights is too small: ' + amount.to_s
+        'Создание новых звонков недоступно. Значение суммарного балла слишком мало: ' + amount.to_s
+        #'To create calls feature is not available. The sum of relative weights is too small: ' + amount.to_s
       when amount > 100
-        'To create calls feature is not available. The sum of relative weights is too large: ' + amount.to_s
+        'Создание новых звонков недоступно. Значение суммарного балла слишком велико: ' + amount.to_s
       else
         nil
     end

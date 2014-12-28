@@ -13509,3 +13509,8 @@ function PopUpShow(){$("#popup").show()}function PopUpHide(){$("#popup").hide()}
 
 
 ;
+$(function showCriterionForm(){
+    $('.criterion-btn').bind('click', function() {
+        $(this).next().toggle('drop', 300);
+    })
+});

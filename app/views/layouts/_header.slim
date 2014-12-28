@@ -2,13 +2,16 @@ div.page-header
   div.page-header-title
     h1
       | Escalls
-      - if admin?
-        small  admin
+      - if try(:current_user)
+        small
+          | &nbsp
+          = current_user.role
       - else
-        small  worker
+        small
+          | &nbsp beta
     div.page-header-links
       - if user_signed_in?
-        = link_to 'Аккаунт', user_path(current_user), method: :get
+        = link_to 'аккаунт', user_path(current_user), method: :get
         | &nbsp|&nbsp
-        = link_to 'Выйти', destroy_user_session_path, method: :delete
+        = link_to 'выйти', destroy_user_session_path, method: :delete
 

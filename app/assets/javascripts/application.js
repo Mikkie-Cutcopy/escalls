@@ -91,6 +91,12 @@ $(function showEstimateComment(){
     })
 });
 
+$(function showCriterionForm(){
+    $('.criterion-btn').bind('click', function() {
+        $(this).next().toggle('drop', 300);
+    })
+});
+
 
 function removeUser(userID, a){
     var parent_tr = $(a).parents('tr')[0];
