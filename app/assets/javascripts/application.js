@@ -55,6 +55,8 @@ $(document).ready(function() {
 
     $('[checked]').each(function() {$(this).parent('label').addClass('active')})
 
+
+
 });
 
 $(document).on('click', 'div.escalls-datetimepicker', function(){
@@ -123,11 +125,10 @@ $(function(){
     })
 });
 
-$(function(){
-    $('.call-panel').bind('mouseenter mouseleave', function(event) {
-        $("> div.dropdown", this).toggleClass("invisible");
-        $("> div.dropdown", this).removeClass("open");
-        $(this).toggleClass("call-active");
 
-    })
+
+$(document).on('mouseenter mouseleave', '.call-panel', function(){
+    $("> div.dropdown", this).toggleClass("invisible");
+    $("> div.dropdown", this).removeClass("open");
+    $(this).toggleClass("call-active");
 });

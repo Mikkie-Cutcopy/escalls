@@ -1,0 +1,100 @@
+/* line 6, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
+.call-panel {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1000px;
+  height: 47px;
+  background-color: #DEFFD8;
+  border: 1px solid #d5dbce;
+  margin-top: -1px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 5px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px;
+}
+
+/* line 24, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
+.panel-primary > .panel-heading {
+  background-color: rgba(66, 139, 202, 0.36);
+  border-color: rgba(66, 139, 202, 0.53);
+}
+
+/* line 29, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
+.panel-primary {
+  border-color: rgba(66, 139, 202, 0.68);
+}
+
+/* line 33, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
+.call-active {
+  background-color: #e9f7ec !important;
+  border: 1px solid #f6f5f1 !important;
+}
+
+/* line 38, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
+.call-score {
+  float: right;
+  height: 45px;
+}
+
+/* line 43, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
+.call-head {
+  width: 500px;
+}
+
+/* line 48, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
+.call-date {
+  width: 120px;
+  display: inline-block;
+}
+
+/* line 54, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
+.call-worker {
+  width: 200px;
+  display: inline-block;
+}
+
+/* line 59, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
+.call-dropdown {
+  width: 50px;
+  display: inline-block;
+  float: right;
+}
+
+/* line 66, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
+.call-content {
+  overflow: hidden;
+  height: 25px;
+}
+
+/* line 71, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
+.invisible {
+  visibility: hidden;
+  background-color: #85c575;
+}
+
+/* line 76, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
+.btn-square {
+  width: 36px;
+}
+
+/* line 80, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
+.alert {
+  padding: 7px;
+  padding-bottom: 21px;
+}
+
+/* line 85, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
+.sm2-bar-ui {
+  font-size: 16px;
+}
+
+/* line 89, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
+.sm2-bar-ui .sm2-main-controls,
+.sm2-bar-ui .sm2-playlist-drawer {
+  background-color: #2288cc;
+}
+
+/* line 92, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
+.sm2-bar-ui .sm2-inline-texture {
+  background: transparent;
+}

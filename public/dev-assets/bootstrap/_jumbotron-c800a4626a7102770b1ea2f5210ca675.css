@@ -1,0 +1,47 @@
+/* line 7, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_jumbotron.scss */
+.jumbotron {
+  padding: 30px;
+  margin-bottom: 30px;
+  color: inherit;
+  background-color: #eeeeee;
+}
+/* line 14, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_jumbotron.scss */
+.jumbotron h1,
+.jumbotron .h1 {
+  color: inherit;
+}
+/* line 17, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_jumbotron.scss */
+.jumbotron p {
+  margin-bottom: 15px;
+  font-size: 21px;
+  font-weight: 200;
+}
+/* line 23, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_jumbotron.scss */
+.jumbotron > hr {
+  border-top-color: #d5d5d5;
+}
+/* line 27, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_jumbotron.scss */
+.container .jumbotron {
+  border-radius: 6px;
+}
+/* line 31, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_jumbotron.scss */
+.jumbotron .container {
+  max-width: 100%;
+}
+@media screen and (min-width: 768px) {
+  /* line 7, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_jumbotron.scss */
+  .jumbotron {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  /* line 39, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_jumbotron.scss */
+  .container .jumbotron {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  /* line 45, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_jumbotron.scss */
+  .jumbotron h1,
+  .jumbotron .h1 {
+    font-size: 63px;
+  }
+}

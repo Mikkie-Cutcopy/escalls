@@ -10,7 +10,8 @@ class Admin::CallsController < ApplicationController
   layout 'admin'
 
   def index
-   @calls = Call.all.order(created_at: :desc)
+   @calls = Call.paginate(page: params[:page], per_page: 15).order(created_at: :desc)
+  #Call.all.order(created_at: :desc)
    if @calls.empty?
      flash.now[:message_alert] = 'You doesn\'t have a calls yet'
    end

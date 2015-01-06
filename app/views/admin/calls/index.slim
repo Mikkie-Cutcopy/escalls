@@ -1,3 +1,4 @@
+
 - render 'layouts/calls_tab'
 div class='tab-pane active' id='home'
   div.page-header
@@ -9,6 +10,10 @@ div class='tab-pane active' id='home'
     br
     - unless @calls.empty?
       = render partial: 'call', collection: @calls
+    br
+    div style="width: 230px; margin: auto"
+      = will_paginate @calls
+
 
 
 

@@ -1,0 +1,62 @@
+/* line 11, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_code.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+/* line 16, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_code.scss */
+code {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 4px;
+}
+
+/* line 25, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_code.scss */
+kbd {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: white;
+  background-color: #333333;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+/* line 33, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_code.scss */
+kbd kbd {
+  padding: 0;
+  font-size: 100%;
+  box-shadow: none;
+}
+
+/* line 41, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_code.scss */
+pre {
+  display: block;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.428571429;
+  word-break: break-all;
+  word-wrap: break-word;
+  color: #333333;
+  background-color: whitesmoke;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+/* line 55, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_code.scss */
+pre code {
+  padding: 0;
+  font-size: inherit;
+  color: inherit;
+  white-space: pre-wrap;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+/* line 66, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_code.scss */
+.pre-scrollable {
+  max-height: 340px;
+  overflow-y: scroll;
+}

@@ -1,0 +1,545 @@
+/* line 11, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  min-width: 0;
+}
+
+/* line 21, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 20px;
+  font-size: 21px;
+  line-height: inherit;
+  color: #333333;
+  border: 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* line 33, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* line 48, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+input[type="search"] {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 54, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 4px 0 0;
+  margin-top: 1px \9;
+  line-height: normal;
+}
+
+/* line 61, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+input[type="file"] {
+  display: block;
+}
+
+/* line 66, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+input[type="range"] {
+  display: block;
+  width: 100%;
+}
+
+/* line 73, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+select[multiple],
+select[size] {
+  height: auto;
+}
+
+/* line 80, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+/* line 85, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+output {
+  display: block;
+  padding-top: 7px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #555555;
+}
+
+/* line 116, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+.form-control {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #555555;
+  background-color: white;
+  background-image: none;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+/* line 53, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/mixins/_forms.scss */
+.form-control:focus {
+  border-color: #66afe9;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+/* line 102, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/mixins/_vendor-prefixes.scss */
+.form-control::-moz-placeholder {
+  color: #777777;
+  opacity: 1;
+}
+/* line 104, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/mixins/_vendor-prefixes.scss */
+.form-control:-ms-input-placeholder {
+  color: #777777;
+}
+/* line 105, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/mixins/_vendor-prefixes.scss */
+.form-control::-webkit-input-placeholder {
+  color: #777777;
+}
+/* line 144, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+  cursor: not-allowed;
+  background-color: #eeeeee;
+  opacity: 1;
+}
+
+/* line 154, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+textarea.form-control {
+  height: auto;
+}
+
+/* line 166, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+input[type="search"] {
+  -webkit-appearance: none;
+}
+
+/* line 182, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"] {
+  line-height: 34px;
+  line-height: 1.428571429 \0;
+}
+/* line 187, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+input[type="date"].input-sm, .form-horizontal .form-group-sm input[type="date"].form-control,
+input[type="time"].input-sm,
+.form-horizontal .form-group-sm input[type="time"].form-control,
+input[type="datetime-local"].input-sm,
+.form-horizontal .form-group-sm input[type="datetime-local"].form-control,
+input[type="month"].input-sm,
+.form-horizontal .form-group-sm input[type="month"].form-control {
+  line-height: 30px;
+}
+/* line 190, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+input[type="date"].input-lg, .form-horizontal .form-group-lg input[type="date"].form-control,
+input[type="time"].input-lg,
+.form-horizontal .form-group-lg input[type="time"].form-control,
+input[type="datetime-local"].input-lg,
+.form-horizontal .form-group-lg input[type="datetime-local"].form-control,
+input[type="month"].input-lg,
+.form-horizontal .form-group-lg input[type="month"].form-control {
+  line-height: 46px;
+}
+
+/* line 201, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* line 211, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+.radio,
+.checkbox {
+  position: relative;
+  display: block;
+  min-height: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/* line 218, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+.radio label,
+.checkbox label {
+  padding-left: 20px;
+  margin-bottom: 0;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+/* line 228, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+.radio input[type="radio"],
+.radio-inline input[type="radio"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+  position: absolute;
+  margin-left: -20px;
+  margin-top: 4px \9;
+}
+
+/* line 235, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+.radio + .radio,
+.checkbox + .checkbox {
+  margin-top: -5px;
+}
+
+/* line 241, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+.radio-inline,
+.checkbox-inline {
+  display: inline-block;
+  padding-left: 20px;
+  margin-bottom: 0;
+  vertical-align: middle;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+/* line 250, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+.radio-inline + .radio-inline,
+.checkbox-inline + .checkbox-inline {
+  margin-top: 0;
+  margin-left: 10px;
+}
+
+/* line 263, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+input[type="radio"][disabled], input[type="radio"].disabled, fieldset[disabled] input[type="radio"],
+input[type="checkbox"][disabled],
+input[type="checkbox"].disabled, fieldset[disabled]
+input[type="checkbox"] {
+  cursor: not-allowed;
+}
+
+/* line 271, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+.radio-inline.disabled, fieldset[disabled] .radio-inline,
+.checkbox-inline.disabled, fieldset[disabled]
+.checkbox-inline {
+  cursor: not-allowed;
+}
+
+/* line 280, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+.radio.disabled label, fieldset[disabled] .radio label,
+.checkbox.disabled label, fieldset[disabled]
+.checkbox label {
+  cursor: not-allowed;
+}
+
+/* line 292, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+.form-control-static {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  margin-bottom: 0;
+}
+/* line 300, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+.form-control-static.input-lg, .form-horizontal .form-group-lg .form-control-static.form-control, .form-control-static.input-sm, .form-horizontal .form-group-sm .form-control-static.form-control {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* line 67, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/mixins/_forms.scss */
+.input-sm, .form-horizontal .form-group-sm .form-control {
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+
+/* line 75, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/mixins/_forms.scss */
+select.input-sm, .form-horizontal .form-group-sm select.form-control {
+  height: 30px;
+  line-height: 30px;
+}
+
+/* line 81, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/mixins/_forms.scss */
+textarea.input-sm, .form-horizontal .form-group-sm textarea.form-control,
+select[multiple].input-sm,
+.form-horizontal .form-group-sm select[multiple].form-control {
+  height: auto;
+}
+
+/* line 67, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/mixins/_forms.scss */
+.input-lg, .form-horizontal .form-group-lg .form-control {
+  height: 46px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 6px;
+}
+
+/* line 75, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/mixins/_forms.scss */
+select.input-lg, .form-horizontal .form-group-lg select.form-control {
+  height: 46px;
+  line-height: 46px;
+}
+
+/* line 81, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/mixins/_forms.scss */
+textarea.input-lg, .form-horizontal .form-group-lg textarea.form-control,
+select[multiple].input-lg,
+.form-horizontal .form-group-lg select[multiple].form-control {
+  height: auto;
+}
+
+/* line 321, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+.has-feedback {
+  position: relative;
+}
+/* line 326, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+.has-feedback .form-control {
+  padding-right: 42.5px;
+}
+
+/* line 331, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+.form-control-feedback {
+  position: absolute;
+  top: 25px;
+  right: 0;
+  z-index: 2;
+  display: block;
+  width: 34px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+}
+
+/* line 342, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+.input-lg + .form-control-feedback, .form-horizontal .form-group-lg .form-control + .form-control-feedback {
+  width: 46px;
+  height: 46px;
+  line-height: 46px;
+}
+
+/* line 347, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+.input-sm + .form-control-feedback, .form-horizontal .form-group-sm .form-control + .form-control-feedback {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+}
+
+/* line 13, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/mixins/_forms.scss */
+.has-success .help-block,
+.has-success .control-label,
+.has-success .radio,
+.has-success .checkbox,
+.has-success .radio-inline,
+.has-success .checkbox-inline {
+  color: #3c763d;
+}
+/* line 17, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/mixins/_forms.scss */
+.has-success .form-control {
+  border-color: #3c763d;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+/* line 20, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/mixins/_forms.scss */
+.has-success .form-control:focus {
+  border-color: #2b542c;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
+}
+/* line 27, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/mixins/_forms.scss */
+.has-success .input-group-addon {
+  color: #3c763d;
+  border-color: #3c763d;
+  background-color: #dff0d8;
+}
+/* line 33, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/mixins/_forms.scss */
+.has-success .form-control-feedback {
+  color: #3c763d;
+}
+
+/* line 13, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/mixins/_forms.scss */
+.has-warning .help-block,
+.has-warning .control-label,
+.has-warning .radio,
+.has-warning .checkbox,
+.has-warning .radio-inline,
+.has-warning .checkbox-inline {
+  color: #8a6d3b;
+}
+/* line 17, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/mixins/_forms.scss */
+.has-warning .form-control {
+  border-color: #8a6d3b;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+/* line 20, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/mixins/_forms.scss */
+.has-warning .form-control:focus {
+  border-color: #66512c;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
+}
+/* line 27, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/mixins/_forms.scss */
+.has-warning .input-group-addon {
+  color: #8a6d3b;
+  border-color: #8a6d3b;
+  background-color: #fcf8e3;
+}
+/* line 33, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/mixins/_forms.scss */
+.has-warning .form-control-feedback {
+  color: #8a6d3b;
+}
+
+/* line 13, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/mixins/_forms.scss */
+.has-error .help-block,
+.has-error .control-label,
+.has-error .radio,
+.has-error .checkbox,
+.has-error .radio-inline,
+.has-error .checkbox-inline {
+  color: #a94442;
+}
+/* line 17, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/mixins/_forms.scss */
+.has-error .form-control {
+  border-color: #a94442;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+/* line 20, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/mixins/_forms.scss */
+.has-error .form-control:focus {
+  border-color: #843534;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
+}
+/* line 27, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/mixins/_forms.scss */
+.has-error .input-group-addon {
+  color: #a94442;
+  border-color: #a94442;
+  background-color: #f2dede;
+}
+/* line 33, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/mixins/_forms.scss */
+.has-error .form-control-feedback {
+  color: #a94442;
+}
+
+/* line 366, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+.has-feedback label.sr-only ~ .form-control-feedback {
+  top: 0;
+}
+
+/* line 376, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+.help-block {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: #737373;
+}
+
+@media (min-width: 768px) {
+  /* line 401, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+  .form-inline .form-group {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+  /* line 408, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+  .form-inline .form-control {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+  }
+  /* line 414, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+  .form-inline .input-group {
+    display: inline-table;
+    vertical-align: middle;
+  }
+  /* line 420, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+  .form-inline .input-group .input-group-addon,
+  .form-inline .input-group .input-group-btn,
+  .form-inline .input-group .form-control {
+    width: auto;
+  }
+  /* line 426, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+  .form-inline .input-group > .form-control {
+    width: 100%;
+  }
+  /* line 430, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+  .form-inline .control-label {
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+  /* line 439, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+  .form-inline .radio,
+  .form-inline .checkbox {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+  /* line 445, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+  .form-inline .radio label,
+  .form-inline .checkbox label {
+    padding-left: 0;
+  }
+  /* line 450, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+  .form-inline .radio input[type="radio"],
+  .form-inline .checkbox input[type="checkbox"] {
+    position: relative;
+    margin-left: 0;
+  }
+  /* line 459, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+  .form-inline .has-feedback .form-control-feedback {
+    top: 0;
+  }
+}
+
+/* line 479, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+.form-horizontal .radio,
+.form-horizontal .checkbox,
+.form-horizontal .radio-inline,
+.form-horizontal .checkbox-inline {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 7px;
+}
+/* line 487, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+.form-horizontal .radio,
+.form-horizontal .checkbox {
+  min-height: 27px;
+}
+/* line 492, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+.form-horizontal .form-group {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+/* line 15, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+.form-horizontal .form-group:before, .form-horizontal .form-group:after {
+  content: " ";
+  display: table;
+}
+/* line 19, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+.form-horizontal .form-group:after {
+  clear: both;
+}
+@media (min-width: 768px) {
+  /* line 499, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+  .form-horizontal .control-label {
+    text-align: right;
+    margin-bottom: 0;
+    padding-top: 7px;
+  }
+}
+/* line 510, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+.form-horizontal .has-feedback .form-control-feedback {
+  top: 0;
+  right: 15px;
+}
+@media (min-width: 768px) {
+  /* line 521, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+  .form-horizontal .form-group-lg .control-label {
+    padding-top: 14.3px;
+  }
+}
+@media (min-width: 768px) {
+  /* line 531, /home/mikkie/.rvm/gems/ruby-1.9.3-p547/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_forms.scss */
+  .form-horizontal .form-group-sm .control-label {
+    padding-top: 6px;
+  }
+}
