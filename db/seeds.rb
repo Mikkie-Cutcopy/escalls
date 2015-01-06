@@ -87,7 +87,7 @@
         password_confirmation:  "password"
        }]
 
-  if Rails.env.development?
+
     users << {id: 1,
         full_name: "Александра Солонина",
         email:     "solonina@mail.com",
@@ -113,7 +113,7 @@
         password:  "password",
         password_confirmation:  "password"
     }
-  end
+
 
 
   if Criterion.all.empty?
