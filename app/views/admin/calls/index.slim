@@ -26,8 +26,8 @@ div class='tab-pane active' id='home'
     - unless @calls.empty?
       = render partial: 'call', collection: @calls
     br
-    div style="width: 230px; margin: auto"
-      = will_paginate @calls
+    div.flickr_pagination
+      = will_paginate @calls, previous_label: 'Назад', next_label: 'Вперёд'
 
 
 
