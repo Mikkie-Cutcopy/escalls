@@ -180,3 +180,15 @@
  .page-header {
    margin-bottom: 40px;
  }
+
+ .btn-primary {
+   color: white;
+   background-color: #ff2e51;
+   border-color: rgba(239, 8, 50, 0.79);
+ }
+
+ .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle {
+   color: white;
+   background-color: #ff7182;
+   border-color: rgba(239, 127, 146, 0.66);
+ }

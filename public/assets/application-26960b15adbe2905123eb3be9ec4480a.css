@@ -10456,3 +10456,17 @@ h2 {
 .page-header {
   margin-bottom: 40px;
 }
+
+/* line 184, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+.btn-primary {
+  color: white;
+  background-color: #ff2e51;
+  border-color: rgba(239, 8, 50, 0.79);
+}
+
+/* line 190, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle {
+  color: white;
+  background-color: #ff7182;
+  border-color: rgba(239, 127, 146, 0.66);
+}
