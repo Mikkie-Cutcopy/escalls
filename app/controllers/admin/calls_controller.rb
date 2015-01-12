@@ -10,14 +10,25 @@ class Admin::CallsController < ApplicationController
   layout 'admin'
 
   def index
-   @calls = Call.paginate(page: params[:page], per_page: 15).order(created_at: :desc)
-  #Call.all.order(created_at: :desc)
-   if @calls.empty?
-     flash.now[:message_alert] = 'You doesn\'t have a calls yet'
-   end
+    @workers_scope = User.active_workers.order(full_name: :desc)
+    @workers = [User.new(id: nil, full_name: 'Все сотрудники'), @workers_scope].flatten
+    params[:call_order] ||= 'created_at'
+    @calls = Call.paginate(page: params[:page], per_page: 15).order(params[:call_order] => :desc) #все звонки
+    if params[:worker_filter].present?
+      @worker = User.find(params[:worker_filter])
+      @calls = @calls.where('user_id' => params[:worker_filter]) #звонки сотрудника
+    end
+    if @calls.empty?
+      flash.now[:message_alert] = 'You doesn\'t have calls yet'
+    end
   end
 
   def new
+    if User.active_workers.empty?
+      flash[:message_alert] = 'Нет активных сотрудников'
+      return redirect_to admin_calls_path
+    end
+
     @workers = User.where('role' => 'worker', 'status' => 'active')
     @criterions = Criterion.all.order('id')
     @criterions.each do |criterion|

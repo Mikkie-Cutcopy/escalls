@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
 
   has_many :calls
 
+  scope :active_workers, -> {where('role' => 'worker', 'status' => 'active')}
 
   def admin?
     self.role.eql?('admin')

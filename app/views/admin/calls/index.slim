@@ -1,9 +1,24 @@
-
 - render 'layouts/calls_tab'
 div class='tab-pane active' id='home'
   div.page-header
-    h2.page-header-title Звонки
+    h2.page-header-title
+      | Звонки
+      small
+        | &nbsp
+        = @worker.try(:full_name)
+        - if  @worker.try(:full_name)
+          | &nbsp
+        - if params[:call_order].eql?('total_score')
+          | по итоговой оценке
+
   div.tab-pane-content
+    div.worker-filter.pull-left  style='width: 540px'
+      = form_tag '/admin/calls', method: :get do
+        = select_tag :call_order, options_for_select([['Последние','created_at'], ['Лучшие','total_score']]), class: 'form-control pull-left', style: 'width: 240px'
+        div.input-group
+          = select_tag :worker_filter, options_from_collection_for_select(@workers, :id, :full_name), class: 'form-control pull-right', style: 'width: 240px'
+          span.input-group-btn
+            = submit_tag 'Ok', method: :get, class: 'button btn btn-default', style: 'width: 42px'
     = button_to 'Создать звонок', new_admin_call_path, method: :get, class: 'btn btn-primary pull-right'
     br
     br
