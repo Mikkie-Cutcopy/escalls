@@ -79,4 +79,25 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  config.action_mailer.default_url_options = { host: 'escalls.envill123.lclients.ru'}
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+      address:              'smtp.gmail.com',
+      port:                  587,
+      domain:               'escalls.envill123.lclients.ru',
+      user_name:             ENV['GMAIL_USERNAME'],
+      password:              ENV['GMAIL_PASSWORD'],
+      authentication:       'plain',
+      enable_starttls_auto: true  }
+
+  config.before_configuration do
+    env_file = Rails.root.join('shared', 'environment_variables.yml').to_s
+
+    if File.exists?(env_file)
+      YAML.load_file(env_file)[Rails.env].each do |key, value|
+        ENV[key.to_s] = value
+      end
+    end
+  end
 end
