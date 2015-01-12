@@ -8,7 +8,7 @@ class Admin::UsersController < ApplicationController
 
   def index
     @workers = User.where('role' => 'worker')
-    @new_workers = User.where('role' => '')
+    @new_workers = User.where('role' => nil)
   end
 
   def show

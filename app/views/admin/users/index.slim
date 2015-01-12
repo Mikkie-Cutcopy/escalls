@@ -3,12 +3,13 @@ div class='tab-pane active' id='users'
   div.page-header
     h2.page-header-title Сотрудники
   div.tab-pane-content
+    - unless @workers.empty?
+      = render partial: 'worker', collection: @workers
     - unless @new_workers.empty?
       h3
         | Новые пользователи
       = render partial: 'new_worker', collection: @new_workers
-    - unless @workers.empty?
-      = render partial: 'worker', collection: @workers
+
 
 
 
