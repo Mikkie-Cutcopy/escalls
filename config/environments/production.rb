@@ -91,13 +91,5 @@ Rails.application.configure do
       authentication:       'plain',
       enable_starttls_auto: true  }
 
-  config.before_configuration do
-    env_file = Rails.root.join('../../shared', 'environment_variables.yml').to_s
 
-    if File.exists?(env_file)
-      YAML.load_file(env_file)[Rails.env].each do |key, value|
-        ENV[key.to_s] = value
-      end
-    end
-  end
 end
