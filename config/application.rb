@@ -22,7 +22,7 @@ module Escalls
     config.encoding = "utf-8"
 
     config.before_configuration do
-      env_var_path = if Rails.env('production')
+      env_var_path = if Rails.env.eql?('production')
                        '../../shared'
                      else
                        'config'
