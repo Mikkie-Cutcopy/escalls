@@ -1,15 +1,15 @@
 - render 'layouts/criterions_tab'
 div class='tab-pane active' id='criterions'
-  div.page-header
+  div.page-header.tab-page-header
     h2.page-header-title Критерии оценки
   div.tab-pane-content
     = button_to 'Добавить критерий', new_admin_criterion_path, method: :get, class: 'button btn btn-primary pull-right'
     br
     br
     p class='bg-danger'
-      = @message
+      = @messages
     - unless @criterions.empty?
-      div style="width:  1000px"
+      div style="width:  1060px"
         table class="table table-bordered"
           tr class="success"
             th Критерий

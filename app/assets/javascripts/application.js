@@ -34,6 +34,7 @@
 //= require jquery-ui
 //= require turbolinks
 //= require jquery-fileupload
+//= require mediaelement_rails
 //= require bootstrap
 
 //= require_tree .

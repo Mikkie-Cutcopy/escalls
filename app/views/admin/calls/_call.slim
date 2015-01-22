@@ -14,8 +14,9 @@ div.call-panel
         = link_to 'Удалить',admin_call_path(call), method: :delete, data: { confirm: 'Вы уверены?' }, role: "menuitem", tabindex: "-1"
   div.call-head
     div.call-date
-      b
-        = call.date.to_s(:escalls_datetime)
+
+      = call.date.to_s(:escalls_datetime)
+    | &nbsp
     div.call-worker
       = call.user.full_name
 

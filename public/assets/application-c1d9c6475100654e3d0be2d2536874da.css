@@ -10112,14 +10112,14 @@ button.close {
 .call-panel {
   margin-left: auto;
   margin-right: auto;
-  width: 1000px;
-  height: 47px;
-  background-color: #DEFFD8;
-  border: 1px solid #d5dbce;
+  width: 1060px;
+  height: 56px;
+  background-color: rgba(253, 243, 239, 0.69);
+  border: 1px solid rgba(205, 216, 236, 0.5);
   margin-top: -1px;
   padding-right: 10px;
   padding-left: 10px;
-  padding-top: 5px;
+  padding-top: 8px;
 }
 
 /* line 23, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
@@ -10142,185 +10142,197 @@ button.close {
 .call-score {
   float: right;
   height: 45px;
+  width: 45px;
+  padding-top: 2px;
 }
 
-/* line 42, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
+/* line 44, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
 .call-head {
   width: 500px;
 }
 
-/* line 47, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
+/* line 49, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
 .call-date {
   width: 120px;
   display: inline-block;
 }
 
-/* line 53, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
+/* line 55, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
 .call-worker {
   width: 200px;
   display: inline-block;
 }
 
-/* line 58, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
+/* line 60, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
 .call-dropdown {
   width: 70px;
   display: inline-block;
   float: right;
 }
 
-/* line 65, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
+/* line 67, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
 .call-content {
   overflow: hidden;
   height: 25px;
 }
 
-/* line 70, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
+/* line 72, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
 .invisible {
   visibility: hidden;
   background-color: #85c575;
 }
 
-/* line 75, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
+/* line 77, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
 .btn-square {
   width: 36px;
 }
 
-/* line 79, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
+/* line 81, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
 .alert {
   padding: 7px;
   padding-bottom: 21px;
 }
 
-/* line 84, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
+/* line 86, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
 .sm2-bar-ui {
   font-size: 16px;
 }
 
-/* line 88, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
+/* line 90, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
 .sm2-bar-ui .sm2-main-controls,
 .sm2-bar-ui .sm2-playlist-drawer {
   background-color: #2288cc;
 }
 
-/* line 91, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
+/* line 93, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
 .sm2-bar-ui .sm2-inline-texture {
   background: transparent;
 }
 
-/* line 95, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
+/* line 97, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
 .flickr_pagination {
   text-align: center;
   padding: 0.3em;
   cursor: default;
 }
 
-/* line 99, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
+/* line 101, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
 .flickr_pagination a, .flickr_pagination span, .flickr_pagination em {
   padding: 0.2em 0.5em;
 }
 
-/* line 101, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
+/* line 103, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
 .flickr_pagination .disabled {
   color: #aaaaaa;
 }
 
-/* line 103, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
+/* line 105, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
 .flickr_pagination .current {
   font-style: normal;
   font-weight: bold;
   color: #ff0084;
 }
 
-/* line 107, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
+/* line 109, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
 .flickr_pagination a {
   border: 1px solid #dddddd;
   color: #0063dc;
   text-decoration: none;
 }
 
-/* line 111, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
+/* line 113, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
 .flickr_pagination a:hover, .flickr_pagination a:focus {
   border-color: #003366;
   background: #0063dc;
   color: white;
 }
 
-/* line 115, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
+/* line 117, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
 .flickr_pagination .page_info {
   color: #aaaaaa;
   padding-top: 0.8em;
 }
 
-/* line 118, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
+/* line 120, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
 .flickr_pagination .previous_page, .flickr_pagination .next_page {
   border-width: 2px;
 }
 
-/* line 120, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
+/* line 122, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
 .flickr_pagination .previous_page {
   margin-right: 1em;
 }
 
-/* line 122, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
+/* line 124, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/calls.css.scss */
 .flickr_pagination .next_page {
   margin-left: 1em;
 }
 
-/* line 8, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 11, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+body {
+  background-image: url(/assets/cover.jpg);
+}
+
+/* line 15, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .admin_main {
-  width: 1100px;
+  width: 1210px;
   overflow: hidden;
   margin: auto;
 }
 
-/* line 14, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 21, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .escalls-container {
   margin: auto;
 }
 
-/* line 18, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 25, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 textarea.form-control {
   height: 130px;
   width: 420px;
 }
 
-/* line 23, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 30, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .call-comment {
   width: 468px !important;
 }
 
-/* line 27, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 34, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 h1 {
   display: inline-block;
 }
 
-/* line 31, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 38, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 h2 {
   margin-top: 0px;
 }
 
-/* line 35, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 42, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .tab-pane-content {
   margin: auto;
-  width: 1000px;
+  width: 1060px;
 }
 
-/* line 40, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 47, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .datetimepicker {
   left: 750px !important;
   top: 450px !important;
 }
 
-/* line 45, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 52, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-  background-color: #f7fff3;
+  background-color: rgba(245, 245, 245, 0.83);
   cursor: pointer;
   color: royalblue;
 }
 
-/* line 51, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 58, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+.nav-tabs > li > a {
+  background-color: rgba(245, 245, 245, 0.53);
+}
+
+/* line 62, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .tab-content {
-  background-color: #f7fff3;
+  background-color: rgba(245, 245, 245, 0.89);
   overflow: hidden;
   padding-bottom: 100px;
   border-bottom: 1px solid #dddddd;
@@ -10329,35 +10341,35 @@ h2 {
   margin-bottom: 300px;
 }
 
-/* line 61, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 72, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .page-header-title {
   margin-left: 40px;
   margin-right: 40px;
 }
 
-/* line 66, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 77, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .page-header-links {
   display: inline-block;
   float: right;
-  margin-top: 20px;
+  margin-top: 35px;
   margin-bottom: 10px;
 }
 
-/* line 72, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 83, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .header__alert_message {
-  width: 1100px;
+  width: 1210px;
   padding: 7px;
   height: 35px;
-  background-color: #ff0033;
+  background-color: rgba(255, 41, 0, 0.9);
   font-size: 16px;
   text-align: center;
   margin: 0 auto 20px auto;
   color: #ffffff;
   /* box-shadow */
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 8px;
+  box-shadow: #fceb31 0px 1px 8px;
 }
 
-/* line 87, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 98, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .header__ok_alert_message {
   width: 1100px;
   padding: 5px;
@@ -10371,27 +10383,28 @@ h2 {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 8px;
 }
 
-/* line 102, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 113, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .play-pause {
   width: 37px !important;
 }
 
-/* line 106, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 117, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .audiojs {
   width: 468px;
 }
 
-/* line 110, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 121, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .account-container {
   width: 380px;
   min-height: 300px;
   padding: 20px;
   margin-left: 162px;
   /* box-shadow */
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 8px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 8px;
+  background-color: rgba(245, 245, 245, 0.83);
 }
 
-/* line 121, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 133, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .form-container {
   width: 460px;
   min-height: 500px;
@@ -10401,13 +10414,13 @@ h2 {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 8px;
 }
 
-/* line 132, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 144, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .account-btn {
   width: 340px;
   margin-bottom: 10px;
 }
 
-/* line 137, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 149, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .b-container {
   width: 500px;
   height: 300px;
@@ -10418,7 +10431,7 @@ h2 {
   color: #fff;
 }
 
-/* line 146, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 158, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .b-popup {
   width: 100%;
   min-height: 100%;
@@ -10429,7 +10442,7 @@ h2 {
   display: none;
 }
 
-/* line 155, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 167, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .b-popup .b-popup-content {
   margin: 100px auto 0px auto;
   width: 400px;
@@ -10440,31 +10453,39 @@ h2 {
   box-shadow: 0px 0px 10px #000;
 }
 
-/* line 165, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 177, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .btn-success.active, .open > .btn-success.dropdown-toggle {
   color: white;
   background-color: #B7D518;
   border-color: #80B60D;
 }
 
-/* line 176, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 188, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .estimate-with_comment {
   background-color: #f6f475;
 }
 
-/* line 180, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 192, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .page-header {
-  margin-bottom: 40px;
+  background-color: rgba(245, 245, 245, 0.83);
+  padding-top: 25px;
+  margin: 0px 0 40px;
+  border-bottom: 1px solid #E2E4EB;
 }
 
-/* line 184, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 199, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+.tab-page-header {
+  background-color: rgba(245, 245, 245, 0);
+}
+
+/* line 203, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .btn-primary {
   color: white;
   background-color: #ff2e51;
   border-color: rgba(239, 8, 50, 0.79);
 }
 
-/* line 190, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 209, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle {
   color: white;
   background-color: #ff7182;

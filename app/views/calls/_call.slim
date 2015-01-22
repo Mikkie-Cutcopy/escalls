@@ -4,8 +4,8 @@ div.call-panel
       = call.total_score
   div.call-head
     div.call-date
-      b
-        = call.date.to_s(:escalls_datetime)
+
+      = call.date.to_s(:escalls_datetime)
     div.call-worker
       = call.user.full_name
 
