@@ -10268,69 +10268,1121 @@ button.close {
   margin-left: 1em;
 }
 
-/* line 11, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 1, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/soundmanager2.css.scss */
+.sm2-bar-ui {
+  font-size: 12px;
+}
+
+/* line 5, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/soundmanager2.css.scss */
+.sm2-bar-ui .sm2-main-controls,
+.sm2-bar-ui .sm2-playlist-drawer {
+  background-color: #43647b;
+}
+
+/* line 8, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/soundmanager2.css.scss */
+.sm2-bar-ui .sm2-inline-texture {
+  background: transparent;
+}
+
+/* line 1, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  font-family: helvetica, arial, verdana, sans-serif;
+  font-weight: normal;
+  /* prevent background border bleed */
+  background-clip: padding-box;
+  /* because indeed, fonts do look pretty "fat" otherwise in this case. */
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  /* http://files.christophzillgens.com/webkit-font-smoothing.html */
+  /* font-smoothing: subpixel-antialiased; */
+  /* general font niceness? */
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  min-width: 20em;
+  max-width: 30em;
+  /* take out overflow if you want an absolutely-positioned playlist dropdown. */
+  border-radius: 2px;
+  overflow: hidden;
+  /* just for fun (animate normal / full-width) */
+  -webkit-transition: max-width 0.2s ease-in-out;
+          transition: max-width 0.2s ease-in-out;
+}
+
+/* line 27, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui .sm2-playlist li {
+  text-align: center;
+  font-size: 92.5%;
+  line-height: 1em;
+}
+
+/* line 33, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui.compact {
+  min-width: 1em;
+  max-width: 15em;
+}
+
+/* line 38, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui ul {
+  line-height: 1em;
+}
+
+/* want things left-aligned? */
+/* line 43, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui.left .sm2-playlist li {
+  text-align: left;
+}
+
+/* line 47, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui .sm2-playlist li .load-error {
+  cursor: help;
+}
+
+/* line 51, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui.full-width {
+  max-width: 100%;
+  z-index: 5;
+}
+
+/* line 56, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui.fixed {
+  position: fixed;
+  top: auto;
+  bottom: 0px;
+  left: 0px;
+  border-radius: 0px;
+  /* so the absolutely-positioned playlist can show... */
+  overflow: visible;
+  /* and this should probably have a high z-index. tweak as needed. */
+  z-index: 999;
+}
+
+/* line 69, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui.fixed .bd,
+.sm2-bar-ui.bottom .bd {
+  /* display: table; */
+  border-radius: 0px;
+  border-bottom: none;
+}
+
+/* line 75, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui.bottom {
+  /* absolute bottom-aligned UI */
+  top: auto;
+  bottom: 0px;
+  left: 0px;
+  border-radius: 0px;
+  /* so the absolutely-positioned playlist can show... */
+  overflow: visible;
+}
+
+/* line 85, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui.playlist-open .bd {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom-color: transparent;
+}
+
+/* line 92, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui .bd,
+.sm2-bar-ui .sm2-extra-controls {
+  position: relative;
+  background-color: #2288cc;
+  /*
+  transition: background 0.2s ease-in-out;
+  */
+}
+
+/* line 100, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui .sm2-inline-gradient {
+  /* gradient */
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  /* W3C */
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.125) 5%, rgba(255, 255, 255, 0.125) 45%, rgba(255, 255, 255, 0.15) 50%, rgba(0, 0, 0, 0.1) 51%, rgba(0, 0, 0, 0.1) 95%);
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.125) 5%, rgba(255, 255, 255, 0.125) 45%, rgba(255, 255, 255, 0.15) 50%, rgba(0, 0, 0, 0.1) 51%, rgba(0, 0, 0, 0.1) 95%);
+  /* W3C */
+}
+
+/* line 111, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui.flat .sm2-inline-gradient {
+  background-image: none;
+}
+
+/* line 115, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui.flat .sm2-box-shadow {
+  display: none;
+  box-shadow: none;
+}
+
+/* line 120, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui.no-volume .sm2-volume {
+  /* mobile devices (android + iOS) ignore attempts to set volume. */
+  display: none;
+}
+
+/* line 125, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui.textured .sm2-inline-texture {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  /* for example */
+  /* background-image: url(/assets/bar-ui/wood_pattern_dark.png); */
+  /* additional opacity effects can be applied here. */
+  opacity: 0.75;
+}
+
+/* line 138, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui.textured.dark-text .sm2-inline-texture {
+  /* dark text + textured case: use light wood background (for example.) */
+  /* background-image: url(/assets/bar-ui/patterns/wood_pattern.png); */
+}
+
+/* line 143, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui.textured.dark-text .sm2-playlist-wrapper {
+  /* dark text + textured case: ditch 10% dark on playlist body. */
+  background-color: transparent;
+}
+
+/* line 149, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui.textured.dark-text .sm2-playlist-wrapper ul li:hover a,
+.sm2-bar-ui.textured.dark-text .sm2-playlist-wrapper ul li.selected a {
+  /* dark + textured case: dark highlights */
+  background-color: rgba(0, 0, 0, 0.1);
+  background-image: url(/assets/bar-ui/black-10.png);
+  /* modern browsers don't neeed the image */
+  background-image: none, none;
+}
+
+/* line 157, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui .bd {
+  display: table;
+  border-bottom: none;
+}
+
+/* line 162, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui .sm2-playlist-wrapper {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* line 166, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui .sm2-extra-controls .bd {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 171, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui.textured .sm2-extra-controls .bd {
+  /* lighten extra color overlays */
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* line 176, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui .sm2-extra-controls {
+  background-color: transparent;
+  border: none;
+}
+
+/* line 181, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui .sm2-extra-controls .bd {
+  /* override full-width table behaviour */
+  display: block;
+  border: none;
+}
+
+/* line 187, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui .sm2-extra-controls .sm2-inline-element {
+  display: inline-block;
+}
+
+/* line 192, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui,
+.sm2-bar-ui .bd a {
+  color: #fff;
+}
+
+/* line 197, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui.dark-text,
+.sm2-bar-ui.dark-text .bd a {
+  color: #000;
+}
+
+/* line 201, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui.dark-text .sm2-inline-button {
+  /* Warning/disclaimer: SVG might be fuzzy when inverted on Chrome, losing resolution on hi-DPI displays. */
+  -webkit-filter: invert(1);
+  /* SVG-based invert filter for Firefox */
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='invert'><feColorMatrix in='SourceGraphic' type='matrix' values='-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0'/></filter></svg>#invert");
+  /* IE 8 inverse filter, may only match pure black/white */
+  /* filter: xray; */
+  /* pending W3 standard */
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  /* not you, IE < 10. */
+  -webkit-filter: none\9;
+          filter: none\9;
+}
+
+/* line 214, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui .bd a {
+  text-decoration: none;
+}
+
+/* line 218, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui .bd .sm2-button-element:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  background-image: url(/assets/bar-ui/black-10.png);
+  background-image: none, none;
+}
+
+/* line 224, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui .bd .sm2-button-element:active {
+  background-color: rgba(0, 0, 0, 0.25);
+  background-image: url(/assets/bar-ui/black-25.png);
+  background-image: none, none;
+}
+
+/* line 232, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui .bd .sm2-extra-controls .sm2-button-element:active .sm2-inline-button,
+.sm2-bar-ui .bd .active .sm2-inline-button {
+  -ms-transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  -webkit-transform-origin: 50% 50%;
+  /* firefox doesn't scale quite right. */
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  /* firefox doesn't scale quite right. */
+  -moz-transform: none;
+}
+
+/* line 245, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui .bd .sm2-extra-controls .sm2-button-element:hover,
+.sm2-bar-ui .bd .sm2-extra-controls .sm2-button-element:active,
+.sm2-bar-ui .bd .active {
+  background-color: rgba(0, 0, 0, 0.1);
+  background-image: url(/assets/bar-ui/black-10.png);
+  background-image: none, none;
+}
+
+/* line 251, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui .bd .sm2-extra-controls .sm2-button-element:active {
+  /* box shadow is excessive on smaller elements. */
+  box-shadow: none;
+}
+
+/* line 256, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui {
+  /* base font size */
+  font-size: 15px;
+  text-shadow: none;
+}
+
+/* line 262, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui .sm2-inline-element {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0px;
+  overflow: hidden;
+}
+
+/* line 271, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui .sm2-inline-element,
+.sm2-bar-ui .sm2-button-element .sm2-button-bd {
+  position: relative;
+  /**
+   * .sm2-button-bd exists because of a Firefox bug from 2000
+   * re: nested relative / absolute elements inside table cells.
+   * https://bugzilla.mozilla.org/show_bug.cgi?id=63895
+   */
+}
+
+/* line 281, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui .sm2-inline-element,
+.sm2-bar-ui .sm2-button-element .sm2-button-bd {
+  /**
+   * if you play with UI width/height, these are the important ones.
+   * NOTE: match these values if you want square UI buttons.
+   */
+  min-width: 2.8em;
+  min-height: 2.8em;
+}
+
+/* line 290, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui .sm2-inline-button {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 298, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui .sm2-extra-controls .bd {
+  /* don't double-layer. */
+  background-image: none;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+/* line 304, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui .sm2-extra-controls .sm2-inline-element {
+  width: 25px;
+  /* bare minimum */
+  min-height: 1.75em;
+  min-width: 2.5em;
+}
+
+/* line 310, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui .sm2-inline-status {
+  line-height: 100%;
+  /* how much to allow before truncating song artist / title with ellipsis */
+  display: inline-block;
+  min-width: 200px;
+  max-width: 20em;
+  /* a little more spacing */
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+}
+
+/* line 321, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui .sm2-inline-element {
+  /* extra-small em scales up nicely, vs. 1px which gets fat */
+  border-right: 0.075em dotted #666;
+  /* legacy */
+  border-right: 0.075em solid rgba(0, 0, 0, 0.1);
+}
+
+/* line 327, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui .sm2-inline-element.noborder {
+  border-right: none;
+}
+
+/* line 331, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui .sm2-inline-element.compact {
+  min-width: 2em;
+  padding: 0px 0.25em;
+}
+
+/* line 336, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui .sm2-inline-element:first-of-type {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  overflow: hidden;
+}
+
+/* line 342, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui .sm2-inline-element:last-of-type {
+  border-right: none;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+/* line 348, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui .sm2-inline-status a:hover {
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+/* line 354, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-inline-time,
+.sm2-inline-duration {
+  display: table-cell;
+  width: 1%;
+  font-size: 75%;
+  line-height: 0.9em;
+  min-width: 2em;
+  /* if you have sounds > 10:00 in length, make this bigger. */
+  vertical-align: middle;
+}
+
+/* line 363, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui .sm2-playlist {
+  position: relative;
+  height: 1.45em;
+}
+
+/* line 368, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui .sm2-playlist-target {
+  /* initial render / empty case */
+  position: relative;
+  min-height: 1em;
+}
+
+/* line 374, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui .sm2-playlist ul {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  list-style-type: none;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* line 387, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui p,
+.sm2-bar-ui .sm2-playlist ul,
+.sm2-bar-ui .sm2-playlist ul li {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* line 392, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui .sm2-playlist ul li {
+  position: relative;
+}
+
+/* line 397, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui .sm2-playlist ul li,
+.sm2-bar-ui .sm2-playlist ul li a {
+  position: relative;
+  display: block;
+  /* prevent clipping of characters like "g" */
+  height: 1.5em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+/* line 408, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-row {
+  display: table-row;
+}
+
+/* line 412, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-progress-bd {
+  /* spacing between progress track/ball and time (position) */
+  padding: 0px 0.8em;
+}
+
+/* line 419, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-progress .sm2-progress-track,
+.sm2-progress .sm2-progress-ball,
+.sm2-progress .sm2-progress-bar {
+  position: relative;
+  width: 100%;
+  height: 0.65em;
+  border-radius: 0.65em;
+}
+
+/* line 426, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-progress .sm2-progress-bar {
+  /* element which follows the progres "ball" as it moves */
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 0px;
+  background-color: rgba(0, 0, 0, 0.33);
+  background-image: url(/assets/bar-ui/black-33.png);
+  background-image: none, none;
+}
+
+/* line 439, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.volume-shade,
+.playing .sm2-progress .sm2-progress-track,
+.paused .sm2-progress .sm2-progress-track {
+  cursor: pointer;
+}
+
+/* line 443, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.playing .sm2-progress .sm2-progress-ball {
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+/* line 449, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-progress .sm2-progress-ball {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 1em;
+  height: 1em;
+  margin: -0.2em 0px 0px -0.5em;
+  width: 14px;
+  height: 14px;
+  margin: -2px 0px 0px -7px;
+  width: 0.9333em;
+  height: 0.9333em;
+  margin: -0.175em 0px 0px -0.466em;
+  background-color: #fff;
+  padding: 0px;
+  /*
+   z-index: 1;
+  */
+  -webkit-transition: -webkit-transform 0.15s ease-in-out;
+  transition: transform 0.15s ease-in-out;
+}
+
+/*
+.sm2-bar-ui.dark-text .sm2-progress .sm2-progress-ball {
+ background-color: #000;
+}
+*/
+/* line 477, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-progress .sm2-progress-track {
+  background-color: rgba(0, 0, 0, 0.4);
+  background-image: url(/assets/bar-ui/black-33.png);
+  /* legacy */
+  background-image: none, none;
+  /* modern browsers */
+}
+
+/* scrollbar rules have to be separate, browsers not supporting this syntax will skip them when combined. */
+/* line 484, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-playlist-wrapper ul::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* line 489, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.playing.grabbing .sm2-progress .sm2-progress-track,
+.playing.grabbing .sm2-progress .sm2-progress-ball {
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+/* line 495, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui.grabbing .sm2-progress .sm2-progress-ball {
+  -webkit-transform: scale(1.15);
+  -ms-transform: scale(1.15);
+      transform: scale(1.15);
+}
+
+/* line 500, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-inline-button {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  /* hide inner text */
+  line-height: 10em;
+  /**
+   * image-rendering seems to apply mostly to Firefox in this case. Use with caution.
+   * https://developer.mozilla.org/en-US/docs/Web/CSS/image-rendering#Browser_compatibility
+   */
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+  -ms-interpolation-mode: bicubic;
+}
+
+/* line 518, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.play-pause,
+.play-pause:hover,
+.paused .play-pause:hover {
+  background-image: url(/assets/bar-ui/icomoon/entypo-25px-ffffff/PNG/play.png);
+  background-image: none, url(/assets/bar-ui/icomoon/entypo-25px-ffffff/SVG/play.svg);
+  background-size: 67.5%;
+  background-position: 40% 53%;
+}
+
+/* line 525, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.playing .play-pause {
+  background-image: url(/assets/bar-ui/icomoon/entypo-25px-ffffff/PNG/pause.png);
+  background-image: none, url(/assets/bar-ui/icomoon/entypo-25px-ffffff/SVG/pause.svg);
+  background-size: 57.6%;
+  background-position: 50% 53%;
+}
+
+/* line 532, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-volume-control {
+  background-image: url(/assets/bar-ui/icomoon/entypo-25px-ffffff/PNG/volume.png);
+  background-image: none, url(/assets/bar-ui/icomoon/entypo-25px-ffffff/SVG/volume.svg);
+}
+
+/* line 538, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-volume-control,
+.sm2-volume-shade {
+  background-position: 42% 50%;
+  background-size: 56%;
+}
+
+/* line 543, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.volume-shade {
+  filter: alpha(opacity=33);
+  /* <= IE 8 */
+  opacity: 0.33;
+  /* -webkit-filter: invert(1);*/
+  background-image: url(/assets/bar-ui/icomoon/entypo-25px-000000/PNG/volume.png);
+  background-image: none, url(/assets/bar-ui/icomoon/entypo-25px-000000/SVG/volume.svg);
+}
+
+/* line 551, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.menu {
+  background-image: url(/assets/bar-ui/icomoon/entypo-25px-ffffff/PNG/list2.png);
+  background-image: none, url(/assets/bar-ui/icomoon/entypo-25px-ffffff/SVG/list2.svg);
+  background-size: 58%;
+  background-position: 54% 51%;
+}
+
+/* line 558, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.previous {
+  background-image: url(/assets/bar-ui/icomoon/entypo-25px-ffffff/PNG/first.png);
+  background-image: none, url(/assets/bar-ui/icomoon/entypo-25px-ffffff/SVG/first.svg);
+}
+
+/* line 563, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.next {
+  background-image: url(/assets/bar-ui/icomoon/entypo-25px-ffffff/PNG/last.png);
+  background-image: none, url(/assets/bar-ui/icomoon/entypo-25px-ffffff/SVG/last.svg);
+}
+
+/* line 569, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.previous,
+.next {
+  background-size: 49.5%;
+  background-position: 50% 50%;
+}
+
+/* line 576, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-extra-controls .previous,
+.sm2-extra-controls .next {
+  backgound-size: 53%;
+}
+
+/* line 580, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.shuffle {
+  background-image: url(/assets/bar-ui/icomoon/entypo-25px-ffffff/PNG/shuffle.png);
+  background-image: none, url(/assets/bar-ui/icomoon/entypo-25px-ffffff/SVG/shuffle.svg);
+  background-size: 45%;
+  background-position: 50% 50%;
+}
+
+/* line 587, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.repeat {
+  background-image: url(/assets/bar-ui/icomoon/entypo-20px-ffffff/PNG/loop.png);
+  background-image: none, url(/assets/bar-ui/icomoon/entypo-25px-ffffff/SVG/loop.svg);
+  background-position: 50% 43%;
+  background-size: 54%;
+}
+
+/* line 594, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-extra-controls .repeat {
+  background-position: 50% 45%;
+}
+
+/* line 598, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-progress-ball .icon-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: none, url(/assets/bar-ui/icomoon/free-25px-000000/SVG/spinner.svg);
+  background-size: 72%;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  display: none;
+}
+
+/* line 611, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.playing.buffering .sm2-progress-ball .icon-overlay {
+  display: block;
+  -webkit-animation: spin 0.6s linear infinite;
+  animation: spin 0.6s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  /* line 618, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  /* line 621, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  /* line 636, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  /* line 639, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+/* line 644, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-element ul {
+  font-size: 95%;
+  list-style-type: none;
+}
+
+/* line 650, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-element ul,
+.sm2-element ul li {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* line 655, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.bd.sm2-playlist-drawer {
+  /* optional: absolute positioning */
+  /* position: absolute; */
+  z-index: 3;
+  border-radius: 0px;
+  width: 100%;
+  height: 0px;
+  border: none;
+  background-image: none;
+  display: block;
+  overflow: hidden;
+  -webkit-transition: height 0.2s ease-in-out;
+          transition: height 0.2s ease-in-out;
+}
+
+/* line 670, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui.fixed .bd.sm2-playlist-drawer,
+.sm2-bar-ui.bottom .bd.sm2-playlist-drawer {
+  position: absolute;
+}
+
+/* line 675, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui.fixed .sm2-playlist-wrapper,
+.sm2-bar-ui.bottom .sm2-playlist-wrapper {
+  padding-bottom: 0px;
+}
+
+/* line 680, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui.fixed .bd.sm2-playlist-drawer,
+.sm2-bar-ui.bottom .bd.sm2-playlist-drawer {
+  /* show playlist on top */
+  bottom: 2.8em;
+}
+
+/* line 685, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui .bd.sm2-playlist-drawer {
+  opacity: 0.5;
+  /* redraw fix for Chrome, background color doesn't always draw when playlist drawer open. */
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+}
+
+/* experimental, may not perform well. */
+/*
+.sm2-bar-ui .bd.sm2-playlist-drawer a {
+ -webkit-filter: blur(5px);
+}
+*/
+/* line 698, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui.playlist-open .bd.sm2-playlist-drawer {
+  opacity: 1;
+}
+
+/* line 702, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui.playlist-open .bd.sm2-playlist-drawer a {
+  -webkit-filter: none;
+  /* blur(0px) was still blurred on retina displays, as of 07/2014 */
+}
+
+/* line 707, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui.fixed.playlist-open .bd.sm2-playlist-drawer .sm2-playlist-wrapper,
+.sm2-bar-ui.bottom.playlist-open .bd.sm2-playlist-drawer .sm2-playlist-wrapper {
+  /* extra padding when open */
+  padding-bottom: 0.5em;
+  box-shadow: none;
+}
+
+/* line 713, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui .bd.sm2-playlist-drawer {
+  -webkit-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+  -webkit-transition-property: -webkit-transform, height, opacity, background-color, -webkit-filter;
+          transition-property: transform, height, opacity, background-color, -webkit-filter;
+}
+
+/* line 718, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui .bd.sm2-playlist-drawer a {
+  -webkit-transition: -webkit-filter 0.2s ease-in-out;
+          transition: -webkit-filter 0.2s ease-in-out;
+}
+
+/* line 722, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui .bd.sm2-playlist-drawer .sm2-inline-texture {
+  /* negative offset for height of top bar, so background is seamless. */
+  background-position: 0px -2.8em;
+}
+
+/* line 727, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-box-shadow {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0px 1px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* line 736, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-playlist-wrapper {
+  position: relative;
+  padding: 0.5em 0.5em 0.5em 0.25em;
+  background-image: none, none;
+}
+
+/* line 742, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-playlist-wrapper ul {
+  max-height: 9.25em;
+  overflow: auto;
+}
+
+/* line 747, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-playlist-wrapper ul li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* line 751, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-playlist-wrapper ul li:nth-child(odd) {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* line 755, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-playlist-wrapper ul li a {
+  display: block;
+  padding: 0.5em 0.25em 0.5em 0.75em;
+  margin-right: 0.5em;
+  font-size: 90%;
+  vertical-align: middle;
+}
+
+/* line 763, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-playlist-wrapper ul li a.sm2-exclude {
+  display: inline-block;
+}
+
+/* line 767, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-playlist-wrapper ul li a.sm2-exclude .label {
+  font-size: 95%;
+  line-height: 1em;
+  margin-left: 0px;
+  padding: 2px 4px;
+}
+
+/* line 774, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-playlist-wrapper ul li:hover a {
+  background-color: rgba(0, 0, 0, 0.2);
+  background-image: url(/assets/bar-ui/black-20.png);
+  background-image: none, none;
+}
+
+/* line 780, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui.dark-text .sm2-playlist-wrapper ul li:hover a {
+  background-color: rgba(255, 255, 255, 0.1);
+  background-image: url(/assets/bar-ui/black-10.png);
+  background-image: none, none;
+}
+
+/* line 786, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-playlist-wrapper ul li.selected a {
+  background-color: rgba(0, 0, 0, 0.25);
+  background-image: url(/assets/bar-ui/black-20.png);
+  background-image: none, none;
+}
+
+/* line 792, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui.dark-text ul li.selected a {
+  background-color: rgba(255, 255, 255, 0.1);
+  background-image: url(/assets/bar-ui/black-10.png);
+  background-image: none, none;
+}
+
+/* line 798, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui .disabled {
+  filter: alpha(opacity=33);
+  /* <= IE 8 */
+  opacity: 0.33;
+}
+
+/* line 803, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui .bd .sm2-button-element.disabled:hover {
+  background-color: transparent;
+}
+
+/* line 809, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui .active,
+.sm2-bar-ui.playlist-open .sm2-menu:hover {
+  /* depressed / "on" state */
+  box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.1);
+  background-image: none;
+}
+
+/* line 815, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.firefox-fix {
+  /**
+   * This exists because of a Firefox bug from 2000
+   * re: nested relative / absolute elements inside table cells.
+   * https://bugzilla.mozilla.org/show_bug.cgi?id=63895
+   */
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+/* some custom scrollbar trickery, where supported */
+/* line 829, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-playlist-wrapper ul::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* line 833, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-playlist-wrapper ul::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.33);
+  border-radius: 10px;
+}
+
+/* line 838, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-playlist-wrapper ul::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #fff;
+}
+
+/* line 843, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-extra-controls {
+  font-size: 0px;
+  text-align: center;
+}
+
+/* line 848, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui .label {
+  position: relative;
+  display: inline-block;
+  font-size: 0.7em;
+  margin-left: 0.25em;
+  vertical-align: top;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  padding: 0px 3px;
+  -moz-box-sizing: padding-box;
+       box-sizing: padding-box;
+}
+
+/* line 860, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui.dark-text .label {
+  background-color: rgba(0, 0, 0, 0.1);
+  background-image: url(/assets/bar-ui/black-10.png);
+  background-image: none, none;
+}
+
+/* line 866, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui .sm2-playlist-drawer .label {
+  font-size: 0.8em;
+  padding: 0px 3px;
+}
+
+/* --- full width stuff --- */
+/* line 873, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui .sm2-inline-element {
+  display: table-cell;
+}
+
+/* line 877, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui .sm2-inline-element {
+  /* collapse */
+  width: 1%;
+}
+
+/* line 882, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui .sm2-inline-status {
+  /* full width */
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+/* line 889, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui > .bd {
+  width: 100%;
+}
+
+/* line 893, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/bar-ui.css */
+.sm2-bar-ui .sm2-playlist-drawer {
+  /* re-hide playlist */
+  display: block;
+  overflow: hidden;
+}
+
+/* line 13, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 body {
   background-image: url(/assets/cover.jpg);
 }
 
-/* line 15, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 17, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .admin_main {
   width: 1210px;
   overflow: hidden;
   margin: auto;
 }
 
-/* line 21, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 23, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .escalls-container {
   margin: auto;
 }
 
-/* line 25, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 27, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 textarea.form-control {
   height: 130px;
   width: 420px;
 }
 
-/* line 30, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 32, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .call-comment {
   width: 468px !important;
 }
 
-/* line 34, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 36, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 h1 {
   display: inline-block;
 }
 
-/* line 38, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 40, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 h2 {
   margin-top: 0px;
 }
 
-/* line 42, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 44, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .tab-pane-content {
   margin: auto;
   width: 1060px;
 }
 
-/* line 47, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 49, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .datetimepicker {
   left: 750px !important;
   top: 450px !important;
 }
 
-/* line 52, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 54, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
   background-color: rgba(245, 245, 245, 0.83);
   cursor: pointer;
   color: royalblue;
 }
 
-/* line 58, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 60, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .nav-tabs > li > a {
   background-color: rgba(245, 245, 245, 0.53);
 }
 
-/* line 62, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 64, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .tab-content {
   background-color: rgba(245, 245, 245, 0.89);
   overflow: hidden;
@@ -10341,13 +11393,13 @@ h2 {
   margin-bottom: 300px;
 }
 
-/* line 72, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 74, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .page-header-title {
   margin-left: 40px;
   margin-right: 40px;
 }
 
-/* line 77, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 79, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .page-header-links {
   display: inline-block;
   float: right;
@@ -10355,7 +11407,7 @@ h2 {
   margin-bottom: 10px;
 }
 
-/* line 83, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 85, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .header__alert_message {
   width: 1210px;
   padding: 7px;
@@ -10369,7 +11421,7 @@ h2 {
   box-shadow: #fceb31 0px 1px 8px;
 }
 
-/* line 98, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 100, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .header__ok_alert_message {
   width: 1100px;
   padding: 5px;
@@ -10383,17 +11435,17 @@ h2 {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 8px;
 }
 
-/* line 113, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 115, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .play-pause {
   width: 37px !important;
 }
 
-/* line 117, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 119, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .audiojs {
   width: 468px;
 }
 
-/* line 121, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 123, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .account-container {
   width: 380px;
   min-height: 300px;
@@ -10404,7 +11456,7 @@ h2 {
   background-color: rgba(245, 245, 245, 0.83);
 }
 
-/* line 133, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 135, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .form-container {
   width: 460px;
   min-height: 500px;
@@ -10414,13 +11466,13 @@ h2 {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 8px;
 }
 
-/* line 144, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 146, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .account-btn {
   width: 340px;
   margin-bottom: 10px;
 }
 
-/* line 149, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 151, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .b-container {
   width: 500px;
   height: 300px;
@@ -10431,7 +11483,7 @@ h2 {
   color: #fff;
 }
 
-/* line 158, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 160, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .b-popup {
   width: 100%;
   min-height: 100%;
@@ -10442,7 +11494,7 @@ h2 {
   display: none;
 }
 
-/* line 167, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 169, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .b-popup .b-popup-content {
   margin: 100px auto 0px auto;
   width: 400px;
@@ -10453,19 +11505,19 @@ h2 {
   box-shadow: 0px 0px 10px #000;
 }
 
-/* line 177, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 179, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .btn-success.active, .open > .btn-success.dropdown-toggle {
   color: white;
   background-color: #B7D518;
   border-color: #80B60D;
 }
 
-/* line 188, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 190, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .estimate-with_comment {
   background-color: #f6f475;
 }
 
-/* line 192, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 194, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .page-header {
   background-color: rgba(245, 245, 245, 0.83);
   padding-top: 25px;
@@ -10473,19 +11525,19 @@ h2 {
   border-bottom: 1px solid #E2E4EB;
 }
 
-/* line 199, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 201, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .tab-page-header {
   background-color: rgba(245, 245, 245, 0);
 }
 
-/* line 203, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 205, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .btn-primary {
   color: white;
   background-color: #ff2e51;
   border-color: rgba(239, 8, 50, 0.79);
 }
 
-/* line 209, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 211, /home/mikkie/Documents/projects/escalls/app/assets/stylesheets/application.css.scss */
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle {
   color: white;
   background-color: #ff7182;
