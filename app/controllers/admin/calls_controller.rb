@@ -20,7 +20,7 @@ class Admin::CallsController < ApplicationController
       @calls = @calls.where('user_id' => params[:worker_filter]) #звонки сотрудника
     end
     if @calls.empty?
-      flash.now[:message_alert] = 'You doesn\'t have calls yet'
+      flash.now[:message_alert] = 'Записей не найдено'
     end
   end
 

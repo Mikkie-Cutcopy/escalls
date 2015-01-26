@@ -15,4 +15,8 @@ class User < ActiveRecord::Base
   def worker?
     self.role.eql?('worker')
   end
+
+  def quest?
+    self.role.eql?('quest')
+  end
 end
