@@ -11,7 +11,8 @@
 
 
  body {
-   background-image: image_url('cover.jpg');
+   background: image_url('cover.jpg') bottom right no-repeat;
+   background-attachment:fixed;
  }
 
  .admin_main {

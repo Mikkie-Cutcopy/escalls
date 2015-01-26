@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable, :timeoutable
 
-  has_many :calls
+  has_many :calls, dependent: :destroy
 
   scope :active_workers, -> {where('role' => 'worker', 'status' => 'active')}
 
