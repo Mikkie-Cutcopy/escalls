@@ -5,6 +5,7 @@ class Admin::CallsController < ApplicationController
   before_action :authenticate_admin!
   before_action :allow_create_call, only: [:new, :create, :edit, :update, :recount]
 
+
   load_and_authorize_resource
 
   layout 'admin'
