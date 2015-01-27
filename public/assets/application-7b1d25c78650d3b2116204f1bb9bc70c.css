@@ -10135,7 +10135,7 @@ button.close {
 
 /* line 32, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/calls.css.scss */
 .call-active {
-  background-color: #e9f7ec !important;
+  background-color: rgba(247, 100, 134, 0.46) !important;
 }
 
 /* line 37, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/calls.css.scss */
@@ -11543,4 +11543,21 @@ h2 {
   color: white;
   background-color: #ff7182;
   border-color: rgba(239, 127, 146, 0.66);
+}
+
+/* line 218, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+.table > thead > tr > td.info, .table > thead > tr > th.info, .table > thead > tr.info > td, .table > thead > tr.info > th, .table > tbody > tr > td.info, .table > tbody > tr > th.info, .table > tbody > tr.info > td, .table > tbody > tr.info > th, .table > tfoot > tr > td.info, .table > tfoot > tr > th.info, .table > tfoot > tr.info > td, .table > tfoot > tr.info > th {
+  background-color: rgba(253, 243, 239, 0.69) !important;
+}
+
+/* line 222, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+.table > thead > tr > td.success, .table > thead > tr > th.success, .table > thead > tr.success > td, .table > thead > tr.success > th, .table > tbody > tr > td.success, .table > tbody > tr > th.success, .table > tbody > tr.success > td, .table > tbody > tr.success > th, .table > tfoot > tr > td.success, .table > tfoot > tr > th.success, .table > tfoot > tr.success > td, .table > tfoot > tr.success > th {
+  background-color: #D84387 !important;
+}
+
+/* line 226, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+.btn-danger {
+  color: white;
+  background-color: #FF2E51;
+  border-color: #F10F37;
 }

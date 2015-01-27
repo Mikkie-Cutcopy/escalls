@@ -6,6 +6,7 @@ div class='tab-pane active' id='criterions'
     = button_to 'Добавить критерий', new_admin_criterion_path, method: :get, class: 'button btn btn-primary pull-right'
     br
     br
+    br
     p class='bg-danger'
       = @messages
     - unless @criterions.empty?

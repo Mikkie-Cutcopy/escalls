@@ -214,3 +214,17 @@
    background-color: #ff7182;
    border-color: rgba(239, 127, 146, 0.66);
  }
+
+ .table > thead > tr > td.info, .table > thead > tr > th.info, .table > thead > tr.info > td, .table > thead > tr.info > th, .table > tbody > tr > td.info, .table > tbody > tr > th.info, .table > tbody > tr.info > td, .table > tbody > tr.info > th, .table > tfoot > tr > td.info, .table > tfoot > tr > th.info, .table > tfoot > tr.info > td, .table > tfoot > tr.info > th {
+   background-color: rgba(253, 243, 239, 0.69) !important;
+ }
+
+ .table > thead > tr > td.success, .table > thead > tr > th.success, .table > thead > tr.success > td, .table > thead > tr.success > th, .table > tbody > tr > td.success, .table > tbody > tr > th.success, .table > tbody > tr.success > td, .table > tbody > tr.success > th, .table > tfoot > tr > td.success, .table > tfoot > tr > th.success, .table > tfoot > tr.success > td, .table > tfoot > tr.success > th {
+   background-color: #D84387 !important;
+ }
+
+ .btn-danger {
+   color: white;
+   background-color: #FF2E51;
+   border-color: #F10F37;
+ }
