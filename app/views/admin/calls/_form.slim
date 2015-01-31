@@ -2,8 +2,8 @@
 
 
 - unless @call.comment.blank?
-  script
-    |$(document).ready(function() {
+  javascript:
+     $(document).ready(function() {
        $('a#comment-btn').click();
      });
 br
@@ -11,22 +11,22 @@ div.escalls-container.panel.panel-primary style="width: 500px"
   div.panel-heading
     h3.panel-title
   div.panel-body
-    = form_for [:admin, @call], html: {multipart: true} do |f|
-      = f.label :Тема
-      br
-      = f.text_field :subject, class: 'form-control'
-      br
-      = f.label :Дата_и_время_звонка
-      div.input-group.escalls-datetimepicker
-        div class="input-append date" id="datetimepicker"  data-date-format="dd-mm-yyyy hh:ii" data-date-language='ru' data-date-startDate="2014-01-01" data-date-todayBtn='true'
-          = f.datetime_field :date, style: "float: right", class: "span2 form-control", size: "16", type: "text", value: "#{@call.id ? @call.date.to_s(:escalls_datetime) : Time.now.to_s(:escalls_datetime)}"
-          span.add-on
-            i.icon-th
-        span class="input-group-btn"
-          button  class="btn btn-default" type="button"
-            span.glyphicon.glyphicon-calendar
+    = form_for [:admin, @call], html: {multipart: true}, id: 'new_call' do |f|
+      div.form-group
+        = f.label :Тема
+        br
+        = f.text_field :subject, class: 'form-control', name: 'call_subject'
 
-      br
+      div.form-group
+        = f.label :Дата_и_время_звонка
+        div.input-group.escalls-datetimepicker
+          div class="input-append date " id="datetimepicker"  data-date-format="dd-mm-yyyy hh:ii" data-date-language='ru' data-date-startDate="2014-01-01" data-date-todayBtn='true'
+            = f.datetime_field :date, name: 'call_date', style: "float: right", class: "span2 form-control", size: "16", type: "text", value: "#{@call.id ? @call.date.to_s(:escalls_datetime) : Time.now.to_s(:escalls_datetime)}"
+            span.add-on
+              i.icon-th
+          span class="input-group-btn"
+            button  class="btn btn-default" type="button"
+              span.glyphicon.glyphicon-calendar
       = f.label :Работник
       = f.select :user_id, options_from_collection_for_select(@workers, :id, :full_name), {}, {class: 'form-control'}
       br

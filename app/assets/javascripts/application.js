@@ -39,6 +39,12 @@
 //= require bootstrap
 //= require bar-ui
 
+//= require formValidation
+//= require validation/bootstrap
+//= require validation/en_US
+//= require validation/ru_RU
+
+
 //= require_tree .
 
 
@@ -134,4 +140,44 @@ $(document).on('mouseenter mouseleave', '.call-panel', function(){
     $("> div.dropdown", this).toggleClass("invisible");
     $("> div.dropdown", this).removeClass("open");
     $(this).toggleClass("call-active");
+});
+
+
+
+$(document).ready(function() {
+    $('.new_call, .edit_call').formValidation({
+        // I am validating Bootstrap form
+        framework: 'bootstrap',
+
+        icon: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+
+        fields: {
+            call_subject: {
+                validators: {
+                    notEmpty: {
+                        message: 'Поле не может быть пустым'
+                    }
+                }
+            },
+
+            call_date: {
+                validators: {
+                    notEmpty: {
+                        message: 'Поле не может быть пустым'
+                    },
+                    regexp: {
+                        regexp: /^[1-3]\d-[0-1]\d-20\d\d [0-2]\d:[0-5]\d/,
+                        message: 'Не соответствует формату даты'
+                    }
+                }
+
+
+
+            }
+        }
+    })
 });

@@ -11320,70 +11320,296 @@ button.close {
   overflow: hidden;
 }
 
-/* line 13, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/**
+ * FormValidation (http://formvalidation.io)
+ * The best jQuery plugin to validate form fields. Support Bootstrap, Foundation, Pure, SemanticUI, UIKit frameworks
+ *
+ * @author      http://twitter.com/nghuuphuoc
+ * @copyright   (c) 2013 - 2015 Nguyen Huu Phuoc
+ * @license     http://formvalidation.io/license/
+ */
+/* line 11, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/formValidation.css */
+.fv-has-feedback {
+  position: relative;
+}
+
+/* line 14, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/formValidation.css */
+.fv-control-feedback {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  display: block;
+  width: 34px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+}
+
+/* line 25, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/formValidation.css */
+.fv-has-feedback .fv-control-feedback {
+  /*right: 15px;*/
+}
+
+/* line 28, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/formValidation.css */
+.fv-help-block {
+  display: block;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~ For Bootstrap form ~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* line 36, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/formValidation.css */
+.fv-form-bootstrap .help-block {
+  margin-bottom: 0;
+}
+
+/* line 39, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/formValidation.css */
+.fv-form-bootstrap .tooltip-inner {
+  text-align: left;
+}
+
+/* Bootstrap stacked form without label */
+/* line 43, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/formValidation.css */
+.fv-form-bootstrap .fv-icon-no-label {
+  top: 0;
+}
+
+/* line 46, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/formValidation.css */
+.fv-form-bootstrap .fv-bootstrap-icon-input-group {
+  z-index: 100;
+}
+
+/* Bootstrap inline form */
+/* line 50, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/formValidation.css */
+.form-inline.fv-form-bootstrap .form-group, .fv-form-bootstrap.navbar-form .form-group, .form-inline.fv-form-bootstrap .field_with_errors, .fv-form-bootstrap.navbar-form .field_with_errors {
+  vertical-align: top;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~ For Foundation form ~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* line 58, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/formValidation.css */
+.fv-form-foundation .fv-control-feedback {
+  top: 21px;
+  /* The height of Foundation label */
+  right: 15px;
+  /* The padding-right of .columns */
+  width: 37px;
+  height: 37px;
+  line-height: 37px;
+}
+
+/* line 65, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/formValidation.css */
+.fv-form-foundation .collapse .fv-control-feedback {
+  top: 0;
+  right: 0;
+}
+
+/* Foundation horizontal form */
+/* line 70, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/formValidation.css */
+.fv-form-horizontal.fv-form-foundation .fv-control-feedback {
+  top: 0;
+}
+
+/* Foundation stacked form without label */
+/* line 74, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/formValidation.css */
+.fv-form-foundation .fv-icon-no-label {
+  top: 0;
+}
+
+/* line 77, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/formValidation.css */
+.fv-form-foundation .error .fv-control-feedback {
+  color: #f04124;
+}
+
+/**
+ * Foundation reset the bottom marin to 0 when the row has '.error' class
+ * I need to adjust it when using tooltip to show the error
+ */
+/* line 84, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/formValidation.css */
+.fv-form-foundation .error.fv-has-tooltip input, .error.fv-has-tooltip textarea, .error.fv-has-tooltip select {
+  margin-bottom: 1rem;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~ For Pure form ~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~ */
+/* line 92, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/formValidation.css */
+.fv-form-pure .fv-control-feedback {
+  top: 22px;
+  /* Height of Pure label */
+  width: 36px;
+  /* Height of Pure input */
+  height: 36px;
+  line-height: 36px;
+}
+
+/* line 98, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/formValidation.css */
+.pure-form-stacked.fv-form-pure .fv-control-feedback {
+  top: 4px;
+}
+
+/* line 101, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/formValidation.css */
+.pure-form-aligned .pure-control-group .fv-help-block {
+  margin-top: 5px;
+  margin-left: 180px;
+}
+
+/* line 106, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/formValidation.css */
+.pure-form-aligned.fv-form-pure .fv-control-feedback,
+.fv-form-pure .fv-icon-no-label {
+  /* Pure stacked form without label */
+  top: 0;
+}
+
+/* line 111, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/formValidation.css */
+.fv-form-pure .fv-has-error label,
+.fv-form-pure .fv-has-error .fv-help-block,
+.fv-form-pure .fv-has-error .fv-control-feedback {
+  color: #CA3C3C;
+  /* Same as .button-error */
+}
+
+/* line 115, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/formValidation.css */
+.fv-form-pure .fv-has-success label,
+.fv-form-pure .fv-has-success .fv-control-feedback {
+  /*color: #1CB841;*/
+  /* Same as .button-success */
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~ For Semantic form ~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* line 123, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/formValidation.css */
+.fv-form-semantic .fv-control-feedback.icon {
+  right: 7px;
+}
+
+/* line 126, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/formValidation.css */
+.fv-form-semantic .error .icon {
+  color: #d95c5c;
+}
+
+/* Semantic horizontal form */
+/* line 130, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/formValidation.css */
+.fv-form-horizontal.fv-form-semantic .row {
+  padding-bottom: 0;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~ For UIKit form ~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~ */
+/* line 138, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/formValidation.css */
+.fv-form-uikit .fv-control-feedback {
+  top: 25px;
+  /* Height of UIKit label */
+  width: 30px;
+  /* Height of UIKit input */
+  height: 30px;
+  line-height: 30px;
+}
+
+/* line 144, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/formValidation.css */
+.fv-form-uikit .uk-text-danger {
+  display: block;
+}
+
+/* UIKit horizontal form */
+/* line 148, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/formValidation.css */
+.uk-form-horizontal.fv-form-uikit .fv-control-feedback {
+  /*line-height: normal;*/
+  top: 0;
+}
+
+/* line 154, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/formValidation.css */
+.fv-form-uikit .fv-has-error label,
+.fv-form-uikit .fv-has-error .uk-form-label,
+.fv-form-uikit .fv-has-error .fv-control-feedback {
+  color: #D85030;
+  /* Same as .uk-form-danger */
+}
+
+/* line 159, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/formValidation.css */
+.fv-form-uikit .fv-has-success label,
+.fv-form-uikit .fv-has-success .uk-form-label,
+.fv-form-uikit .fv-has-success .fv-control-feedback {
+  /*color: #659F13;*/
+  /* Same as .uk-form-success */
+}
+
+/* UIKit stacked form without label */
+/* line 163, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/formValidation.css */
+.fv-form-uikit .fv-icon-no-label {
+  top: 0;
+}
+
+/* line 11, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 body {
-  background: url(/assets/cover.jpg) bottom right no-repeat;
+  background: url(/assets/cover.jpg) no-repeat top center;
+  background-size: 120vw auto;
+  overflow: initial;
   background-attachment: fixed;
 }
 
-/* line 18, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 19, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .admin_main {
   width: 1210px;
   overflow: hidden;
   margin: auto;
 }
 
-/* line 24, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 25, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .escalls-container {
   margin: auto;
 }
 
-/* line 28, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 30, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 textarea.form-control {
-  height: 130px;
+  height: 130px !important;
   width: 420px;
 }
 
-/* line 33, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 35, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .call-comment {
   width: 468px !important;
 }
 
-/* line 37, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 39, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 h1 {
   display: inline-block;
 }
 
-/* line 41, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 43, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 h2 {
   margin-top: 0px;
 }
 
-/* line 45, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 47, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .tab-pane-content {
   margin: auto;
   width: 1060px;
 }
 
-/* line 50, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 52, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .datetimepicker {
   left: 750px !important;
   top: 500px !important;
 }
 
-/* line 55, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 57, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
   background-color: rgba(245, 245, 245, 0.83);
   cursor: pointer;
   color: royalblue;
 }
 
-/* line 61, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 63, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .nav-tabs > li > a {
   background-color: rgba(245, 245, 245, 0.53);
 }
 
-/* line 65, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 67, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .tab-content {
   background-color: rgba(245, 245, 245, 0.89);
   overflow: hidden;
@@ -11394,13 +11620,13 @@ h2 {
   margin-bottom: 300px;
 }
 
-/* line 75, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 77, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .page-header-title {
   margin-left: 40px;
   margin-right: 40px;
 }
 
-/* line 80, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 82, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .page-header-links {
   display: inline-block;
   float: right;
@@ -11408,7 +11634,7 @@ h2 {
   margin-bottom: 10px;
 }
 
-/* line 86, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 88, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .header__alert_message {
   width: 1210px;
   padding: 7px;
@@ -11422,7 +11648,7 @@ h2 {
   box-shadow: rgba(94, 21, 14, 0.89) 0px 1px 8px;
 }
 
-/* line 101, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 103, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .header__ok_alert_message {
   width: 1100px;
   padding: 5px;
@@ -11436,17 +11662,17 @@ h2 {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 8px;
 }
 
-/* line 116, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 118, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .play-pause {
   width: 37px !important;
 }
 
-/* line 120, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 122, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .audiojs {
   width: 468px;
 }
 
-/* line 124, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 126, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .account-container {
   width: 380px;
   min-height: 300px;
@@ -11457,7 +11683,7 @@ h2 {
   background-color: rgba(245, 245, 245, 0.83);
 }
 
-/* line 136, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 138, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .form-container {
   width: 460px;
   min-height: 500px;
@@ -11467,13 +11693,13 @@ h2 {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 8px;
 }
 
-/* line 147, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 149, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .account-btn {
   width: 340px;
   margin-bottom: 10px;
 }
 
-/* line 152, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 154, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .b-container {
   width: 500px;
   height: 300px;
@@ -11484,7 +11710,7 @@ h2 {
   color: #fff;
 }
 
-/* line 161, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 163, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .b-popup {
   width: 100%;
   min-height: 100%;
@@ -11495,7 +11721,7 @@ h2 {
   display: none;
 }
 
-/* line 170, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 172, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .b-popup .b-popup-content {
   margin: 100px auto 0px auto;
   width: 400px;
@@ -11506,19 +11732,29 @@ h2 {
   box-shadow: 0px 0px 10px #000;
 }
 
-/* line 180, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 182, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .btn-success.active, .open > .btn-success.dropdown-toggle {
   color: white;
   background-color: #B7D518;
   border-color: #80B60D;
 }
 
-/* line 191, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 193, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+.form-group, .field_with_errors {
+  margin-bottom: 18px;
+}
+
+/* line 197, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+.form-control-feedback {
+  right: 38px;
+}
+
+/* line 200, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .estimate-with_comment {
   background-color: #f6f475;
 }
 
-/* line 195, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 204, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .page-header {
   background-color: rgba(245, 245, 245, 0.83);
   padding-top: 25px;
@@ -11526,36 +11762,36 @@ h2 {
   border-bottom: 1px solid #E2E4EB;
 }
 
-/* line 202, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 211, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .tab-page-header {
   background-color: rgba(245, 245, 245, 0);
 }
 
-/* line 206, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 215, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .btn-primary {
   color: white;
   background-color: #ff2e51;
   border-color: rgba(239, 8, 50, 0.79);
 }
 
-/* line 212, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 221, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle {
   color: white;
   background-color: #ff7182;
   border-color: rgba(239, 127, 146, 0.66);
 }
 
-/* line 218, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 227, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .table > thead > tr > td.info, .table > thead > tr > th.info, .table > thead > tr.info > td, .table > thead > tr.info > th, .table > tbody > tr > td.info, .table > tbody > tr > th.info, .table > tbody > tr.info > td, .table > tbody > tr.info > th, .table > tfoot > tr > td.info, .table > tfoot > tr > th.info, .table > tfoot > tr.info > td, .table > tfoot > tr.info > th {
   background-color: rgba(253, 243, 239, 0.69) !important;
 }
 
-/* line 222, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 231, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .table > thead > tr > td.success, .table > thead > tr > th.success, .table > thead > tr.success > td, .table > thead > tr.success > th, .table > tbody > tr > td.success, .table > tbody > tr > th.success, .table > tbody > tr.success > td, .table > tbody > tr.success > th, .table > tfoot > tr > td.success, .table > tfoot > tr > th.success, .table > tfoot > tr.success > td, .table > tfoot > tr.success > th {
   background-color: #D84387 !important;
 }
 
-/* line 226, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 235, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .btn-danger {
   color: white;
   background-color: #FF2E51;

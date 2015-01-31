@@ -6,12 +6,13 @@
  @import "calls";
  @import "soundmanager2";
  @import "bar-ui";
-
-
-
+ @import "formValidation";
 
  body {
-   background: image_url('cover.jpg') bottom right no-repeat;
+
+   background: image_url('cover.jpg') no-repeat top center;
+   background-size: 120vw auto;
+   overflow: initial;
    background-attachment:fixed;
  }
 
@@ -25,8 +26,9 @@
    margin: auto
  }
 
+
  textarea.form-control {
-   height: 130px;
+   height: 130px !important;
    width: 420px;
  }
 
@@ -187,6 +189,13 @@
    @extend .form-group;
    @extend .has-error;
  }
+
+ .form-group {
+   margin-bottom: 18px;
+ }
+
+ .form-control-feedback {
+   right: 38px;}
 
  .estimate-with_comment {
    background-color: #f6f475;;

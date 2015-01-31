@@ -18,8 +18,7 @@ class Call < ActiveRecord::Base
     attr_accessor :allow_create
   end
 
-  attr_accessor :non_assign_score
-  attr_accessor :correct_dependencies
+  attr_accessor :non_assign_score, :correct_dependencies
 
   before_save do
     self.get_total_score!
