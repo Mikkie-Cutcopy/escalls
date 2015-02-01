@@ -6,4 +6,7 @@ div class='tab-pane active' id='home'
     br
     - unless @calls.empty?
       = render partial: 'call', collection: @calls
+    br
+    div.flickr_pagination
+      = will_paginate @calls, previous_label: 'Назад', next_label: 'Вперёд'
 

@@ -61829,7 +61829,7 @@ $(document).ready(function() {
         },
 
         fields: {
-            call_subject: {
+            'call[subject]': {
                 validators: {
                     notEmpty: {
                         message: 'Поле не может быть пустым'
@@ -61837,18 +61837,90 @@ $(document).ready(function() {
                 }
             },
 
-            call_date: {
+            'call[date]' : {
                 validators: {
                     notEmpty: {
                         message: 'Поле не может быть пустым'
                     },
                     regexp: {
-                        regexp: /^[1-3]\d-[0-1]\d-20\d\d [0-2]\d:[0-5]\d/,
+                        regexp: /^[0-3]\d-[0-1]\d-20\d\d [0-2]\d:[0-5]\d/,
                         message: 'Не соответствует формату даты'
                     }
                 }
 
 
+
+            }
+        }
+    })
+});
+
+$(document).ready(function() {
+    $('.change_rw').formValidation({
+        // I am validating Bootstrap form
+        framework: 'bootstrap',
+
+        icon: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+
+        fields: {
+            'new_relative_weight': {
+                validators: {
+                    notEmpty: {
+                        message: 'Поле не может быть пустым'
+                    },
+                    numeric: {
+                        message: 'Значение должно быть числом'
+                    },
+                    stringLength: {
+                        max: 2,
+                        message: 'Не более двух цифр'
+                    }
+                }
+            }
+
+        }
+    })
+});
+
+
+$(document).ready(function() {
+    $('.new_or_edit_criterion').formValidation({
+        // I am validating Bootstrap form
+        framework: 'bootstrap',
+
+        icon: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+
+        fields: {
+            'criterion[name]': {
+                validators: {
+                    notEmpty: {
+                        message: 'Поле не может быть пустым'
+                    }
+                }
+
+            },
+            'criterion[good_thing]': {
+                validators: {
+                    notEmpty: {
+                        message: 'Поле не может быть пустым'
+                    }
+                }
+
+            },
+            'criterion[bad_thing]': {
+                validators: {
+                    notEmpty: {
+                        message: 'Поле не может быть пустым'
+                    }
+                }
 
             }
         }

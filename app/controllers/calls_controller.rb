@@ -7,7 +7,7 @@ class CallsController < ApplicationController
   layout 'user'
 
   def index
-    @calls = Call.where(:user_id => current_user.id).order(created_at: :desc)
+    @calls = Call.where(:user_id => current_user.id).paginate(page: params[:page], per_page: 15).order(created_at: :desc)
     if @calls.empty?
       flash.now[:message_alert] = current_user.worker? ? 'Записей не найдено' : 'Аккаунт не активирован администратором'
     end

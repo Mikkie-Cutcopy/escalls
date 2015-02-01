@@ -20,17 +20,30 @@ div class='tab-pane active' id='criterions'
             tr class='info'
               th #{c.name}
               td
+
                 button.btn.btn-danger.pull-left.criterion-btn  style='width: 42px'
                   = c.relative_weight
-                div style="display: none"
-                  = form_tag change_relative_weight_value_admin_criterion_path(c) do
-                    div.input-group
-                      = text_field_tag :new_relative_weight, nil, class: 'form-control pull-right', style: 'width: 140px', type: 'text', placeholder: 'Новое значение'
-                      span.input-group-btn
-                        = submit_tag 'Ok', class: 'button btn btn-default', style: 'width: 42px'
+                div style="display: none; margin-left: 50px"
+                  = form_tag change_relative_weight_value_admin_criterion_path(c), class: 'change_rw' do
+                    div.form-group
+                      div.input-group
+                        = text_field_tag :new_relative_weight, nil, class: 'form-control pull-right', style: 'width: 140px', type: 'text', placeholder: 'Новое значение'
+                        span.input-group-btn
+                          = submit_tag 'Ok', class: 'button btn btn-default', style: 'width: 42px'
               td
                 = link_to  edit_admin_criterion_path(c), method: :get, class: 'pull-left'
                   span.glyphicon.glyphicon-pencil
                 | &nbsp  &nbsp
                 = link_to  admin_criterion_path(c), method: :delete, data: { confirm: 'Вы уверены?' }
                   span.glyphicon.glyphicon-trash
+            tr.info
+              td colspan='3'
+                | &nbsp &nbsp
+                span.glyphicon.glyphicon-plus aria-hidden="true"
+                | &nbsp &nbsp
+                = c.good_thing
+                br
+                | &nbsp &nbsp
+                span.glyphicon.glyphicon-minus aria-hidden="true"
+                | &nbsp &nbsp
+                = c.bad_thing

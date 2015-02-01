@@ -10,7 +10,8 @@ br
 br
 = button_to 'Редактировать аккаунт', edit_user_registration_path, method: :get, class: 'btn btn-primary account-btn'
 = button_to 'Выйти', destroy_user_session_path, method: :delete, class: 'btn btn-primary account-btn'
-= button_to 'Удалить аккаунт', registration_path(current_user), data: { confirm: "Вы уверены?" }, method: :delete, class: 'btn btn-danger account-btn'
+- unless current_user.admin?
+  = button_to 'Удалить аккаунт', registration_path(current_user), data: { confirm: "Вы уверены?" }, method: :delete, class: 'btn btn-danger account-btn'
 = button_to 'Ok', root_path, method: :get, class: 'btn btn-primary', style: 'float: right'
 br
 br

@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   devise_for :users
 
   root to: 'start#access'
+  get  '/404',  to:  'application#not_found'
+
 
   namespace :admin do
     resources :calls do

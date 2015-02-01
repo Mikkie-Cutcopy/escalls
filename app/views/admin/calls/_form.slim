@@ -15,13 +15,13 @@ div.escalls-container.panel.panel-primary style="width: 500px"
       div.form-group
         = f.label :Тема
         br
-        = f.text_field :subject, class: 'form-control', name: 'call_subject'
+        = f.text_field :subject, class: 'form-control'
 
       div.form-group
         = f.label :Дата_и_время_звонка
         div.input-group.escalls-datetimepicker
           div class="input-append date " id="datetimepicker"  data-date-format="dd-mm-yyyy hh:ii" data-date-language='ru' data-date-startDate="2014-01-01" data-date-todayBtn='true'
-            = f.datetime_field :date, name: 'call_date', style: "float: right", class: "span2 form-control", size: "16", type: "text", value: "#{@call.id ? @call.date.to_s(:escalls_datetime) : Time.now.to_s(:escalls_datetime)}"
+            = f.datetime_field :date, style: "float: right", class: "span2 form-control", size: "16", type: "text", value: "#{@call.id ? @call.date.to_s(:escalls_datetime) : Time.now.to_s(:escalls_datetime)}"
             span.add-on
               i.icon-th
           span class="input-group-btn"

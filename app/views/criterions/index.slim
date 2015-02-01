@@ -3,19 +3,25 @@ div class='tab-pane active' id='criterions'
   div.page-header.tab-page-header
     h2.page-header-title Критерии оценки
   div.tab-pane-content
+    p class='bg-danger'
+      = @messages
     - unless @criterions.empty?
       div style="width:  1060px"
         table class="table table-bordered"
           tr class="success"
             th Критерий
-            th Хорошо
-            th Плохо
-            th Баллы
           - @criterions.each do |c|
             tr class='info'
               th #{c.name}
-              td #{c.good_thing}
-              td #{c.bad_thing}
+            tr.info
               td
-                button.btn.btn-primary.disable
-                  = c.relative_weight
+                | &nbsp &nbsp
+                span.glyphicon.glyphicon-plus aria-hidden="true"
+                | &nbsp &nbsp
+                = c.good_thing
+                br
+                | &nbsp &nbsp
+                span.glyphicon.glyphicon-minus aria-hidden="true"
+                | &nbsp &nbsp
+                = c.bad_thing
+

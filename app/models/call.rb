@@ -30,10 +30,12 @@ class Call < ActiveRecord::Base
 
   def get_total_score!
     total_score = 0
-    self.estimates.each do |e|
-      coefficient = e.score.to_i
-      weight = Criterion.find_by_id(e.criterion_id.to_i).relative_weight.to_i
-      total_score += score = coefficient * weight
+    if estimates.map(&:score).count(-2) < 2
+      estimates.each do |e|
+        coefficient = e.score.to_i
+        weight = Criterion.find_by_id(e.criterion_id.to_i).relative_weight.to_i
+        total_score += score = coefficient * weight
+      end
     end
     self.total_score = total_score
     self.version = Version.last.value

@@ -137,7 +137,7 @@
 
  .form-container {
    width: 460px;
-   min-height: 500px;
+   min-height: 550px;
    padding: 20px;
    margin: auto;
    /* box-shadow */
@@ -229,7 +229,12 @@
  }
 
  .table > thead > tr > td.success, .table > thead > tr > th.success, .table > thead > tr.success > td, .table > thead > tr.success > th, .table > tbody > tr > td.success, .table > tbody > tr > th.success, .table > tbody > tr.success > td, .table > tbody > tr.success > th, .table > tfoot > tr > td.success, .table > tfoot > tr > th.success, .table > tfoot > tr.success > td, .table > tfoot > tr.success > th {
-   background-color: #D84387 !important;
+   background-color: rgba(145, 47, 237, 0.7) !important;
+
+ }
+
+ .table > thead > tr > td.info, .table > thead > tr > th.info, .table > thead > tr.info > td, .table > thead > tr.info > th, .table > tbody > tr > td.info, .table > tbody > tr > th.info, .table > tbody > tr.info > td, .table > tbody > tr.info > th, .table > tfoot > tr > td.info, .table > tfoot > tr > th.info, .table > tfoot > tr.info > td, .table > tfoot > tr.info > th {
+   background-color: rgba(253, 243, 239, 0.69) !important;
  }
 
  .btn-danger {
@@ -237,3 +242,4 @@
    background-color: #FF2E51;
    border-color: #F10F37;
  }
+

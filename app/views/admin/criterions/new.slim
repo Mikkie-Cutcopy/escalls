@@ -3,19 +3,22 @@
 div.page-header.tab-page-header
   h2.page-header-title Новый критерий
 div.form-container
-  = form_for :criterion, url: admin_criterions_path do |form|
-    = form.label :Название
-    br
-    = form.text_field :name, class: 'form-control'
-    br
-    = form.label :Хорошо
-    br
-    = form.text_area  :good_thing, class: 'form-control'
-    br
-    = form.label :Плохо
-    br
-    = form.text_area  :bad_thing, class: 'form-control'
-    = form.hidden_field :relative_weight
-    br
+  = form_for :criterion, url: admin_criterions_path, :html => {class: 'new_or_edit_criterion'} do |form|
+    div.form-group
+      = form.label :Название
+      br
+      = form.text_field :name, class: 'form-control'
+
+    div.form-group
+      = form.label :Хорошо
+      br
+      = form.text_area  :good_thing, class: 'form-control'
+
+    div.form-group
+      = form.label :Плохо
+      br
+      = form.text_area  :bad_thing, class: 'form-control'
+      = form.hidden_field :relative_weight
+
     = form.submit 'Создать', class: 'btn btn-primary pull-right'
     = link_to 'Отмена', admin_criterions_path, method: :get, class: 'btn btn-primary pull-right', style: 'width: 90px; margin-right: 10px'
