@@ -123,12 +123,13 @@ div.escalls-container.panel.panel-primary style="width: 500px"
                     div.escalls-container.panel.panel-default style="width: 420px"
                       = e.object.comment
           div style='border: 2px'
-          b Общий комментарий:
-          br
+          - if f.object.comment.present?
+            b Общий комментарий:
+            br
 
-          div.escalls-container.panel.panel-default style="width: 420px; margin-top: 5px;"
-            = f.object.comment
-          br
+            div.escalls-container.panel.panel-default style="width: 420px; margin-top: 5px;"
+              = f.object.comment
+            br
           div.alert.alert-info
             b Итоговая оценка
             label.btn.btn-success.disable    style='float: right'

@@ -94,6 +94,7 @@ div.escalls-container.panel.panel-primary style="width: 500px"
 
                  </div>
       br
+      br
       ul.list-group
         li.list-group-item
           table.table
@@ -103,7 +104,7 @@ div.escalls-container.panel.panel-primary style="width: 500px"
                   - criterion = e.object.criterion
                   = e.label criterion.name
                   |
-                  div.btn-group  style='float: right'
+                  div.btn-group style='float: right'
                     - if e.object.score.eql?(1)
                       label.btn.btn-success.btn-square.disable
                         | +
@@ -114,9 +115,23 @@ div.escalls-container.panel.panel-primary style="width: 500px"
                       label.btn.btn-danger.btn-square.disable
                         | -
                   br
+                  - unless e.object.comment.blank?
+                    br
+
+                    div.escalls-container.panel.panel-default style="width: 420px"
+                      = e.object.comment
+
+          - f.object.comment.present?
+            div style='border: 2px'
+            b Общий комментарий:
+            br
+
+            div.escalls-container.panel.panel-default style="width: 420px; margin-top: 5px;"
+              = f.object.comment
+            br
           div.alert.alert-info
-            b Суммарный балл
-            label.btn.btn-success.disable    style='float: right'
+            b Итоговая оценка
+            label.btn.btn-success.disable style='float: right'
               = @call.total_score
 
       = link_to 'Ok', root_path, method: :get, class: 'btn btn-primary pull-right', style: 'width: 90px; margin-right: 10px'
