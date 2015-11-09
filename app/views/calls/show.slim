@@ -121,7 +121,7 @@ div.escalls-container.panel.panel-primary style="width: 500px"
                     div.escalls-container.panel.panel-default style="width: 420px"
                       = e.object.comment
 
-          - f.object.comment.present?
+          - if f.object.comment.present?
             div style='border: 2px'
             b Общий комментарий:
             br

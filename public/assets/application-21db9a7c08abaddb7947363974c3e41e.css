@@ -10139,131 +10139,137 @@ button.close {
 }
 
 /* line 37, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/calls.css.scss */
+.btn-score {
+  width: 50px;
+}
+
+/* line 41, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/calls.css.scss */
 .call-score {
   float: right;
   height: 45px;
   width: 45px;
   padding-top: 2px;
+  margin-right: 6px;
 }
 
-/* line 44, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/calls.css.scss */
+/* line 49, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/calls.css.scss */
 .call-head {
   width: 500px;
 }
 
-/* line 49, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/calls.css.scss */
+/* line 54, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/calls.css.scss */
 .call-date {
   width: 120px;
   display: inline-block;
 }
 
-/* line 55, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/calls.css.scss */
+/* line 60, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/calls.css.scss */
 .call-worker {
   width: 200px;
   display: inline-block;
 }
 
-/* line 60, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/calls.css.scss */
+/* line 65, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/calls.css.scss */
 .call-dropdown {
   width: 70px;
   display: inline-block;
   float: right;
 }
 
-/* line 67, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/calls.css.scss */
+/* line 72, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/calls.css.scss */
 .call-content {
   overflow: hidden;
   height: 25px;
 }
 
-/* line 72, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/calls.css.scss */
+/* line 77, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/calls.css.scss */
 .invisible {
   visibility: hidden;
   background-color: #85c575;
 }
 
-/* line 77, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/calls.css.scss */
+/* line 82, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/calls.css.scss */
 .btn-square {
   width: 36px;
 }
 
-/* line 81, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/calls.css.scss */
+/* line 86, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/calls.css.scss */
 .alert {
   padding: 7px;
   padding-bottom: 21px;
 }
 
-/* line 86, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/calls.css.scss */
+/* line 91, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/calls.css.scss */
 .sm2-bar-ui {
   font-size: 16px;
 }
 
-/* line 90, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/calls.css.scss */
+/* line 95, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/calls.css.scss */
 .sm2-bar-ui .sm2-main-controls,
 .sm2-bar-ui .sm2-playlist-drawer {
   background-color: #2288cc;
 }
 
-/* line 93, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/calls.css.scss */
+/* line 98, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/calls.css.scss */
 .sm2-bar-ui .sm2-inline-texture {
   background: transparent;
 }
 
-/* line 97, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/calls.css.scss */
+/* line 102, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/calls.css.scss */
 .flickr_pagination {
   text-align: center;
   padding: 0.3em;
   cursor: default;
 }
 
-/* line 101, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/calls.css.scss */
+/* line 106, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/calls.css.scss */
 .flickr_pagination a, .flickr_pagination span, .flickr_pagination em {
   padding: 0.2em 0.5em;
 }
 
-/* line 103, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/calls.css.scss */
+/* line 108, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/calls.css.scss */
 .flickr_pagination .disabled {
   color: #aaaaaa;
 }
 
-/* line 105, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/calls.css.scss */
+/* line 110, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/calls.css.scss */
 .flickr_pagination .current {
   font-style: normal;
   font-weight: bold;
   color: #ff0084;
 }
 
-/* line 109, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/calls.css.scss */
+/* line 114, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/calls.css.scss */
 .flickr_pagination a {
   border: 1px solid #dddddd;
   color: #0063dc;
   text-decoration: none;
 }
 
-/* line 113, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/calls.css.scss */
+/* line 118, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/calls.css.scss */
 .flickr_pagination a:hover, .flickr_pagination a:focus {
   border-color: #003366;
   background: #0063dc;
   color: white;
 }
 
-/* line 117, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/calls.css.scss */
+/* line 122, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/calls.css.scss */
 .flickr_pagination .page_info {
   color: #aaaaaa;
   padding-top: 0.8em;
 }
 
-/* line 120, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/calls.css.scss */
+/* line 125, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/calls.css.scss */
 .flickr_pagination .previous_page, .flickr_pagination .next_page {
   border-width: 2px;
 }
 
-/* line 122, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/calls.css.scss */
+/* line 127, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/calls.css.scss */
 .flickr_pagination .previous_page {
   margin-right: 1em;
 }
 
-/* line 124, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/calls.css.scss */
+/* line 129, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/calls.css.scss */
 .flickr_pagination .next_page {
   margin-left: 1em;
 }
@@ -11553,63 +11559,68 @@ body {
 }
 
 /* line 19, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+a {
+  color: #2185BA;
+}
+
+/* line 23, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .admin_main {
   width: 1210px;
   overflow: hidden;
   margin: auto;
 }
 
-/* line 25, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 29, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .escalls-container {
   margin: auto;
 }
 
-/* line 30, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 34, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 textarea.form-control {
   height: 130px !important;
   width: 420px;
 }
 
-/* line 35, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 39, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .call-comment {
   width: 468px !important;
 }
 
-/* line 39, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 43, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 h1 {
   display: inline-block;
 }
 
-/* line 43, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 47, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 h2 {
   margin-top: 0px;
 }
 
-/* line 47, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 51, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .tab-pane-content {
   margin: auto;
   width: 1060px;
 }
 
-/* line 52, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 56, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .datetimepicker {
   left: 750px !important;
   top: 500px !important;
 }
 
-/* line 57, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 61, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
   background-color: rgba(245, 245, 245, 0.83);
   cursor: pointer;
   color: royalblue;
 }
 
-/* line 63, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 67, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .nav-tabs > li > a {
   background-color: rgba(245, 245, 245, 0.53);
 }
 
-/* line 67, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 71, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .tab-content {
   background-color: rgba(245, 245, 245, 0.89);
   overflow: hidden;
@@ -11620,13 +11631,13 @@ h2 {
   margin-bottom: 300px;
 }
 
-/* line 77, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 81, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .page-header-title {
   margin-left: 40px;
   margin-right: 40px;
 }
 
-/* line 82, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 86, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .page-header-links {
   display: inline-block;
   float: right;
@@ -11634,7 +11645,7 @@ h2 {
   margin-bottom: 10px;
 }
 
-/* line 88, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 92, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .header__alert_message {
   width: 1210px;
   padding: 7px;
@@ -11648,7 +11659,7 @@ h2 {
   box-shadow: rgba(94, 21, 14, 0.89) 0px 1px 8px;
 }
 
-/* line 103, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 107, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .header__ok_alert_message {
   width: 1100px;
   padding: 5px;
@@ -11662,17 +11673,17 @@ h2 {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 8px;
 }
 
-/* line 118, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 122, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .play-pause {
   width: 37px !important;
 }
 
-/* line 122, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 126, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .audiojs {
   width: 468px;
 }
 
-/* line 126, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 130, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .account-container {
   width: 380px;
   min-height: 300px;
@@ -11683,7 +11694,7 @@ h2 {
   background-color: rgba(245, 245, 245, 0.83);
 }
 
-/* line 138, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 142, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .form-container {
   width: 460px;
   min-height: 550px;
@@ -11693,13 +11704,13 @@ h2 {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 8px;
 }
 
-/* line 149, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 153, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .account-btn {
   width: 340px;
   margin-bottom: 10px;
 }
 
-/* line 154, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 158, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .b-container {
   width: 500px;
   height: 300px;
@@ -11710,7 +11721,7 @@ h2 {
   color: #fff;
 }
 
-/* line 163, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 167, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .b-popup {
   width: 100%;
   min-height: 100%;
@@ -11721,7 +11732,7 @@ h2 {
   display: none;
 }
 
-/* line 172, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 176, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .b-popup .b-popup-content {
   margin: 100px auto 0px auto;
   width: 400px;
@@ -11732,29 +11743,29 @@ h2 {
   box-shadow: 0px 0px 10px #000;
 }
 
-/* line 182, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 186, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .btn-success.active, .open > .btn-success.dropdown-toggle {
   color: white;
   background-color: #B7D518;
   border-color: #80B60D;
 }
 
-/* line 193, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 197, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .form-group, .field_with_errors {
   margin-bottom: 18px;
 }
 
-/* line 197, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 201, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .form-control-feedback {
   right: 38px;
 }
 
-/* line 200, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 204, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .estimate-with_comment {
   background-color: #f6f475;
 }
 
-/* line 204, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 208, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .page-header {
   background-color: rgba(245, 245, 245, 0.83);
   padding-top: 25px;
@@ -11762,41 +11773,41 @@ h2 {
   border-bottom: 1px solid #E2E4EB;
 }
 
-/* line 211, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 215, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .tab-page-header {
   background-color: rgba(245, 245, 245, 0);
 }
 
-/* line 215, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 219, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .btn-primary {
   color: white;
   background-color: #ff2e51;
   border-color: rgba(239, 8, 50, 0.79);
 }
 
-/* line 221, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+/* line 225, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle {
   color: white;
   background-color: #ff7182;
   border-color: rgba(239, 127, 146, 0.66);
 }
 
-/* line 227, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
-.table > thead > tr > td.info, .table > thead > tr > th.info, .table > thead > tr.info > td, .table > thead > tr.info > th, .table > tbody > tr > td.info, .table > tbody > tr > th.info, .table > tbody > tr.info > td, .table > tbody > tr.info > th, .table > tfoot > tr > td.info, .table > tfoot > tr > th.info, .table > tfoot > tr.info > td, .table > tfoot > tr.info > th {
-  background-color: rgba(253, 243, 239, 0.69) !important;
-}
-
 /* line 231, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
-.table > thead > tr > td.success, .table > thead > tr > th.success, .table > thead > tr.success > td, .table > thead > tr.success > th, .table > tbody > tr > td.success, .table > tbody > tr > th.success, .table > tbody > tr.success > td, .table > tbody > tr.success > th, .table > tfoot > tr > td.success, .table > tfoot > tr > th.success, .table > tfoot > tr.success > td, .table > tfoot > tr.success > th {
-  background-color: rgba(145, 47, 237, 0.7) !important;
-}
-
-/* line 236, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .table > thead > tr > td.info, .table > thead > tr > th.info, .table > thead > tr.info > td, .table > thead > tr.info > th, .table > tbody > tr > td.info, .table > tbody > tr > th.info, .table > tbody > tr.info > td, .table > tbody > tr.info > th, .table > tfoot > tr > td.info, .table > tfoot > tr > th.info, .table > tfoot > tr.info > td, .table > tfoot > tr.info > th {
   background-color: rgba(253, 243, 239, 0.69) !important;
+}
+
+/* line 235, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+.table > thead > tr > td.success, .table > thead > tr > th.success, .table > thead > tr.success > td, .table > thead > tr.success > th, .table > tbody > tr > td.success, .table > tbody > tr > th.success, .table > tbody > tr.success > td, .table > tbody > tr.success > th, .table > tfoot > tr > td.success, .table > tfoot > tr > th.success, .table > tfoot > tr.success > td, .table > tfoot > tr.success > th {
+  background-color: rgba(203, 152, 252, 0.7) !important;
 }
 
 /* line 240, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
+.table > thead > tr > td.info, .table > thead > tr > th.info, .table > thead > tr.info > td, .table > thead > tr.info > th, .table > tbody > tr > td.info, .table > tbody > tr > th.info, .table > tbody > tr.info > td, .table > tbody > tr.info > th, .table > tfoot > tr > td.info, .table > tfoot > tr > th.info, .table > tfoot > tr.info > td, .table > tfoot > tr.info > th {
+  background-color: rgba(253, 243, 239, 0.69) !important;
+}
+
+/* line 244, /home/mikkie/Documents/Projects/escalls/app/assets/stylesheets/application.css.scss */
 .btn-danger {
   color: white;
   background-color: #FF2E51;

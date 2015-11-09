@@ -1,5 +1,6 @@
 class Call < ActiveRecord::Base
 
+
  # has_attached_file :record
   has_attached_file :record,
                     :styles => {
