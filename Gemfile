@@ -20,7 +20,7 @@ gem 'will_paginate'
 gem 'mediaelement_rails'
 gem 'mislav-will_paginate'
 gem 'capistrano',  github: 'capistrano/capistrano', ref: '96a16'
-gem 'sprockets-rails', '>= 2.1.4'
+gem 'sprockets-rails'
 
 gem 'unicorn'
 #gem 'soundmanager2-rails'

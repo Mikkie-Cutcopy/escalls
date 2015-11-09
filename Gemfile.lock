@@ -224,7 +224,7 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   slim
   spring
-  sprockets-rails (>= 2.1.4)
+  sprockets-rails
   sqlite3
   therubyracer
   thin
