@@ -2,19 +2,12 @@ class Call < ActiveRecord::Base
 
 
  # has_attached_file :record
-  has_attached_file :record,
-                    :styles => {
-                        :mp3 => {
-                            :params => "-q1 -b 320",
-                            :format => "mp3" }
-                    },
-                    :processors => [:wav_mp3]
-  validates_attachment_content_type :record, :content_type => ['audio/wav'], :message => 'file must be of filetype .mp3 or .wav', :file_name => { :matches =>  [/wav\Z/]}
+  has_attached_file :record
+  validates_attachment_content_type :record, :content_type => ['audio/mpeg', 'audio/mp3'], :message => 'file must be of filetype .mp3', :file_name => { :matches => [/mp3\Z/] }
 
 
 
-
-  #validates_attachment_size :record, :less_than => 80.megabytes
+  validates_attachment_size :record, :less_than => 80.megabytes
   #validates :subject, presence: true
   #validates :date, format: {with: /\d{2}-\d{2}-\d{4}\s\d{2}:\d{2}/}
 
