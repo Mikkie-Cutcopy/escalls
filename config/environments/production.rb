@@ -86,8 +86,8 @@ Rails.application.configure do
       address:              'smtp.gmail.com',
       port:                  587,
       domain:               'escalls.payu.lclients.ru',
-      user_name:             Rails.application.secrets.gmail["username"],
-      password:              Rails.application.secrets.gmail["password"],
+      #user_name:             Rails.application.secrets.gmail["username"],
+      #password:              Rails.application.secrets.gmail["password"],
       authentication:       'plain',
       enable_starttls_auto: true  }
 end
