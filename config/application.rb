@@ -21,21 +21,5 @@ module Escalls
     config.i18n.default_locale = :en
     config.encoding = "utf-8"
 
-    config.before_configuration do
-      env_var_path = if Rails.env.eql?('production')
-                       '../../shared'
-                     else
-                       'config'
-                     end
-
-      env_file = Rails.root.join(env_var_path, 'environment_variables.yml').to_s
-
-      if File.exists?(env_file)
-        YAML.load_file(env_file)[Rails.env].each do |key, value|
-          ENV[key.to_s] = value
-        end
-      end
-    end
-
   end
 end
