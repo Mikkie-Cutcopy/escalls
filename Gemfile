@@ -12,7 +12,6 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'pry'
-gem 'thin'
 gem 'jquery-fileupload-rails'
 gem 'jquery-ui-rails'
 gem 'paperclip'
